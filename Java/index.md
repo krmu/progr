@@ -69,4 +69,28 @@ Pirmstam mainīgie ir definēti un komanda tiek izmantota kopējā klasē.
 | <    | Mazāks       | 4 < 5 |
 | <=   | Mazāks vienāds |  |
 | &&   | Un (and)    | 4 && 4 |
-| "&#124;&#124;" | vai (or)	 | saldējums vai medus |
+| &#124;&#124; | vai (or)	 | saldējums vai medus |
+
+# Piemēri
+
+## Pāra skatļa noteikšana
+Vienkārša programma, kura nosaka vai skaitlis ir pāra vai nepāra pēc tā ievades.
+~~~java
+import java.util.Scanner;
+
+public class EvenOdd {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Ievad skaitli: ");
+        int num = reader.nextInt();
+
+        if(num % 2 == 0)
+            System.out.println(num + " ir pāra skaitlis");
+        else
+            System.out.println(num + " nav pāra skaitlis");
+    }
+}
+~~~
