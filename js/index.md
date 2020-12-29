@@ -128,7 +128,7 @@ for( SĀKUMA VĒRTĪBA; PILDĪT KAMĒR; SOLIS){
     Darbība;
 
 }
-
+~~~~
 While ciklu lieto gadījumos, kad nav vajadzīgs cikla solis un cikls tiek pildīts līdz konkrētai darbībai.
 
 Pielietojums:
