@@ -3,24 +3,24 @@ layout: page
 title: Python programmēšanas valoda
 description: ~
 ---
-
-# Funkciju definēšana
+# Lietojums
+## Funkciju definēšana
 
 Python programmēšanas valodā funkcijas definē ar vārdu def.
 
 ~~~python
 def FUNKCIJAS NOSAUKUMS():
-  print("Funkcijas darbība")
+    print("Funkcijas darbība")
 ~~~
 
 Piemērs
 ~~~python
 def hello():
-  print("Sveika pasaule")
+    print("Sveika pasaule")
 hello()
 ~~~
 
-# Mainīgo pieraksts.
+## Mainīgo pieraksts
 
 Mainīgajiem nav jāpieraksta to veids. Piemēram, Java programmēšanas valodā jāraksta skatiļu mainīgajiem burti Int
 
@@ -46,7 +46,7 @@ atzimes = [1,2,3,4,5]
 valodas = {'LV': 'Latviešu valoda','ENG': 'Angļu valoda'}
 ~~~
 
-# Nosacījumu veidošana
+## Nosacījumu veidošana
 
 Python programmēšanas valodā nosacījumi teik veidoti šadā veidā:
 
@@ -70,29 +70,22 @@ Piemēri:
 
 ~~~python
 x = 0
-
 y = 5
-
-if x < y:
-
+if x < y:  
     print('x ir mazāks nekā y')
 
 if y < x: 
-
     print('y ir mazāks nekā x')
-
 if y in ['foo', 'bar', 'baz']: 
-
     print('y atrodas masīvā')
 ~~~
 
-# Failu - lasīšana, rakstīšana
+## Failu - lasīšana, rakstīšana
 
 Python programmēšanas valoda ļauj nolasīt failus un to saturu.
 
 ~~~python
 with open('data.txt', 'r') as f:
-
     dati= f.read()
 ~~~
 
@@ -102,9 +95,7 @@ Ierakstīt failā:
 
 ~~~python
 with open('data.txt', 'w') as f:
-
     dati= 'Šo tekstu ierakstīt failā'
-
     f.write(dati)
 ~~~
 
@@ -114,12 +105,10 @@ Ierakstīt failā:
 
 ~~~python
 with open('data.txt', 'a') as f:
-
     dati= 'Šo tekstu ierakstīt failā'
-
     f.write(dati)
 ~~~
-# Masīvi / vārdnīcas
+## Masīvi / vārdnīcas
 
 Šajā gadījumā tiek ierakstīts failā teksts - pievienojot faila beigās. 
 
@@ -150,14 +139,12 @@ Lai iegūtu konrētu vērtību no masīva:
 Python masīva vērtības sāk skaitīt no 0
 ~~~python
 atzimes = [10,9,5,4,5,3]
-
-    print(atzimes[1])
+print(atzimes[1])
 ~~~
 Konsolē tiek izdrukāts: 9, jo sākot skaitīt no 0 iegūstam, ka 9 ir pirmais elements.
 ~~~python
 prieksmetusaisinajumi = {'lv':'Latviešu valoda', 'inf':'Informātika'}
-
-    print(prieksmetusaisinajumi ['lv'])
+print(prieksmetusaisinajumi ['lv'])
 ~~~
 
 Konsolē tiek izdrukāts: Latviešu valoda , jo vārdnīcas atslēga lv satur vērtību Latviešu valoda.
@@ -165,8 +152,50 @@ Konsolē tiek izdrukāts: Latviešu valoda , jo vārdnīcas atslēga lv satur v�
 Vārdnīcas nolasīšana ciklā.
 
 ~~~python
-for x in Vārdnīcas mainīgais:
-  print(x)
+prieksmetusaisinajumi = {'lv':'Latviešu valoda', 'inf':'Informātika'}
+for x in prieksmetusaisinajumi:
+    print(x)
 ~~~
 
 X šajā gadījumā nodos konsolē vārdnīcas atslēgas.
+
+# Piemēri
+============
+
+# UID ģenerātors
+
+Šis kods ļauj mums iegūt unikālu lietotāja identifikātoru formātā XXXXX-XXXXX-XXXXX-XXXXX daļu daudzumu nosaka lietotājs.
+
+Papildus kods ļauj arī ierakstīt CSV failā. Kodā atsāts 100000 ģenerators, kurā ir arī pārbaudes mehānisms.
+
+~~~python
+import time
+import string
+import random
+def generate(cikdalas):
+    parts = []
+    chari = 6
+    for r in range(cikdalas + 1):
+        part = ""
+        for x in range(chari + 1):
+            if(x % 2):
+                part = part + str(random.randint(1, 9))
+            elif x == 5:
+                part =part + int(time.time()*10.0)
+            else:
+                part = part + random.choice(string.ascii_letters)
+        parts.append(part)
+    return "-".join(parts)
+testeris = []
+f = open('csvfile.csv','w')
+for x in range(100000):
+    id = generate(6)
+    if  id in testeris:
+        print("ATRADA DUBLIKĀTU: ",   id, " REIZE", x )
+        break
+    f.write(id+'\n')
+    testeris.append(generate(5))
+f.close()
+print("Darbība beigusies")
+print("Kopa:", len(testeris))
+~~~
