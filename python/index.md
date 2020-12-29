@@ -159,6 +159,23 @@ for x in prieksmetusaisinajumi:
 
 X šajā gadījumā nodos konsolē vārdnīcas atslēgas.
 
+## Ārējās bibliotēkas
+
+Python programmēšanas valoda atļauj izmantot ārējās bibliotēkas. Lai to izdarītu ir jāizmanto PIP jeb Python bibliotēku pārvaldnieku. 
+Lai instalētu bibliotēku:
+
+~~~python
+
+pip pip install [bibliotēka]
+
+~~~
+Piemēram instalēsim Easy UI bibliotēku
+
+~~~python
+pip install easyui
+
+~~~
+
 # Piemēri
 
 ## UID ģenerātors
