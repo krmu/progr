@@ -1,3 +1,5 @@
 plugins:
   - jekyll-remote-theme
 remote_theme: https://github.com/tomjoht/documentation-theme-jekyll.git
+
+theme: jekyll-theme-leap-day
