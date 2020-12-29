@@ -162,7 +162,7 @@ X šajā gadījumā nodos konsolē vārdnīcas atslēgas.
 # Piemēri
 ============
 
-# UID ģenerātors
+## UID ģenerātors
 
 Šis kods ļauj mums iegūt unikālu lietotāja identifikātoru formātā XXXXX-XXXXX-XXXXX-XXXXX daļu daudzumu nosaka lietotājs.
 
@@ -201,7 +201,7 @@ print("Kopa:", len(testeris))
 
 ~~~
 
-# API pieprasījums
+## API pieprasījums
 
 Ar Python palīdzību ir iespējams arī veidot API pieprasījumus uz vietnēm. Tiek veidots vienkāršs pieprasījums uz vietni  chucknorris.io. Mainīgais r sevī satur pieparsījumu un tā saturu. Tiek izmantota funkcija .json() kas ļauj pārveidot pieprasījumu par vārdnīcu PYTHON valodā. 
 
