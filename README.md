@@ -1,0 +1,2 @@
+# progr
+Dažādas programmēšanas
