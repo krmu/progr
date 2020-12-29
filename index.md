@@ -9,6 +9,9 @@ Te tāds ievads par neko
 Stāsts par python
 ## Kā darbojas?
 Stāsts par darbojas
+```py
+vards = []
+```
 
 
  
