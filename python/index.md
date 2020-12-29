@@ -4,7 +4,7 @@ title: Python programmēšanas valoda
 description: ~
 ---
 
-# Python funkciju definēšana
+# Funkciju definēšana
 
 Python programmēšanas valodā funkcijas definē ar vārdu def.
 
@@ -20,7 +20,7 @@ def hello():
 hello()
 ~~~
 
-# Python programmēšanas valodas mainīgo pieraksts.
+# Mainīgo pieraksts.
 
 Mainīgajiem nav jāpieraksta to veids. Piemēram, Java programmēšanas valodā jāraksta skatiļu mainīgajiem burti Int
 
@@ -46,7 +46,7 @@ atzimes = [1,2,3,4,5]
 valodas = {'LV': 'Latviešu valoda','ENG': 'Angļu valoda'}
 ~~~
 
-# Python nosacījumu veidošana
+# Nosacījumu veidošana
 
 Python programmēšanas valodā nosacījumi teik veidoti šadā veidā:
 
