@@ -1,8 +1,7 @@
 ---
 layout: page
-homepage: true
-disable_anchors: true
-description: - 
+title: HTML
+description: ~
 ---
 
 # Lapa par HTML

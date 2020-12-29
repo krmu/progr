@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Python programmēšanas valoda
+title: Python
 description: ~
 ---
 # Lietojums
@@ -51,7 +51,7 @@ valodas = {'LV': 'Latviešu valoda','ENG': 'Angļu valoda'}
 Python programmēšanas valodā nosacījumi teik veidoti šadā veidā:
 
 SVARĪGI! Python kodā atdalīšana notiek līmeņos. Visi vienādie līmeņi tiek izpildīti pēc kārtas. Līmeņus ievieš ar TAB taustiņu vai SPACE spiežot 4 reizes, bet visā kodā jābūt vienādiem atdalītājiem, atsarpes vai tabulatori.
-
+~~~
 if nosacījums :
     [TABULATORA ATKĀPE] notikums
 else:
@@ -65,7 +65,7 @@ elif nosacījums3:
     [TABULATORA ATKĀPE] notikums
 
 Kur [TABULATORA ATKĀPE] ir taustiņš TAB
-
+~~~
 Piemēri:
 
 ~~~python
