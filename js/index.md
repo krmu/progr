@@ -1,7 +1,7 @@
 ---
 layout: page
 title: JavaScript
-description: ~
+description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 ---
 
 # Lietojums

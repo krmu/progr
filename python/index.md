@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python
-description: ~
+description: Python programmēšanas valodas lietojums un praktiski piemēri
 ---
 # Lietojums
 ## Funkciju definēšana
@@ -166,12 +166,13 @@ Lai instalētu bibliotēku:
 
 ~~~python
 
-pip pip install [bibliotēka]
+pip install [bibliotēka]
 
 ~~~
 Piemēram instalēsim Easy UI bibliotēku
 
 ~~~python
+
 pip install easyui
 
 ~~~
