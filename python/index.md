@@ -160,7 +160,6 @@ for x in prieksmetusaisinajumi:
 X šajā gadījumā nodos konsolē vārdnīcas atslēgas.
 
 # Piemēri
-============
 
 ## UID ģenerātors
 
