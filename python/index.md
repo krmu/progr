@@ -198,4 +198,22 @@ for x in range(100000):
 f.close()
 print("Darbība beigusies")
 print("Kopa:", len(testeris))
+
 ~~~
+
+# API pieprasījums
+
+Ar Python palīdzību ir iespējams arī veidot API pieprasījumus uz vietnēm. Tiek veidots vienkāršs pieprasījums uz vietni  chucknorris.io. Mainīgais r sevī satur pieparsījumu un tā saturu. Tiek izmantota funkcija .json() kas ļauj pārveidot pieprasījumu par vārdnīcu PYTHON valodā. 
+
+~~~python
+
+import requests
+
+r = requests.get(url='https://api.chucknorris.io/jokes/random')
+t = r.json()
+
+print("Šīs dienas joks:",t["value"])
+
+~~~
+
+Agrižot saturu, pie joka mēc varam tikt izmantojot komandu t["value"] jeb vārdnīcas vienību "value".
