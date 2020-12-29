@@ -8,15 +8,15 @@ description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 
 ## Mainīgie
 
-Mainīgajiem nav jāpieraksta to veids, bet mainīgo nosaukam priekšā jāraksta vārdu var
+Mainīgajiem nav jāpieraksta to veids, bet mainīgo nosaukam priekšā jāraksta vārdu `var`. 
 
 ~~~js
 
-var Skaitls = 1
+var Skaitls = 1;
 
-var Tekstuāls mainīgais = "Šis ir teksta mainīgais"
+var Tekstuāls mainīgais = "Šis ir teksta mainīgais";
 
-var Masīvs = [1,2,3,4,5]
+var Masīvs = [1,2,3,4,5];
 
 var Masīvs =  ["Krūmi", "Koks", "Stabs"];
 
@@ -25,18 +25,19 @@ var Masīvs =  ["Krūmi", "Koks", "Stabs"];
 Piemērs:
 
 ~~~js
-var x = 1
+var x = 1;
 
-var vards = "Mans vārds ir Pēteris"
+var vards = "Mans vārds ir Pēteris";
 
-var atzimes = [1,2,3,4,5]
+var atzimes = [1,2,3,4,5];
 
 var tekstamasivs = ["Krūmi", "Koks", "Stabs"];
 
 ~~~~
 ## Nosacījumu veidošana
 
-Javascript programmēšanas valodā nosacījums tiek veikts ar vārdu if un nosacījumu darbības atdala ar figūriekavām.
+Javascript programmēšanas valodā nosacījums tiek veikts ar vārdu `if` un nosacījumu darbības atdala ar figūriekavām.
+
 ~~~js
 if( nosacījums ){
 
@@ -49,6 +50,7 @@ if( nosacījums ){
 }
 ~~~
 Gadījumos, ja ir vairāku nosacījumu pārbaude:
+
 ~~~js
 if( nosacījums ){
 
@@ -66,9 +68,9 @@ if( nosacījums ){
 ~~~
 Piemēram:
 ~~~js
-    x = 0
+var x = 0;
 
-    y = 5
+var y = 5;
 
 if ( x == 5){
 
@@ -113,7 +115,7 @@ function teikums(vards,skola){
 teikums("Jānis", "Babītes vidusskolā"); // Mani sauc Jānis. Es mācos: Babītes vidusskolā
 ~~~~
 
-Funkcijas parametros var tikt padoti arī masīvi.
+Funkcijas parametros `var` tikt padoti arī masīvi.
 
 ## Cikli
 

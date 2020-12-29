@@ -7,7 +7,7 @@ description: Java programmēšanas valodas lietojums un praktiski piemēri
 # Lietojums
 ## Sākums
 
-Java programmēšanas valodā sāk ar klases definēšanu "Main". Tad definē metodi main (public static void main(String[] args)
+Java programmēšanas valodā sāk ar klases definēšanu `1`Main`. Tad definē metodi `main` `(public static void main(String[] args)`
 
 ~~~java
 public class Main {

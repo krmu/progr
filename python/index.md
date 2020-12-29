@@ -22,7 +22,7 @@ hello()
 
 ## Mainīgo pieraksts
 
-Mainīgajiem nav jāpieraksta to veids. Piemēram, Java programmēšanas valodā jāraksta skatiļu mainīgajiem burti Int
+Mainīgajiem nav jāpieraksta to veids. Piemēram, Java programmēšanas valodā jāraksta skatiļu mainīgajiem burti `Int`
 
 ~~~python
 
@@ -50,7 +50,7 @@ valodas = {'LV': 'Latviešu valoda','ENG': 'Angļu valoda'}
 
 Python programmēšanas valodā nosacījumi teik veidoti šadā veidā:
 
-SVARĪGI! Python kodā atdalīšana notiek līmeņos. Visi vienādie līmeņi tiek izpildīti pēc kārtas. Līmeņus ievieš ar TAB taustiņu vai SPACE spiežot 4 reizes, bet visā kodā jābūt vienādiem atdalītājiem, atsarpes vai tabulatori.
+SVARĪGI! Python kodā atdalīšana notiek līmeņos. Visi vienādie līmeņi tiek izpildīti pēc kārtas. Līmeņus ievieš ar `TAB` taustiņu vai `SPACE` spiežot 4 reizes, bet visā kodā jābūt vienādiem atdalītājiem, atsarpes vai tabulatori.
 ~~~
 if nosacījums :
     [TABULATORA ATKĀPE] notikums
@@ -89,7 +89,7 @@ with open('data.txt', 'r') as f:
     dati= f.read()
 ~~~
 
-Kur data.txt ir faila nosaukums (jāatrodas tajā pašā mapē, kur atrodas .py fails), 'r' parametrs norāda, ka fails tiek lasīts - read. Savukārt, mainīgais dati saturēs masīvu ar rindām no faila. 
+Kur data.txt ir faila nosaukums (jāatrodas tajā pašā mapē, kur atrodas `.py` fails), `r` parametrs norāda, ka fails tiek lasīts - read. Savukārt, mainīgais dati saturēs masīvu ar rindām no faila. 
 
 Ierakstīt failā:
 
@@ -116,15 +116,15 @@ Python programmēšanas valodā ir iespēja definēt masīvus un vārdnīcas.
 
 Masīva definēšana:
 
-Mainīgais = ['pirmā teksta vērtība', 'otrā teksta vērtība',skaitlis1, utt. ]
+`Mainīgais = ['pirmā teksta vērtība', 'otrā teksta vērtība',skaitlis1, utt. ]
 
-Vārdnīcas mainīgais = {'atslega':'vertiba','atslega2':'vertiba2'}
+Vārdnīcas mainīgais = {'atslega':'vertiba','atslega2':'vertiba2'}`
 
 Kur atslēga ir unikāla visā vārdnīcā.
 
 Masīvu un vārdnīcu garumus nosaka ar šādām komandām:
 
-print(len(Vārdnīcas mainīgais))
+`print(len(Vārdnīcas mainīgais))`
 
 Piemēram:
 ~~~python
@@ -147,7 +147,7 @@ prieksmetusaisinajumi = {'lv':'Latviešu valoda', 'inf':'Informātika'}
 print(prieksmetusaisinajumi ['lv'])
 ~~~
 
-Konsolē tiek izdrukāts: Latviešu valoda , jo vārdnīcas atslēga lv satur vērtību Latviešu valoda.
+Konsolē tiek izdrukāts: Latviešu valoda , jo vārdnīcas atslēga `lv` satur vērtību Latviešu valoda.
 
 Vārdnīcas nolasīšana ciklā.
 
@@ -181,7 +181,7 @@ pip install easyui
 
 ## UID ģenerātors
 
-Šis kods ļauj mums iegūt unikālu lietotāja identifikātoru formātā XXXXX-XXXXX-XXXXX-XXXXX daļu daudzumu nosaka lietotājs.
+Šis kods ļauj mums iegūt unikālu lietotāja identifikātoru formātā `XXXXX-XXXXX-XXXXX-XXXXX` daļu daudzumu nosaka lietotājs.
 
 Papildus kods ļauj arī ierakstīt CSV failā. Kodā atsāts 100000 ģenerators, kurā ir arī pārbaudes mehānisms.
 
@@ -220,7 +220,7 @@ print("Kopa:", len(testeris))
 
 ## API pieprasījums
 
-Ar Python palīdzību ir iespējams arī veidot API pieprasījumus uz vietnēm. Tiek veidots vienkāršs pieprasījums uz vietni  chucknorris.io. Mainīgais r sevī satur pieparsījumu un tā saturu. Tiek izmantota funkcija .json() kas ļauj pārveidot pieprasījumu par vārdnīcu PYTHON valodā. 
+Ar Python palīdzību ir iespējams arī veidot API pieprasījumus uz vietnēm. Tiek veidots vienkāršs pieprasījums uz vietni  chucknorris.io. Mainīgais `r` sevī satur pieparsījumu un tā saturu. Tiek izmantota funkcija `.json()` kas ļauj pārveidot pieprasījumu par vārdnīcu PYTHON valodā. 
 
 ~~~python
 
@@ -233,4 +233,4 @@ print("Šīs dienas joks:",t["value"])
 
 ~~~
 
-Agrižot saturu, pie joka mēc varam tikt izmantojot komandu t["value"] jeb vārdnīcas vienību "value".
+Atgrižot saturu, pie joka mēc varam tikt izmantojot komandu `t["value"]` jeb vārdnīcas vienību `value`.
