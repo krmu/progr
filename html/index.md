@@ -1,8 +1,8 @@
 ---
-layout: full
+layout: page
 homepage: true
 disable_anchors: true
 description: - 
 ---
 
-# Sākumlapa
+# Lapa par HTML
