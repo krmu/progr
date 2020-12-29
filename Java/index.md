@@ -5,7 +5,7 @@ description: Java programmēšanas valodas lietojums un praktiski piemēri
 ---
 
 # Lietojums
-## Minimums
+## Sākums
 
 Java programmēšanas valodā sāk ar klases definēšanu "Main". Tad definē metodi main (public static void main(String[] args)
 
@@ -69,4 +69,4 @@ Pirmstam mainīgie ir definēti un komanda tiek izmantota kopējā klasē.
 | <    | Mazāks       | 4 < 5 |
 | <=   | Mazāks vienāds |  |
 | &&   | Un (and)    | 4 && 4 |
-| "||" | vai (or)	 | saldējums vai medus |
+| "&#124;&#124;" | vai (or)	 | saldējums vai medus |
