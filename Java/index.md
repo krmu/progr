@@ -69,4 +69,4 @@ Pirmstam mainīgie ir definēti un komanda tiek izmantota kopējā klasē.
 | <    | Mazāks       | 4 < 5 |
 | <=   | Mazāks vienāds |  |
 | &&   | Un (and)    | 4 && 4 |
-| ||   | vai (or)	 | saldējums vai medus |
+| "||" | vai (or)	 | saldējums vai medus |
