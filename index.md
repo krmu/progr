@@ -3,12 +3,12 @@ layout: default
 ---
 
 # Ievads
-    Te tāds ievads par neko
+Te tāds ievads par neko
 # Python
 ## Uzdevumi
-    Stāsts par python
+Stāsts par python
 ## Kā darbojas?
-    Stāsts par darbojas
+Stāsts par darbojas
 
 
  
