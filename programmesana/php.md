@@ -1,5 +1,4 @@
 ---
-layout: default
 title: PHP
 description: PHP programmēšanas valodas lietojums un praktiski piemēri
 show_in_menu: true
@@ -108,7 +107,7 @@ echo $a['otrais']['elementatslega'];
 
 ## Nosacījumu veidošana
 
-~~~tip
+~~~note
 Lai veidotu nosacījumu, izmanto komandu `if`. Nosacījuma beigās lieto `{` un `}`. Nosacījumu liek parastajās iekavās.
 ~~~
 Apskatīsim piemēru.
@@ -154,11 +153,11 @@ Atbilde 6.
 
 Lai nogādatu datus no klienta pie server tiek veikts datu nosūtīšanas process. Ir divi dažādi veidi kā veidot pieprasījumu uz serveri. `GET` un `POST`.
 
-~~~warning
+~~~note
 
 `GET` pieprasījums adresē izskatās šādi: `http://www.test.com/index.php?name1=value1&name2=value2`. Ar šo veidu uz serveri nevar nogādāt failus. Mainīgie ir redzami pārlūka adreses logā.
 ~~~
-~~~warning
+~~~note
 
 `POST` pieprasījumu pārlūka adresē redzēt nevar. Tiek izmantota `HTTP` galvene, kuru lietotājs neredz. Var tikt pārsūtīti dati uz serveri faila formātā.
 ~~~ 
@@ -174,9 +173,7 @@ Attēls www.tutorialrepublic.com
 ~~~php
 <?php
    if( $_POST["vards"]) {
-
       echo "Sveiks, ". $_POST['vards']. "!<br />";
-      exit();
    }
 ?>
 ~~~

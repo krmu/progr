@@ -5,6 +5,28 @@ description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 ---
 
 # Lietojums
+## Sākums
+
+Lai sāktu mājaslapā rakstīt Javascript kodu jālieto `<script type="application/javascript"></script>` birkas. 
+
+Var izmantot arī vienkāršo variantu `<script></script>`
+
+Piemērs:
+~~~html
+
+<script type="application/javascript">
+
+</script>
+
+~~~
+
+Lai iekļautu savā lapā ārējo Javascript kodu:
+
+`<script src="mansskripts.js"></script>`
+
+
+
+
 ## Elementu atlase lapā
 
 Lai atlasītu kādu elementu dokumentā pēc tā identifikatora izmanto:
@@ -33,7 +55,7 @@ Klases elementiem lapā var atkārtoties
 
 ~~~js
 
-var vertiba = ocument.getElementsByClassName("manaklase");
+var vertiba = document.getElementsByClassName("manaklase");
 
 ~~~
 
@@ -73,7 +95,6 @@ var tekstamasivs = ["Krūmi", "Koks", "Stabs"];
 ## Nosacījumu veidošana
 
 ~~~tip
-
 Javascript programmēšanas valodā nosacījums tiek veikts ar vārdu `if` un nosacījumu darbības atdala ar figūriekavām.
 ~~~
 ~~~js
@@ -152,7 +173,7 @@ function teikums(vards,skola){
 
 teikums("Jānis", "Babītes vidusskolā"); // Mani sauc Jānis. Es mācos: Babītes vidusskolā
 ~~~
-~~~tip
+~~~note
 
 Funkcijas parametros var tikt padoti arī masīvi.
 

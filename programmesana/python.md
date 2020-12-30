@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Python
 description: Python programmēšanas valodas lietojums un praktiski piemēri
 ---
@@ -148,7 +147,7 @@ print(atzimes[1])
 Konsolē tiek izdrukāts: 9, jo sākot skaitīt no 0 iegūstam, ka 9 ir pirmais elements.
 ~~~python
 prieksmetusaisinajumi = {'lv':'Latviešu valoda', 'inf':'Informātika'}
-print(prieksmetusaisinajumi ['lv'])
+print(prieksmetusaisinajumi['lv'])
 ~~~
 
 Konsolē tiek izdrukāts: Latviešu valoda , jo vārdnīcas atslēga `lv` satur vērtību Latviešu valoda.
@@ -237,4 +236,4 @@ print("Šīs dienas joks:",t["value"])
 
 ~~~
 
-Atgrižot saturu, pie joka mēc varam tikt izmantojot komandu `t["value"]` jeb vārdnīcas vienību `value`.
+Atgriežot saturu, pie joka mēc varam tikt izmantojot komandu `t["value"]` jeb vārdnīcas vienību `value`.
