@@ -1,7 +1,7 @@
 ---
-sort: 5
+sort: 3
 ---
 
-# C++
+# PHP
 
 {% include list.liquid %}

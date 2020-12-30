@@ -1,7 +1,7 @@
 ---
-sort: 5
+sort: 6
 ---
 
-# C++
+# Dizains
 
 {% include list.liquid %}
