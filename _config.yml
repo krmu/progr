@@ -6,15 +6,9 @@ license:
 
   docs: CC BY 3.0
   docs_url: http://creativecommons.org/licenses/by/3.0/
-links:
-  header:
-    - title: GitHub
-      url: https://github.com/kristapsmu/progr
+readme_index:
+  with_frontmatter: true
 plugins:
-  - jekyll-default-layout
-  - jekyll-readme-index
-  - jekyll-github-metadata
-  - jekyll-titles-from-headings
   - jemoji
   - jekyll-avatar
   - jekyll-mentions
