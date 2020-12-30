@@ -1,7 +1,3 @@
 ---
-sort: 6
+sort: 2
 ---
-
-# Dizains
-
-{% include list.liquid %}

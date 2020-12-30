@@ -1,7 +1,0 @@
----
-sort: 5
----
-
-# C++
-
-{% include list.liquid %}
