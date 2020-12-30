@@ -11,6 +11,10 @@ links:
     - title: GitHub
       url: https://github.com/kristapsmu/progr
 plugins:
+  - jekyll-default-layout
+  - jekyll-readme-index
+  - jekyll-github-metadata
+  - jekyll-titles-from-headings
   - jemoji
   - jekyll-avatar
   - jekyll-mentions
