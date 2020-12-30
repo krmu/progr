@@ -5,6 +5,40 @@ description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 ---
 
 # Lietojums
+## Elementu atlase lapā
+
+Lai atlasītu kādu elementu dokumentā pēc tā identifikatora izmanto:
+
+~~~warning
+
+Ieteicams identifikātorus lapā turēt unikālus!
+
+~~~
+
+~~~js
+
+var vertiba = document.getElementById("identifikators");
+
+~~~
+
+Kur vārda `identifikators` lieto unikālo identifikatoru. HTML birkā to raksta: `id="identifikators"`
+
+Lai atlasītu kādu elementu dokumentā pēc tā klases izmanto:
+
+~~~warning
+
+Klases elementiem lapā var atkārtoties
+
+~~~
+
+~~~js
+
+var vertiba = ocument.getElementsByClassName("manaklase");
+
+~~~
+
+Kur vārda `manaklase` lieto elementa  `Class` identifikatoru. HTML birkā to raksta: `class="manaklase"`
+
 
 ## Mainīgie
 ~~~warning
@@ -164,5 +198,101 @@ while(pildi == true){
     console.log("Šī darbība notiek kamēr vien mainīgais PILDI ir vienāds ar TRUE");
 
 }
+
+~~~
+
+## jQuery
+
+jQuery ir Javascript papildus bibliotēka, kuru var izmantot, lai saīsinātu savu kodu, tāpat dažas funkcijas ir lietojamas ar īsāku pierakstu un vieglāk iegūstams rezultāts.
+
+Apskatīsim piemērus.
+
+
+Javascript valodā atlasām elementu.
+
+Javascript bez jQuery:
+
+~~~js
+
+var vertiba = document.getElementById("identifikators");
+
+~~~
+Javascript izmantojot jQuery:
+
+~~~js
+
+var vertiba = $("$identifikators");
+
+~~~
+
+
+Javascript valodā atlasām elementa vērtību lapā jeb ievades lauciņa vērtību.
+
+Javascript bez jQuery:
+~~~js
+
+var vertiba = document.getElementById("identifikators").value;
+
+~~~
+Javascript izmantojot jQuery:
+
+~~~js
+
+var vertiba = $("#identifikators").val();
+
+~~~
+
+
+## AJAX 
+
+AJAX jeb Asynchronous JavaScript and XML ir veids kā mājaslapā iegūt informāciju lapu nepārlādējot tādējādi ietaupot servera resursus. AJAX ļauj nomainīt saturu mājaslapas elementā lapu nepārlādējot. Piemēram, nomaina tabulas saturu klientam nospiežot pogu vai meklētājs, kurā lietotājs ieraksta vārda daļu un serveris atgriež atpakaļ visus ierakstus, kuri atbilst šim vaicājumam.
+
+~~~danger
+
+AJAX nav programmēšanas valoda.
+
+~~~
+
+AJAX pieprasījumus var veidot izmantojot `jQuery` bibliotēku vai bez tās.
+
+Pirmais piemērs bez.
+
+~~~js
+var xhttp = new XMLHttpRequest(); // Tiek definēta metode, kura tiks izmantota
+  xhttp.onreadystatechange = function() { // Kad metode ir gatava jeb ielādēta tiek izpildīda funkcija
+    if (this.readyState == 4 && this.status == 200) { // Ja funckija ir veiksmīga un statusa kods ir 200, kas nozīme OK
+      document.getElementById("demo").innerHTML = this.responseText; // Dokumenta elementā `demo` tiek ielādeta atbilde no faila 
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true); // Izpilda `GET` pieprasījumu uz failu ajax_info.txt
+  xhttp.send();
+~~~
+
+Otrais piemērs, izmantojot `jQuery` bibliotēku.
+
+~~~warning
+
+Pirms izmantot šo piemēru, lapā jābūt ielādētai Jquery bibliotēkai. [jQuery](https://jquery.com/)
+
+~~~
+
+Ielāde lapas galvenē.
+~~~html
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+~~~
+
+Pats pieprasījums
+
+~~~js
+
+$.ajax('https://manaadrese.nav/getdata',   // Pieprasījuma adrese
+    {
+        success: function (data, status, xhr) {//  Atbilde, ja pieprasījums ir veiksmīgs
+            $('p').append(data); // Atrodam lapā paragrāfu un pievienojam iegūtos datus
+    }
+});
 
 ~~~
