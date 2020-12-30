@@ -71,9 +71,9 @@ Pirmstam mainīgie ir definēti un komanda tiek izmantota kopējā klasē.
 | &&   | Un (and)    | 4 && 4 |
 | &#124;&#124; | vai (or)	 | saldējums vai medus |
 
-# Piemēri
+## Piemēri
 
-## Pāra skatļa noteikšana
+### Pāra skatļa noteikšana
 Vienkārša programma, kura nosaka vai skaitlis ir pāra vai nepāra pēc tā ievades.
 ~~~java
 import java.util.Scanner;
