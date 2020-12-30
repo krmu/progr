@@ -16,9 +16,8 @@ nav_order: 1
 >
 > ~ Jason C. McDonald
 
-
-Materiāla autori:
 <dl>
-    <dt>Kristaps Muižnieks [ HTML, Javascript, Java, PHP, Python sadaļas] </dt>
+    <dt>Materiāla autori:</dt>
+    <dd>Kristaps Muižnieks [ HTML, Javascript, Java, PHP, Python sadaļas] </dd>
     <dd>Elīza Spilnere [ Dizains sadļa ]</dd>
 </dl>
