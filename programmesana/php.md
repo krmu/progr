@@ -161,9 +161,9 @@ Lai nogādatu datus no klienta pie server tiek veikts datu nosūtīšanas proces
 
 Attēls www.tutorialrepublic.com
 
-# Piemēri
+## Piemēri
 
-## Datu nogādāšana uz serveri ar POST
+### Datu nogādāšana uz serveri ar POST
 
 ~~~php
 <?php

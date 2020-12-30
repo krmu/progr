@@ -120,8 +120,10 @@ Masīva definēšana:
 
 Vārdnīcas mainīgais = {'atslega':'vertiba','atslega2':'vertiba2'}`
 
-Kur atslēga ir unikāla visā vārdnīcā.
+```warning
 
+Kur atslēga ir unikāla visā vārdnīcā.
+```
 Masīvu un vārdnīcu garumus nosaka ar šādām komandām:
 
 `print(len(Vārdnīcas mainīgais))`
