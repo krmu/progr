@@ -53,9 +53,9 @@ $masivs = array("elements1","elements2","elements2");
 echo $masivs[0];
 
 ~~~
-
+~~~tip
 Lai redzētu katram elementa atslēgu masīvā var izmantot arī komandu `var_dump()` tā izvadīs visu masīvu ar to elementu atslēgām.
-
+~~~
 ~~~php 
 
 var_dump($masivs);
@@ -108,8 +108,9 @@ echo $a['otrais']['elementatslega'];
 
 ## Nosacījumu veidošana
 
-
+~~~tip
 Lai veidotu nosacījumu, izmanto komandu `if`. Nosacījuma beigās lieto `{` un `}`. Nosacījumu liek parastajās iekavās.
+~~~
 Apskatīsim piemēru.
 
 ~~~php
@@ -153,9 +154,14 @@ Atbilde 6.
 
 Lai nogādatu datus no klienta pie server tiek veikts datu nosūtīšanas process. Ir divi dažādi veidi kā veidot pieprasījumu uz serveri. `GET` un `POST`.
 
+~~~warning
+
 `GET` pieprasījums adresē izskatās šādi: `http://www.test.com/index.php?name1=value1&name2=value2`. Ar šo veidu uz serveri nevar nogādāt failus. Mainīgie ir redzami pārlūka adreses logā.
+~~~
+~~~warning
 
 `POST` pieprasījumu pārlūka adresē redzēt nevar. Tiek izmantota `HTTP` galvene, kuru lietotājs neredz. Var tikt pārsūtīti dati uz serveri faila formātā.
+~~~ 
 
 ![example image](/progr/media/posttoserver.png)
 

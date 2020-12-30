@@ -9,7 +9,7 @@ description: Python programmēšanas valodas lietojums un praktiski piemēri
 Python programmēšanas valodā funkcijas definē ar vārdu def.
 
 ~~~python
-def FUNKCIJAS NOSAUKUMS():
+def FUNKCIJAS_NOSAUKUMS():
     print("Funkcijas darbība")
 ~~~
 
@@ -22,7 +22,7 @@ hello()
 
 ## Mainīgo pieraksts
 
-Mainīgajiem nav jāpieraksta to veids. Piemēram, Java programmēšanas valodā jāraksta skatiļu mainīgajiem burti `Int`
+Mainīgajiem nav jāpieraksta to veids. Piemēram, Java programmēšanas valodā jāraksta skatiļu mainīgajiem burti `Int`.
 
 ~~~python
 
@@ -50,7 +50,9 @@ valodas = {'LV': 'Latviešu valoda','ENG': 'Angļu valoda'}
 
 Python programmēšanas valodā nosacījumi teik veidoti šadā veidā:
 
-SVARĪGI! Python kodā atdalīšana notiek līmeņos. Visi vienādie līmeņi tiek izpildīti pēc kārtas. Līmeņus ievieš ar `TAB` taustiņu vai `SPACE` spiežot 4 reizes, bet visā kodā jābūt vienādiem atdalītājiem, atsarpes vai tabulatori.
+~~~warning
+Python kodā atdalīšana notiek līmeņos. Visi vienādie līmeņi tiek izpildīti pēc kārtas. Līmeņus ievieš ar `TAB` taustiņu vai `SPACE` spiežot 4 reizes, bet visā kodā jābūt vienādiem atdalītājiem, atsarpes vai tabulatori.
+~~~
 ~~~
 if nosacījums :
     [TABULATORA ATKĀPE] notikums

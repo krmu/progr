@@ -7,9 +7,11 @@ description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 # Lietojums
 
 ## Mainīgie
+~~~warning
 
 Mainīgajiem nav jāpieraksta to veids, bet mainīgo nosaukam priekšā jāraksta vārdu `var`. 
 
+~~~
 ~~~js
 
 var Skaitls = 1;
@@ -36,8 +38,10 @@ var tekstamasivs = ["Krūmi", "Koks", "Stabs"];
 ~~~~
 ## Nosacījumu veidošana
 
-Javascript programmēšanas valodā nosacījums tiek veikts ar vārdu `if` un nosacījumu darbības atdala ar figūriekavām.
+~~~tip
 
+Javascript programmēšanas valodā nosacījums tiek veikts ar vārdu `if` un nosacījumu darbības atdala ar figūriekavām.
+~~~
 ~~~js
 if( nosacījums ){
 
@@ -113,9 +117,12 @@ function teikums(vards,skola){
 }
 
 teikums("Jānis", "Babītes vidusskolā"); // Mani sauc Jānis. Es mācos: Babītes vidusskolā
-~~~~
+~~~
+~~~tip
 
-Funkcijas parametros `var` tikt padoti arī masīvi.
+Funkcijas parametros var tikt padoti arī masīvi.
+
+~~~
 
 ## Cikli
 
