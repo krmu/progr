@@ -1,14 +1,10 @@
 remote_theme: rundocs/jekyll-rtd-theme
-name: Palīdzība programmēšanā
-license:
-  software: MIT License
-  software_url: http://opensource.org/licenses/MIT
-
-  docs: CC BY 3.0
-  docs_url: http://creativecommons.org/licenses/by/3.0/
-readme_index:
-  with_frontmatter: true
-plugins:
-  - jemoji
-  - jekyll-avatar
-  - jekyll-mentions
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
