@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Java
 description: Java programmēšanas valodas lietojums un praktiski piemēri
 ---

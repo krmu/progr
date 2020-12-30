@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Python
 description: Python programmēšanas valodas lietojums un praktiski piemēri
 ---

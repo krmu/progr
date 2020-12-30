@@ -10,3 +10,7 @@ links:
   header:
     - title: GitHub
       url: https://github.com/kristapsmu/progr
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions

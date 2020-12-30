@@ -1,8 +1,9 @@
 ---
-layout: full
+layout: default
 homepage: true
 disable_anchors: true
 description: Kad nepieciešama palīdzība programmēšanā...
+nav_order: 1
 ---
 
 # Sākumlapa

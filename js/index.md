@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: JavaScript
 description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 ---

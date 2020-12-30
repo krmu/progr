@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: PHP
 description: PHP programmēšanas valodas lietojums un praktiski piemēri
 show_in_menu: true
