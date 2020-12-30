@@ -8,12 +8,9 @@ nav_order: 1
 
 # Sākumlapa
 
-Vietnes adrese:
-
-[Links](https://kristapsmu.github.io/progr/)
 
 
-![example image](/progr/media/landinggifs.png)
+![example image](/progr/media/landinggifs.gif)
 
 > Don't write better error messages, write code that doesn't need them.
 >
