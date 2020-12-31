@@ -2,4 +2,4 @@
 
 Vietnes adrese:
 
-https://kristapsmu.github.io/progr/
+http://prog.kmu.lv/

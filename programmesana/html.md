@@ -69,7 +69,7 @@ Mājaslapas kodu lietotājs var apskatīt. Biežākā kombinācija ir `ctrl` + `
 Aplūkosim no kā sastāv birka.
 
 
-![example image](/progr/media/htmlbirkas.png)
+![example image](/media/htmlbirkas.png)
 
 Attēlā redzama paragrāfa birka, kurai ir pievienots klases atribūts. 
 
@@ -104,7 +104,7 @@ Ne visām birkām ir nepieciešama to noslēgšana. Piemēram attēla ievietoša
 ~~~
 Iznākums:
 
-![html1](/progr/media/html_uzd2.png)
+![html1](/media/html_uzd2.png)
 
 ### Attēla ievietošana lapā
 ~~~html
@@ -123,7 +123,7 @@ Iznākums:
 ~~~
 Iznākums:
 
-![html1](/progr/media/html_uzd1.png)
+![html1](/media/html_uzd1.png)
 
 Šajā piemērā tiek ievietots pirmā līmeņa virsraksts `h1` un attēls. 
 

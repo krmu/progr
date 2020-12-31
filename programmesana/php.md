@@ -9,7 +9,7 @@ show_in_menu: true
 PHP ir servera puses programmēšanas valoda.
 Lai saprastu, kas ir servera puses programmēšanas valoda 
 
-![example image](/progr/media/serveris.png)
+![example image](/media/serveris.png)
 
 Attēls: www.techwebspace.com
 
@@ -162,7 +162,7 @@ Lai nogādatu datus no klienta pie server tiek veikts datu nosūtīšanas proces
 `POST` pieprasījumu pārlūka adresē redzēt nevar. Tiek izmantota `HTTP` galvene, kuru lietotājs neredz. Var tikt pārsūtīti dati uz serveri faila formātā.
 ~~~ 
 
-![example image](/progr/media/posttoserver.png)
+![example image](/media/posttoserver.png)
 
 Attēls www.tutorialrepublic.com
 

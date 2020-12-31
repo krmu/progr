@@ -1,16 +1,13 @@
 ---
 layout: default
-homepage: true
-disable_anchors: true
 description: Kad nepieciešama palīdzība programmēšanā...
-nav_order: 1
 ---
 
 # Sākumlapa
 
 
 
-![example image](/progr/media/landinggifs.gif)
+![example image](/media/landinggifs.gif)
 
 > Don't write better error messages, write code that doesn't need them.
 >
