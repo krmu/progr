@@ -12,6 +12,7 @@ Lai sāktu mājaslapā rakstīt Javascript kodu jālieto `<script type="applicat
 Var izmantot arī vienkāršo variantu `<script></script>`
 
 Piemērs:
+
 ~~~html
 
 <script type="application/javascript">
@@ -23,7 +24,6 @@ Piemērs:
 Lai iekļautu savā lapā ārējo Javascript kodu:
 
 `<script src="mansskripts.js"></script>`
-
 
 
 
@@ -89,7 +89,7 @@ var vards = "Mans vārds ir Pēteris";
 
 var atzimes = [1,2,3,4,5];
 
-var tekstamasivs = ["Krūmi", "Koks", "Stabs"];
+var teksta_masivs = ["Krūmi", "Koks", "Stabs"];
 
 ~~~~
 ## Nosacījumu veidošana
@@ -181,11 +181,12 @@ Funkcijas parametros var tikt padoti arī masīvi.
 
 ## Cikli
 
-Javascript programmēšanas valodā ir divu veidu cikli for un while.
+Javascript programmēšanas valodā ir divu veidu cikli `for` un `while`.
 
-For ciklu lieto gadījumos, kad ir vajadzīgs cikla skaitītājs un ciklam ir noteikts galapunkts.
+`For` ciklu lieto gadījumos, kad ir vajadzīgs cikla skaitītājs un ciklam ir noteikts galapunkts un/vai sākumpunkts.
 
 Pielietojums:
+
 ~~~js
 for( SĀKUMA VĒRTĪBA; PILDĪT KAMĒR; SOLIS){
 
@@ -193,7 +194,16 @@ for( SĀKUMA VĒRTĪBA; PILDĪT KAMĒR; SOLIS){
 
 }
 ~~~~
-While ciklu lieto gadījumos, kad nav vajadzīgs cikla solis un cikls tiek pildīts līdz konkrētai darbībai.
+Piemērs:
+~~~js
+
+for( var sk = 0; sk< 10; sk++ ){
+
+    console.log(sk); // Konsolē tiks izvadīts skaitlis intervālā no 0 līdz 9
+
+}
+~~~
+`While` ciklu lieto gadījumos, kad nav vajadzīgs cikla solis un cikls tiek pildīts līdz konkrētai darbībai.
 
 Pielietojums:
 ~~~js
@@ -206,11 +216,6 @@ Pielietojums:
 Piemērs:
 
 ~~~js 
-for( var sk = 0; sk< 10; sk++ ){
-
-    console.log(sk); // Konsolē tiks izvadīts skaitlis intervālā no 0 līdz 9
-
-}
 
 var pildi = true;
 
@@ -316,4 +321,77 @@ $.ajax('https://manaadrese.nav/getdata',   // Pieprasījuma adrese
     }
 });
 
+~~~
+
+## Praktiski piemēri
+
+### Paziņojuma lodziņš
+
+Pārlūkos ir iespējams izveidot paziņojuma lodziņu vēl angļu valodā to sauc par `alert` lodziņu.
+
+~~~js
+
+alert("Paziņojuma saturs");
+
+~~~
+
+Iznākums:
+
+![html1](/media/js_alert.jpg)
+
+### Ievades lauciņa nolasišana
+
+Ar Javascript progr. valodu ir iespējams arī nolasīt ievades lauciņu vērtības. Mēs definēsim teksta ievades lauciņu un paziņojumā izvadīsim tā saturu.
+
+~~~html
+
+<label>Ievade: </label><input type="text" id="ievades_lauks">
+
+<button onclick="nolasi();"></button>
+
+~~~
+
+Tika definēti 3 elementi lapā. `label` - elements, kurš kalpo kā skaidrojums ievades lauciņam.
+`<input type="text" id="ievades_lauks">` - tekstuāls ievades lauks, kura `type` atribūtā ir pateikts, ka ievades lauks ir tekstuāls.
+`id="ievades_lauks"` unikāls identifikātors visā lapā.
+
+`<button onclick="nolasi();">Nolasi mani!</button>` - poga, kura nospiežot palaiž funkciju `nolasi()`
+
+Izskats lapā:
+
+![html1](/media/js_alert2.jpg)
+
+Tad tiek definēts Javascript kods:
+
+
+~~~js
+function nolasi(){
+    var ievades_lauks_atlasi = document.getElementById("ievades_lauks"); // Atlasām elementu no mūsu HTML lapas.
+    var vertiba = ievades_lauks_atlasi.value; // Paņemam no mūsu elementa tikai un vienīgi tā vērtību
+    alert("Ievades lauka vērtība ir: " + vertiba); // Paziņojam lapā ievades lauka vērtību.
+}
+~~~
+![html1](/media/js_alert3.jpg)
+
+
+### HTML elementa vērtības nomainīšana
+
+Ar Javascript ir iespējams arī nomainīt elementa saturu lapu nepārlādējot.
+
+Iedomāsimies, ka mums ir pirmā līmeņa virsraksts, kurā ir vārds "Diena", bet mēs vēlamies ar pogas palīdzību nomainīt tā saturu uz "Nakts".
+
+HTML Kods:
+
+~~~html
+
+<h1 id="mainit_so">Diena</h1>
+
+<button onclick="maini_mani();">Nomainīt saturu</button>
+
+~~~
+
+~~~js
+function maini_mani(){
+    var ievades_lauks_atlasi = document.getElementById("mainit_so"); // Atlasām elementu no mūsu HTML lapas.
+    ievades_lauks_atlasi.innerHTML =  "Nakts"; // Iestatām tā HTML saturu uz vārdu "Nakts"
 ~~~
