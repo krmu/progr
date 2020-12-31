@@ -186,7 +186,7 @@ Var secināt, ka tabula nav pārskatāma, jo tabulai nav robežu.
 Lai uzstādītu tabulai robežas, tad izmantot birkai `<table>` atribūtu `border=1`
 
 ~~~html
-<table>
+<table border=1>
 	<tr>
     	<td>1. rinda - 1. kolona </td>
         <td>1. rinda - 2. kolona </td>
