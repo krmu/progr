@@ -237,3 +237,61 @@ print("Šīs dienas joks:",t["value"])
 ~~~
 
 Atgriežot saturu, pie joka mēc varam tikt izmantojot komandu `t["value"]` jeb vārdnīcas vienību `value`.
+
+### Dators iedomājās skaitli...
+
+Dots piemērs spēlei, kurā dators ir iedomājies skaitli un lietotājam tas jāuzmin. Mēģinājumu skaits ir 3 mazāks nekā spēlē uzstādītais maksimālais skaitlis.
+Spēles norise.
+
+1. Tiek importēta bibliotēka `random`, lai varētu dators varētu "iedomāties" skaitli.
+2. Divi mainīgie `max_skaitlis` un `min_skaitlis` - programmētājs uzstāda spēles robežas.
+3. `skaitlis` - liekam datoram iedomāskaitli
+4. `notiek` - spēles notikšanas "karogs" jeb mainīgais, kurā notiek spēles notikšanas stāvoklis. `True` - spēle notiek un `False` - spēle beigusies.
+5. `max_meginajumi` - skaitlis, kurš parāda cik būs mēģinājumu
+6. `meginajumi` - skaitītājs lietotāja mēģinājumiem.
+7. `while notiek == True:` - spēles galvenais cikls, kurš atkārto skaitļa minēšanu.
+8. `meginajumi = meginajumi + 1` - spēlētājam pieskaita vienu gājienu.
+9. `ievade = int(input())` - Liekam spēlētājam ievadīt skaitli
+10. Ja skaitlis ir vienāds ar datora iedomāto, tad paziņo, ka ir uzvara un spēle beidzas.
+11. Ja skaitlis nav vienāds ar datora iedomāto, tad notiek pārbaude un tiek paziņots lielāks vai mazāks.
+12. `if meginajumi == max_meginajumi:` Ja mēģinājumu skaits sasniegts - spēle beidzas un tiek izdrukāts iedomātais skaitlis.
+13. Ja spēles stāvoklis ir beidzies(`if notiek == False:`), tad lietotājam jautā par spēles atsākšanu. 
+14. Ja atbilde ir burts `y`, tad spēle tiek restartēta un mainīgie attiestatīti.
+15. Ja atbilde nav burts `y` jeb visi citi gadījumi, tad spēle beidzas.
+
+~~~python
+import random
+max_skaitlis = 5
+min_skaitlis = 1
+skaitlis = random.randint(min_skaitlis,max_skaitlis)
+notiek = True
+max_meginajumi = int(max_skaitlis / 3)
+meginajumi = 0
+print("Labdien! Esiet sveicināti manā minēšanas spēlē. Dators iedomāsies skaitli no ",min_skaitlis," līdz ",max_skaitlis," Tev ir ",max_meginajumi, " mēģinājumi" )
+while notiek == True:
+  print("Ievadi skaitli:")
+  meginajumi = meginajumi + 1
+  ievade = int(input())
+  if skaitlis == ievade:
+    print("Uzvara")
+    notiek = False
+  else:
+    if ievade > skaitlis:
+      print("Skaitlis ir mazāks")
+    else:
+      print("Skaitlis ir lielāks")
+  if meginajumi == max_meginajumi:
+    print("Spēle beigusies. Mēģinājumu skaits sasniegts.")
+    print("Minamais skaitlis ir:",skaitlis)
+    notiek = False
+  if notiek == False:
+    print("Vai Tu vēlies sākt no jauna? Ievadi y, ja vēlies turpināt")
+    atbilde = input()
+    if atbilde == "y":
+      notiek = True
+      meginajumi = 0
+      skaitlis = random.randint(min_skaitlis,max_skaitlis)
+
+~~~
+
+Speles uzlabošanas variantā dažas vietas var aizvietot ar fukcijām.
