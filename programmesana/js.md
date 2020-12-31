@@ -394,4 +394,5 @@ HTML Kods:
 function maini_mani(){
     var ievades_lauks_atlasi = document.getElementById("mainit_so"); // Atlasām elementu no mūsu HTML lapas.
     ievades_lauks_atlasi.innerHTML =  "Nakts"; // Iestatām tā HTML saturu uz vārdu "Nakts"
+}
 ~~~

@@ -7,7 +7,7 @@ description: Kad nepieciešama palīdzība programmēšanā...
 
 
 
-![example image](/media/landinggifs.gif)
+![example image](/media/landinggifs.gif){: .nerami}
 
 > Don't write better error messages, write code that doesn't need them.
 >
