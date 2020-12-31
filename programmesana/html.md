@@ -1,9 +1,9 @@
 ---
-title: HTML & CSS
+title: HTML
 description: ~
 ---
 
-# Lapa par HTML un CSS
+# Lapa par HTML
 
 ## Kas ir HTML?
 
@@ -83,6 +83,12 @@ Birka tiek atvērta ar simboliem `< >` -> `<p>`. Un noslēgta ar slīpsvītru `<
 Ne visām birkām ir nepieciešama to noslēgšana. Piemēram attēla ievietošanas (`<img>`) birkai nav nepieciešama noslēgšana.
 
 ~~~
+## Noslēgumā
+
+HTML mājaslapas var veidot arī bez interneta pieslēguma, jāizveido tukšs `.htm` dokuments, kurā iekšā ir HTML kods, tad jāatver ar kādu no pārlūkiem.
+
+Daļa jauno pārlūku paši pabeidz birkas, ja to ir aizmirsis izdarīt izstrādātājs, bet uz to nevajadzētu paļauties.
+
 
 ## Piemēri ar gataviem kodiem
 
