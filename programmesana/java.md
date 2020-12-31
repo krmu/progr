@@ -8,7 +8,7 @@ description: Java programmēšanas valodas lietojums un praktiski piemēri
 
 ```warning
 
-Java programmēšanas valodā sāk ar klases definēšanu `1 Main`. Tad definē metodi `main` `(public static void main(String[] args)`
+Java programmēšanas valodā sāk ar klases definēšanu `Main`. Tad definē metodi `main` `(public static void main(String[] args)`
 
 ```
 
@@ -76,7 +76,7 @@ Pirmstam mainīgie ir definēti un komanda tiek izmantota kopējā klasē.
 
 ## Piemēri
 
-### Pāra skatļa noteikšana
+### Pāra skaitļa noteikšana
 Vienkārša programma, kura nosaka vai skaitlis ir pāra vai nepāra pēc tā ievades.
 ~~~java
 import java.util.Scanner;
