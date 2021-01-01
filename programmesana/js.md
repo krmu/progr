@@ -175,7 +175,7 @@ teikums("Jānis", "Babītes vidusskolā"); // Mani sauc Jānis. Es mācos: Babī
 ~~~
 ~~~note
 
-Funkcijas parametros var tikt padoti arī masīvi.
+Funkcijas mainīgajos var tikt padoti arī masīvi.
 
 ~~~
 
@@ -318,8 +318,8 @@ $.ajax('https://manaadrese.nav/getdata',   // Pieprasījuma adrese
     {
         success: function (data, status, xhr) {//  Atbilde, ja pieprasījums ir veiksmīgs
             $('p').append(data); // Atrodam lapā paragrāfu un pievienojam iegūtos datus
-    }
-});
+         }
+    });
 
 ~~~
 
