@@ -3,21 +3,7 @@ title: Python
 description: Python programmēšanas valodas lietojums un praktiski piemēri
 ---
 # Lietojums
-## Funkciju definēšana
 
-Python programmēšanas valodā funkcijas definē ar vārdu def.
-
-~~~python
-def FUNKCIJAS_NOSAUKUMS():
-    print("Funkcijas darbība")
-~~~
-
-Piemērs
-~~~python
-def hello():
-    print("Sveika pasaule")
-hello()
-~~~
 
 ## Mainīgo pieraksts
 
@@ -29,7 +15,7 @@ Skaitls = 1
 
 Tekstuāls mainīgais = "Šis ir teksta mainīgais"
 
-Masīvs = [1,2,3,4,5]
+Saraksts = [1,2,3,4,5]
 
 ~~~
 
@@ -43,6 +29,22 @@ vards = "Mans vārds ir Pēteris"
 atzimes = [1,2,3,4,5]
 
 valodas = {'LV': 'Latviešu valoda','ENG': 'Angļu valoda'}
+~~~
+
+## Funkciju definēšana
+
+Python programmēšanas valodā funkcijas definē ar vārdu def.
+
+~~~python
+def FUNKCIJAS_NOSAUKUMS():
+    print("Funkcijas darbība")
+~~~
+
+Piemērs.
+~~~python
+def hello():
+    print("Sveika pasaule")
+hello()
 ~~~
 
 ## Nosacījumu veidošana
@@ -78,7 +80,7 @@ if x < y:
 if y < x: 
     print('y ir mazāks nekā x')
 if y in ['foo', 'bar', 'baz']: 
-    print('y atrodas masīvā')
+    print('y atrodas sarakstā')
 ~~~
 
 ## Failu - lasīšana, rakstīšana
@@ -90,7 +92,7 @@ with open('data.txt', 'r') as f:
     dati= f.read()
 ~~~
 
-Kur data.txt ir faila nosaukums (jāatrodas tajā pašā mapē, kur atrodas `.py` fails), `r` parametrs norāda, ka fails tiek lasīts - read. Savukārt, mainīgais dati saturēs masīvu ar rindām no faila. 
+Kur data.txt ir faila nosaukums (jāatrodas tajā pašā mapē, kur atrodas `.py` fails), `r` parametrs norāda, ka fails tiek lasīts - read. Savukārt, mainīgais `dati` saturēs vārdnīcu ar rindām no faila. 
 
 Ierakstīt failā:
 
@@ -109,13 +111,13 @@ with open('data.txt', 'a') as f:
     dati= 'Šo tekstu ierakstīt failā'
     f.write(dati)
 ~~~
-## Masīvi / vārdnīcas
+## Saraksti / vārdnīcas
 
 Šajā gadījumā tiek ierakstīts failā teksts - pievienojot faila beigās. 
 
-Python programmēšanas valodā ir iespēja definēt masīvus un vārdnīcas.
+Python programmēšanas valodā ir iespēja definēt sarakstus un vārdnīcas.
 
-Masīva definēšana:
+Saraksta definēšana:
 
 `Mainīgais = ['pirmā teksta vērtība', 'otrā teksta vērtība',skaitlis1, utt. ]
 
@@ -125,7 +127,7 @@ Vārdnīcas mainīgais = {'atslega':'vertiba','atslega2':'vertiba2'}`
 
 Kur atslēga ir unikāla visā vārdnīcā.
 ```
-Masīvu un vārdnīcu garumus nosaka ar šādām komandām:
+Sarakstu un vārdnīcu garumus nosaka ar šādām komandām:
 
 `print(len(Vārdnīcas mainīgais))`
 
@@ -137,14 +139,15 @@ atzimes = [10,9,5,4,5,3]
 
 prieksmetusaisinajumi = {'lv':'Latviešu valoda', 'inf':'Informātika'}
 ~~~
-Lai iegūtu konrētu vērtību no masīva:
+Lai iegūtu konrētu vērtību no saraksta:
 
-Python masīva vērtības sāk skaitīt no 0
+Python saraksta vērtības sāk skaitīt no 0
 ~~~python
 atzimes = [10,9,5,4,5,3]
 print(atzimes[1])
 ~~~
 Konsolē tiek izdrukāts: 9, jo sākot skaitīt no 0 iegūstam, ka 9 ir pirmais elements.
+
 ~~~python
 prieksmetusaisinajumi = {'lv':'Latviešu valoda', 'inf':'Informātika'}
 print(prieksmetusaisinajumi['lv'])
