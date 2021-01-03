@@ -6,7 +6,7 @@
 {%- if workdir_level == 2 %}
     {% comment %} display the root sub-directory as "p.caption" {% endcomment %}
     <a class="caption d-block text-uppercase no-wrap px-2 py-0" href="{{ dir.url | relative_url }}">
-        {{ dir.title | default: dir.url }}
+       <i class="fa fa-bars" aria-hidden="true"></i> {{ dir.title | default: dir.url }}
     </a>
 {%- else %}
     <a class="d-flex flex-items-baseline" href="{{ dir.url | relative_url }}">
@@ -24,7 +24,8 @@
 
         <li class="toc level-{{ level }} {{ current }}" data-sort="{{ item.sort }}" data-level="{{ level }}">
             <a class="d-flex flex-items-baseline {{ current }}" href="{{ item.url | relative_url }}">
-                {%- if item.sort -%}
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+				{%- if item.sort -%}
                     {{ item.sort }}. {{ item.title | default: item.name }}
                 {%- else -%}
                     {{ item.title | default: item.name }}
