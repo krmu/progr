@@ -2,7 +2,6 @@ title: ProgHelp
 lang: lv
 description: Vietne programmēšanas palīdzībai
 
-remote_theme: rundocs/jekyll-rtd-theme
 readme_index:
   with_frontmatter: true
   
