@@ -228,7 +228,7 @@ while(pildi == true){
 ~~~
 ## JSON
 
-JSON jeb JavaScript Object Notation ir datu turēšanas veids jeb veids kā var tikt strukturēti dati masīvā. JSON formāts ļauj drošā veidā pārsūtīt datus no klienta uz serveri konkrētā formātā.
+JSON jeb JavaScript Object Notation ir datu turēšanas veids. Veids kā var tikt strukturēti dati objektā. JSON formāts ļauj drošā struktūrā pārsūtīt datus no klienta uz serveri konkrētā formātā.
 
 Piemērs:
 
