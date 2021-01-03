@@ -1,6 +1,8 @@
 title: ProgHelp
 lang: lv
 description: Vietne programmēšanas palīdzībai
+theme-color: red
+ 
 
 readme_index:
   with_frontmatter: true

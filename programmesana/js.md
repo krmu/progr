@@ -3,7 +3,7 @@ layout: default
 title: JavaScript
 description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 ---
-
+![pythonlogo](/media/jslogo.png){: .logoval}
 # Lietojums
 ## Sākums
 

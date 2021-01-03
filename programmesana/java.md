@@ -2,7 +2,7 @@
 title: Java
 description: Java programmēšanas valodas lietojums un praktiski piemēri
 ---
-
+![example image](/media/javalogo.png){: .logoval}
 # Lietojums
 ## Sākums
 

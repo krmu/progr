@@ -2,7 +2,7 @@
 title: HTML un CSS
 description: ~
 ---
-
+![pythonlogo](/media/htmllogo.png){: .logoval}
 # Lapa par HTML un CSS
 
 ## Kas ir HTML?

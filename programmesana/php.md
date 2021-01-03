@@ -1,9 +1,9 @@
 ---
 title: PHP
 description: PHP programmēšanas valodas lietojums un praktiski piemēri
-show_in_menu: true
----
 
+---
+![example image](/media/phplogo.svg){: .logoval}
 # Ievads
 
 PHP ir servera puses programmēšanas valoda.
