@@ -64,6 +64,12 @@ Piemēram, birka `<title> </title>`, kas uzstāda mājaslapas nosaukumu pārlūk
 Mājaslapas kodu lietotājs var apskatīt. Biežākā kombinācija ir `ctrl` + `U`
 
 ~~~~
+## Vienkāršas darbības
+
+~~~html
+
+<!-- Komentārs HTMl lapā -->
+~~~
 
 ## Birkas
 

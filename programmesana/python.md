@@ -5,6 +5,17 @@ description: Python programmēšanas valodas lietojums un praktiski piemēri
 
 ![pythonlogo](/media/pythonlogo.svg){: .logoval}
 # Lietojums
+
+## Vienkāršas darbības
+
+~~~python
+
+print("Teksta izdruka lapā")
+
+# Komentārs
+
+~~~
+
 ## Mainīgo pieraksts
 
 Mainīgajiem nav jāpieraksta to veids. Piemēram, Java programmēšanas valodā jāraksta skatiļu mainīgajiem burti `Int`.

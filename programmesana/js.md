@@ -25,7 +25,18 @@ Lai iekļautu savā lapā ārējo Javascript kodu:
 
 `<script src="mansskripts.js"></script>`
 
+## Vienkāršas darbības
 
+~~~js
+
+alert("Paziņouma lodziņš");
+
+// Vienas rindas komentārs
+/*
+ Vairāku rindu komentāŗs
+ 
+*/
+~~~
 
 ## Elementu atlase lapā
 
@@ -364,6 +375,14 @@ $.ajax('https://manaadrese.nav/getdata',   // Pieprasījuma adrese
     });
 
 ~~~
+
+## Papildus resursi
+
+- [What is JavaScript?](https://www.youtube.com/watch?v=nItSSTwBvSU)
+- [Javascript mainīgie](https://www.w3schools.com/js/js_variables.asp)
+- [JS Object-oriented programming — the basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+
+
 
 ## Praktiski piemēri
 
