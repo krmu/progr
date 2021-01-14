@@ -29,6 +29,7 @@ $skaitlis = 0;
 $teksts = "Teksts";
 $status = True;
 $peldpunkts = 0.3;
+$masivs = array();
 
 ~~~
 
