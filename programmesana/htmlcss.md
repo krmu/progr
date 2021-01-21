@@ -49,6 +49,10 @@ Apskatīsim mājaslapas daļas.
 </body>
 </html>
 ~~~
+Izskats: 
+
+![pythonlogo](/media/htmlsadalas.png)
+
 Mājaslapa sākas ar birkām `<!DOCTYPE html>` un `<html>`, kas informē pārlūku, ka sākas jauna mājaslapas datne.
 
 Mājaslapai ir divas daļas galvene un vidus, par to liecina birku pāri `<head> </head>` `<body> </body>`.
@@ -112,8 +116,11 @@ Ar visiem pieejamajiem stila definējumiem var iepazīties [šeit](https://www.w
 Piemērs. Pievienojam elementam fona krāsu `background-color` un teksta krāsu `color`, un izmēru `font-size`. 
 
 ~~~html
-<p style="backround-color:red;color:white;font-size:20px"> Paragrāfs ar sarkanu fonu un baltu tekstu</p>
+<p style="background-color:red;color:white;font-size:20px"> Paragrāfs ar sarkanu fonu un baltu tekstu</p>
 ~~~
+Izskats:
+![example image](/media/paragrafssarkans.png)
+
 ~~~warning
 Šajā piemērā stila noteikumi darbosies tikai uz šo elementu.
 ~~~
@@ -176,11 +183,14 @@ Lai atlasītu šo elementu pēc identifikatora stila failā jāizmanto tā nosau
 
 ~~~css
 #zalu{
-    backround-color:red;
+    background:green;
     color:white;
-    font-size:20px
+    font-size:20px;
 }
 ~~~
+Izskats:
+
+![example image](/media/idzalu.png)
 
 Tieši tāpat var atlasīt visus elementus pēc tā klases. Tad izmanto atribūtu `class`. Restītes vietā izmanto punktu.
 
@@ -190,11 +200,13 @@ Tieši tāpat var atlasīt visus elementus pēc tā klases. Tad izmanto atribūt
 
 ~~~css
 .zalu{
-    backround-color:red;
+    background:red;
     color:white;
     font-size:20px
 }
 ~~~
+Izskats:
+![example image](/media/classzalu.png)
 
 Elements var saturēt vairākas klases.
 
@@ -222,7 +234,7 @@ Elements var saturēt vairākas klases.
 </body>
 </html>
 ~~~
-Iznākums:
+Izskats:
 
 ![html1](/media/html_uzd2.png)
 
@@ -241,8 +253,7 @@ Iznākums:
 </body>
 </html>
 ~~~
-Iznākums:
-
+Izskats:
 ![html1](/media/html_uzd1.png)
 
 Šajā piemērā tiek ievietots pirmā līmeņa virsraksts `h1` un attēls. 
@@ -298,7 +309,7 @@ Apskatīsim piemēru.
     </tr>
 </table>
 ~~~
-
+Izskats:
 ![html1](/media/html_uzd4.jpg)
 
 Var secināt, ka tabula nav pārskatāma, jo tabulai nav robežu. 
@@ -332,6 +343,9 @@ Lai uzstādītu tabulai robežas, tad izmantot birkai `<table>` atribūtu `borde
     </tr>
 </table>
 ~~~
+Izskats:
+
+![html1](/media/htmltablerobezas.png)
 
 Tabulai ir iespējams arī uzstādi šūnu sapludināšanu vertikālu un horizontāli. 
 

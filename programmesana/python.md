@@ -94,6 +94,21 @@ if y in ['foo', 'bar', 'baz']:
     print('y atrodas sarakstā')
 ~~~
 
+## Operatori
+Aritmētiskie operatori
+
+| Operators | Apraksts    | Piemērs  |
+|:-----|:------------|:------------|
+| +   | Saskaitīt     |  4 + 4        |
+| -   | Atņemšana | 4  - 3     |
+| *    | Reizināšana     | 4 * 3|
+| /   | Dalīšana      | 4 / 3 |
+| %    | Modulis       | 4 < 5 |
+| **   | Kāpināšana | 4**3 |
+| //   | Dalīšana iegūstot veselu skaitli    | 13 // 4 |
+
+Vairāk par Python operātoriem var lasīt [šeit](https://www.w3schools.com/python/python_operators.asp).
+
 ## Ciklu veidošana
 
 
@@ -258,12 +273,43 @@ Piemēram instalēsim Easy UI bibliotēku
 pip install easyui
 
 ~~~
+## API - programmsaskarne
+
+API jeb "application programming interface" un latviešu valodā programmsaskarne ir veids kā izmantot ārējos datu avotus, lai uzlabotu savu programmu.
+Tādā veidā iespējams iegūt datus no ārejiem resursiem neizmantojot tiešo datubāzes pieslēgumu.
+
+Apskatīsim attēlu.
+
+![html1](/media/api.jpg)
+Attēls: lvivity.com
+
+Attēlā ir vizuāli parādīts, ka notiek pieprasījums no klienta puses (pārlūka, datora, telefona utt.) uz serveri. Serveris apstrādā pieprasījumu un atgriež atpakaļ datus.
+
+Tas kādā formātā tiek atgriezti dati, to nosaka pats programmētājs. Biežākie formāti ir `JSON` un `XML`.
+
+Lai definētu un izmantotu API izsaukumus Python progr. valodā, var izmantot ārējo bibliotēku `requests`.
+
+Paraugs vienkāršam izsaukumam.
+
+~~~python
+
+import requests # Ievietojam ārējo bibliotēku - requests
+
+r = requests.get(url=SAITE UZ API GALAPUNKTU) # Veidojam pieprasījumu, url ir mainīgais, kurā ievietojam saiti uz ārējo resursu.
+t = r.json() # Pārveidojam saņemtos datus uz JSON objektu.
+
+print(t) # Izdrukājam saņemto objektu.
+
+~~~
+
+
 ## Papildus resursi
 
 - [What is Python? Why Python is So Popular?](https://www.youtube.com/watch?v=Y8Tko2YC5hA&ab_channel=ProgrammingwithMosh)
 - [Python mainīgie](https://realpython.com/python-variables/)
 - [Python loops](https://www.learnpython.org/en/Loops)
 - [Python projects](https://data-flair.training/blogs/python-project-ideas/)
+- [Publiskie API](https://github.com/public-apis/public-apis)
 
 
 ## Piemēri
