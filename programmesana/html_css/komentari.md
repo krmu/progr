@@ -12,3 +12,5 @@ nav_order: 3
 
 <!-- Komentārs HTMl lapā -->
 ~~~
+
+Komentārs šajā gadījumā ir vienas rindas. Birka sākas ar `<!--` un beidzas ar `-->`

@@ -8,9 +8,8 @@ nav_order: 3
 ---
 # Nosacījumu veidošana
 
-~~~note
 Lai veidotu nosacījumu, izmanto komandu `if`. Nosacījuma beigās lieto `{` un `}`. Nosacījumu liek parastajās iekavās.
-~~~
+{: .alert .alert-simple}
 Apskatīsim piemēru.
 
 ~~~php

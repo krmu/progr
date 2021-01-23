@@ -26,9 +26,9 @@ $masivs = array("elements1","elements2","elements2");
 echo $masivs[0];
 
 ~~~
-~~~tip
+
 Lai redzētu katram elementa atslēgu masīvā var izmantot arī komandu `var_dump()` tā izvadīs visu masīvu ar to elementu atslēgām.
-~~~
+{: .alert .alert-simple}
 ~~~php 
 
 var_dump($masivs);

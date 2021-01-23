@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Wordpress
+title: Satura vadības sistēmas
 ikona: cms.png
 ---
-# Wordpress
+# Satura vadības sistēmas
 
 Drīzumā.

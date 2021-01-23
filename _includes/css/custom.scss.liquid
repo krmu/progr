@@ -13,8 +13,7 @@ h3{
   margin:20px auto;
   padding:10px;
   position:relative;
-  border-radius:5px;
-  box-shadow:0 0 15px 5px #ccc;
+  box-shadow:0 0 6px 2px #ccc;
 }
 
 @mixin alert($name,$bgColor){
@@ -33,7 +32,11 @@ img.navikon {
     width: 16px;
     vertical-align: middle;
 }
-@include alert(simple-alert,#ebebeb);
+a:hover{
+  text-decoration: none;
+
+}
+@include alert(alert-simple,#f5f6fa);
 @include alert(alert-success,#a8f0c6);
 @include alert(alert-danger,#f7a7a3);
 @include alert(alert-warning,#fbe9d9);
