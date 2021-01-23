@@ -6,5 +6,6 @@ layout: default
 parent: Programmēšana
 has_children: true
 nav_order: 2
+ikona: jslogo.png
 ---
 ![pythonlogo](/media/jslogo.png){: .logoval}

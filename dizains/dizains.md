@@ -2,8 +2,8 @@
 layout: default
 title: Dizains
 nav_order: 2
-has_children: true
 permalink: /dizains/
+ikona: dizains.png
 ---
 # Dizains
 
