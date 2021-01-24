@@ -1,6 +1,6 @@
 ---
 title: HTML un CSS
-description: ~
+description: HTML un CSS pieraksts un lietojums
 layout: default
 parent: Programmēšana
 has_children: true

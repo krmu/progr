@@ -23,10 +23,13 @@ ikona: home.png
         {%- if p.nesakuma == false or  p.nesakuma == nil -%}
             <div class="d-flex">
                  <div class="card" style="width: 10rem; margin:2px;padding:2px">
-                    <img class="card-img-top nerami  img-fluid" src="/media/{{ p.ikona }}"  alt="{{ p.title }}">
+                    <img class="card-img-top nerami mx-auto d-block  img-fluid" src="/media/{{ p.ikona }}"  alt="{{ p.title }}">
                     <div class="card-body d-flex flex-column text-justify text-center">
                         <h3 class="card-title mt-auto font-weight-bold ">{{ p.title }}</h3>
-                        <a href="{{ p.url | absolute_url }}" class="card-link">Atvērt</a>   
+                    </div>
+                    <div class="urli">
+                      {{ p.description }}
+                      <br><a href="{{ p.url | absolute_url }}" class="card-link">Atvērt</a>
                     </div>
                 </div> 
             </div> 

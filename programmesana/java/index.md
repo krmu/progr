@@ -1,6 +1,6 @@
 ---
 title: Java
-description: ~
+description: Java programmēšanas valodas lietojums un praktiski piemēri
 layout: default
 parent: Programmēšana
 has_children: true

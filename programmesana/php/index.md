@@ -1,6 +1,6 @@
 ---
 title: PHP
-description: ~
+description: PHP servera programmēšanas valodas lietojums un praktiski piemēri
 layout: default
 parent: Programmēšana
 has_children: true

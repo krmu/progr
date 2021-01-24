@@ -36,6 +36,21 @@ a:hover{
   text-decoration: none;
 
 }
+.urli{
+  background: #f5f6fa;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  text-align: center;
+  vertical-align: middle;
+  padding: 16px;
+}
+.card:hover > .urli{
+  visibility: visible;
+}
 @include alert(alert-simple,#f5f6fa);
 @include alert(alert-success,#a8f0c6);
 @include alert(alert-danger,#f7a7a3);

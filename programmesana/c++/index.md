@@ -1,6 +1,6 @@
 ---
 title: C++
-description: ~
+description: C++ programmēšanas valodas lietojums un praktiski piemēri
 layout: default
 parent: Programmēšana
 has_children: true
