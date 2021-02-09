@@ -8,3 +8,4 @@ nav_order: 3
 ikona: phplogo.svg
 ---
 ![pythonlogo](/media/phplogo.svg){: .logoval}
+Attēls: php.net{: .avots}

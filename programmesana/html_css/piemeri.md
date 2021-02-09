@@ -44,6 +44,7 @@ Izskats:
 </body>
 </html>
 ~~~
+Avots: azureedge.net
 Izskats:
 ![html1](/media/html_uzd1.png)
 

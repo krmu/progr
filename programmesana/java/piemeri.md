@@ -14,19 +14,19 @@ Vienkārša programma, kura nosaka vai skaitlis ir pāra vai nepāra pēc tā ie
 ~~~java
 import java.util.Scanner;
 
-public class EvenOdd {
+public class NeparaPara {
 
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
 
-        System.out.print("Ievad skaitli: ");
-        int num = reader.nextInt();
+        System.out.print("Ievadi skaitli: ");
+        int skaitlis_no_ievades = reader.nextInt();
 
-        if(num % 2 == 0)
-            System.out.println(num + " ir pāra skaitlis");
+        if(skaitlis_no_ievades % 2 == 0)
+            System.out.println(skaitlis_no_ievades + " ir pāra skaitlis");
         else
-            System.out.println(num + " nav pāra skaitlis");
+            System.out.println(skaitlis_no_ievades + " nav pāra skaitlis");
     }
 }
 ~~~

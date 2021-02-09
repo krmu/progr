@@ -9,3 +9,4 @@ nav_order: 2
 ikona: jslogo.png
 ---
 ![pythonlogo](/media/jslogo.png){: .logoval}
+Attēls: cleanpng.com

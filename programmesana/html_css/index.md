@@ -8,3 +8,4 @@ nav_order: 1
 ikona: htmllogo.png
 ---
 ![pythonlogo](/media/htmllogo.png){: .logoval}
+Avots: w3.org

@@ -7,3 +7,4 @@ has_children: true
 ikona: c++logo.png
 ---
 ![pythonlogo](/media/c++logo.png){: .logoval}
+Attēls: wikipedia.org
