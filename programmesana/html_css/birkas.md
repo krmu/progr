@@ -13,7 +13,7 @@ Aplūkosim no kā sastāv birka.
 
 ![example image](/media/htmlbirkas.png)
 
-Attēls: altervista.org
+Bāzes attēls: altervista.org
 
 Attēlā redzama paragrāfa birka, kurai ir pievienots klases atribūts. 
 
