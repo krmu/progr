@@ -45,7 +45,7 @@ Mājaslapas kodu lietotājs var apskatīt. Biežākā kombinācija ir `ctrl` + `
 
 `<head></head>` sadaļā parasti tiek ielikti ārējie stila faili vai Javascript faili.
 
-Tāpat ir noderīgas arī `meta` birkas, kuras ļauj pārlūkam uzzināt informāciju par veidot lapu, tās autoru vai arī iestatīt lapas kodējumu.
+Tāpat ir noderīgas arī `meta` birkas, kuras ļauj pārlūkam uzzināt informāciju par veidoto lapu, tās autoru vai arī iestatīt lapas kodējumu u.c. ar lapu saistītus parametrus.
 
 Lapai ir raksturīgs tās kodējums. Kodējums ir veids(formāts) kā tiek rādīts teksts. 
 
