@@ -8,6 +8,8 @@ nav_order: 9
 
 # Piemēri ar gataviem kodiem
 
+
+
 ### Dažādi virsraksti lapā
 ~~~html
 <!DOCTYPE html>
@@ -28,6 +30,25 @@ nav_order: 9
 Izskats:
 
 ![html1](/media/html_uzd2.png)
+
+### Hipersaites ievietošana lapā
+
+~~~html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lapas virsraksts</title>
+    </head>
+<body>
+
+    <h1>Mana hipersaite</h1>
+    <a href="https://navtadasmajaslapas.lv/apaksmape">Nospied mani</a>
+    
+</body>
+</html>
+~~~
+ 
+![html1](/media/urlhiperlink.png)
 
 ### Attēla ievietošana lapā
 ~~~html

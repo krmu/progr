@@ -42,3 +42,19 @@ Piemēram, birka `<title> </title>`, kas uzstāda mājaslapas nosaukumu pārlūk
 
 Mājaslapas kodu lietotājs var apskatīt. Biežākā kombinācija ir `ctrl` + `U`
 {: .alert .alert-warning}
+
+`<head></head>` sadaļā parasti tiek ielikti ārējie stila faili vai Javascript faili.
+
+Tāpat ir noderīgas arī `meta` birkas, kuras ļauj pārlūkam uzzināt informāciju par veidot lapu, tās autoru vai arī iestatīt lapas kodējumu.
+
+Lapai ir raksturīgs tās kodējums. Kodējums ir veids(formāts) kā tiek rādīts teksts. 
+
+Lai apskatītu ASCII kodejumu: [šeit](https://www.ascii-code.com/)
+
+Lai ievietotu `UTF-8` kodējuma noteikumu jālieto šāda birka:
+
+~~~html
+<meta charset="UTF-8">
+~~~
+
+Šī birka ļaus atrādīt latviešu valodas burtus to pareizā izskatā, pretējā gadījumā garumzīmju vietā var tikt rādītas jautājuma zīmes.
