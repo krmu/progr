@@ -31,3 +31,15 @@ Piemērs:
 `<p>` ir atverošā birka, kura informē pārlūku, ka sākas paragrāfs.
 
 `</p>` ir aizverošā birka, kura informē pārlūku, ka beidzas paragrāfs.
+
+# Kā darbojas HTML? Kur tas rodas?
+
+![example image](/media/request.png){: .nerami}
+
+Avots: monashdatafluency.github.com
+
+Aplūkojot šo attēlu , var secināt, ka viss sākas ar lietotāja pieprasījumu - momentu, kad lietotājs pārlūkā ievada tīmekļa lapas adresi.
+
+Tad notiek pieprasījums uz serveri. Serveris izveido HTML kodu un atgriež skatītāja pārlūkam. 
+
+Pārlūks to saliek kopā un atrāda tieši tā kā to bija izdomājis programmētājs.
