@@ -35,7 +35,7 @@ Piemēri:
 
 <table border=1> </table>   <!-- Tabula ar tās robežu -->
 
-<a href="https://manasaite.lv/neeksite">Nospied mani</a> <!-- Hipersaite ar tās adresi un tekstu -->
+<a href="https://manasaite.lv/neeksiste">Nospied mani</a> <!-- Hipersaite ar tās adresi un tekstu -->
 
 <img src="https://codebrainer.azureedge.net/images/what-is-html.jpg" width="20px" height="20px"> <!-- Bilde ar tās izmēriem garumā un platumā -->
 ~~~
