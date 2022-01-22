@@ -10,6 +10,9 @@ nav_order: 2
 
 Apskatīsim mājaslapas daļas. 
 
+{: .alert .alert-warning}
+Mājaslapas birkas un kods, šo pārlūks saņem no servera:
+
 ~~~html
 <!DOCTYPE html>
 <html>
@@ -24,7 +27,9 @@ Apskatīsim mājaslapas daļas.
 </body>
 </html>
 ~~~
-Izskats: 
+
+{: .alert .alert-warning}
+Šādi to pārlūks parāda lietotājam:
 
 ![pythonlogo](/media/htmlsadalas.png)
 

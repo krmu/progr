@@ -70,8 +70,25 @@ layout: table_wrappers
       {% endif %}
     </nav>
     <footer class="site-footer">
-      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+      Pēdējais atjaunināšanas datums: <span id="last-modified"></span>
+      Vietne izmanto Just The Docs tēmu un darbojas ar Jekyll.
     </footer>
+    <script>
+      function setModifiedDate() {
+        if (document.getElementById('last-modified')) {
+          fetch("https://api.github.com/repos/krmu/progr/commits")
+            .then((response) => {
+              return response.json();
+            })
+            .then((commits) => {
+              var modified = commits[0]['commit']['committer']['date'].slice(0,10);
+              document.getElementById('last-modified').textContent = modified;
+
+            });
+        }
+      }
+      setModifiedDate();
+    </script>
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header">
