@@ -8,7 +8,7 @@ parent: JavaScript
 
 # Sīkdatnes
 
-Sīkdatnes (cookies) ļauj datorā saglabāt mazas datu vienības par mājas lapas apmeklētāju vai izmantoto ierīci.
+Sīkdatnes (cookies) ļauj datorā saglabāt mazas datu vienības par mājas lapas apmeklētāju.
 
 Var teikt, ka sīkdatne ir mazs fails pārlūkprogrammas kešatmiņā, kas satur parametrus un to vērtības.
 

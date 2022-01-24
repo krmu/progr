@@ -25,3 +25,6 @@ Piemērs:
 Lai iekļautu savā lapā ārējo Javascript kodu:
 
 `<script src="mansskripts.js"></script>`
+
+`<script>` tagu vēlams ievietot body bloka beigās! 
+{: .alert .alert-warning}

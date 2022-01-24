@@ -9,13 +9,25 @@ nav_order: 11
 
 # Vienkāršas darbības
 
-~~~js
+`alert()` ir uzlecošais logs ar paziņojuma tekstu.
 
-alert("Paziņouma lodziņš");
+`prompt()` ir uzlecošais logs ar ievades lauku.
+
+Ar `console.log()` iespējams izvadīt datus konsolē.
+
+Piemērā nodemonstrēta arī komentāru pievienošana kodā.
+~~~js
+alert("Paziņojuma lodziņš");
+
+var tavsVards = prompt("Ievadi savu vārdu!");
+
+console.log("Sveika, pasaule!");
 
 // Vienas rindas komentārs
+
 /*
- Vairāku rindu komentāŗs
- 
+ Vairāku 
+ rindu 
+ komentārs
 */
 ~~~

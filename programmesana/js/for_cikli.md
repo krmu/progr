@@ -4,6 +4,7 @@ title:  For cikli
 description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 grand_parent: Programmēšana
 parent: JavaScript
+nav_order: 6
 ---
 
 # For cikli

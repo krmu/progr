@@ -4,7 +4,7 @@ title:  Elementu atlase
 description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 grand_parent: Programmēšana
 parent: JavaScript
-nav_order: 6
+nav_order: 7
 ---
 
 # Elementu atlase lapā
