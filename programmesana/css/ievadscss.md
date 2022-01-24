@@ -2,7 +2,7 @@
 layout: default
 title:  Ievads CSS
 grand_parent: Programmēšana
-parent: HTML un CSS
+parent: CSS
 nav_order: 4
 ---
 

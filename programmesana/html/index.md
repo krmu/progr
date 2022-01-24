@@ -1,11 +1,11 @@
 ---
-title: HTML un CSS
-description: HTML un CSS pieraksts un lietojums
+title: HTML
+description: HTML pieraksts un lietojums
 layout: default
 parent: Programmēšana
 has_children: true
 nav_order: 1
 ikona: htmllogo.png
 ---
-![pythonlogo](/media/htmllogo.png){: .logoval}
+![htmllogo](/media/htmllogo.png){: .logoval}
 Avots: w3.org

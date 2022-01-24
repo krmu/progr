@@ -2,7 +2,7 @@
 layout: default
 title: Ievads
 grand_parent: Programmēšana
-parent: HTML un CSS
+parent: HTML
 nav_order: 1
 ---
 # Kas ir HTML?
