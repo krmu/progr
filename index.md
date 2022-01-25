@@ -13,8 +13,9 @@ ikona: home.png
 ![example image](/media/landinggifs.gif){: .nerami}
 
 <dl>
-    <dt>Materiāla autori:</dt>
-    <dd>Kristaps Muižnieks [ HTML, Javascript, Java, PHP, Python sadaļas] </dd>
+    <dt>Materiāla autori</dt>
+    <dd>Kristaps Muižnieks  [ HTML, Javascript, Java, PHP, Python sadaļas] - Babītes vidusskola</dd>
+    <dd>Raivis Rasnačš [ HTML, Javascript, Python sadaļas] - Jēkabpils Valsts ģimnāzija</dd>
 </dl>
 ## Pievienotās tēmas:
 <div class="row">

@@ -37,12 +37,12 @@ search:
 heading_anchors: true
 
 # Aux links for the upper right navigation
-#aux_links:
- # "Just the Docs on GitHub":
- #   - "//github.com/pmarsceill/just-the-docs"
+aux_links:
+  "Skatīt iekš GitHub":
+    - "//github.com/krmu/progr"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+aux_links_new_tab: true
 
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
@@ -55,7 +55,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 back_to_top: true
 back_to_top_text: "Uz augšu"
 
-footer_content: "Dizains &copy; 2017-2020 Patrick Marsceill. Lapu izstrādājis Kristaps Muižnieks. Licenzēts zem <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT licences.</a>"
+footer_content: "Dizains &copy; 2017-2020 Patrick Marsceill. Lapu izstrādājis Kristaps Muižnieks. Licenzēts zem <a href=\"https://github.com/krmu/progr/blob/main/LICENSE\">MIT licences.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -65,11 +65,11 @@ logo: "/assets/images/logo.png"
 
 # Footer "Edit this page on GitHub" link text
 #gh_edit_link: true # show or hide edit this page link
-#gh_edit_link_text: "Edit this page on GitHub"
-#gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
-#gh_edit_branch: "master" # the branch that your docs is served from
+#gh_edit_link_text: "Labot šo lapu iekš GitHub"
+#gh_edit_repository: "https://github.com/krmu/progr" # the github URL for your repo
+#gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
-gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+#gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
 color_scheme: nil
