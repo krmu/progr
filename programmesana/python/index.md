@@ -5,7 +5,7 @@ layout: default
 parent: Programmēšana
 has_children: true
 nav_order: 4
-ikona: pythonlogo.svg
+ikona: python-logo.png
 ---
-![pythonlogo](/media/pythonlogo.svg){: .logoval}
-Attēls: python.org
+![pythonlogo](/media/python-logo.png){: .logoval}
+Attēls: logodownload.org

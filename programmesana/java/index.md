@@ -8,4 +8,4 @@ ikona: javalogo.png
 ---
 
 ![example image](/media/javalogo.png){: .logoval}
-Attēls: cleanpng.com
+Attēls: hiclipart.com

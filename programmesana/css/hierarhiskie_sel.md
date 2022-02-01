@@ -37,4 +37,5 @@ div p {
     font-weight: bold;
 }
 ~~~
+Stils būs spēkā visām rindkopām, kuras atrodas jebkurā pakāpē div blokā.
 
