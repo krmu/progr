@@ -18,7 +18,7 @@ Piemērs:
 
 <script type="application/javascript">
 
-</>
+</script>
 
 ~~~
 
@@ -82,3 +82,25 @@ console.error("Kļūda konsolē");
 ~~~
 `<script>` tagu vēlams ievietot body bloka beigās! 
 {: .alert .alert-warning}
+
+`alert()` ir uzlecošais logs ar paziņojuma tekstu.
+
+`prompt()` ir uzlecošais logs ar ievades lauku.
+
+
+Piemērā nodemonstrēta arī komentāru pievienošana kodā.
+~~~js
+alert("Paziņojuma lodziņš");
+
+var tavsVards = prompt("Ievadi savu vārdu!");
+
+console.log("Sveika, pasaule!");
+
+// Vienas rindas komentārs
+
+/*
+ Vairāku 
+ rindu 
+ komentārs
+*/
+~~~
