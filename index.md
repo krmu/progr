@@ -2,7 +2,7 @@
 layout: default
 title: Sākumlapa
 description: Kad nepieciešama palīdzība programmēšanā...
-nav_order: 1
+nav_order: 0
 ikona: home.png
 ---
 

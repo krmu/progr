@@ -30,3 +30,4 @@ _sass/@primer/css/**/*.md
 # action
 action.changelog.md
 run.bat
+.idea/vcs.xml
