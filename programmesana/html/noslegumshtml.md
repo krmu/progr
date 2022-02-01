@@ -2,7 +2,7 @@
 layout: default
 title:  Noslēgumā par HTML
 grand_parent: Programmēšana
-parent: HTML un CSS
+parent: HTML
 nav_order: 5
 ---
 

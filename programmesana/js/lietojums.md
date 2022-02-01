@@ -80,3 +80,5 @@ console.warn("Brīdinājums konsolē");
 console.error("Kļūda konsolē");
 
 ~~~
+`<script>` tagu vēlams ievietot body bloka beigās! 
+{: .alert .alert-warning}

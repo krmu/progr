@@ -4,8 +4,8 @@ description: Python programmēšanas valodas lietojums un praktiski piemēri
 layout: default
 parent: Programmēšana
 has_children: true
-nav_order: 2
-ikona: pythonlogo.svg
+nav_order: 4
+ikona: python-logo.png
 ---
-![pythonlogo](/media/pythonlogo.svg){: .logoval}
-Attēls: python.org
+![pythonlogo](/media/python-logo.png){: .logoval}
+Attēls: logodownload.org

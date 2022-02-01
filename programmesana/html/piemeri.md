@@ -2,7 +2,7 @@
 layout: default
 title:  Piemēri
 grand_parent: Programmēšana
-parent: HTML un CSS
+parent: HTML
 nav_order: 9
 ---
 
