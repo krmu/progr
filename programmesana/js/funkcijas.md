@@ -16,7 +16,7 @@ Funkcijas var veikt divu veidu darbības.
 
 # Funkciju lietojums
 
-Funkcijas sāk rakstīt ar vādu `function`, tad seko funkcijas nosaukums un iekavās tās parametri.
+Funkcijas sāk rakstīt ar vārdu `function`, tad seko funkcijas nosaukums un iekavās tās parametri.
 
 Svarīgi! Nosaucot funkcijas, nedrīkst lietot: garumzīmes, mīkstinājuma zīmes, atstarpes. Funkcijas ir reģistrjūtīgas(lielie un mazie burti ir svarīgi).
 {: .alert .alert-danger}
