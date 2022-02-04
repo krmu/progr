@@ -14,6 +14,8 @@ nav_order: 11
 
 [Dators iedomājas skaitli..](#iedomajas-skaitli)
 
+[Āboli](#aboli)
+
 ### Bankomāts <a id="bankomats"></a>
 
 Piemērā nodemonstrēts bankomāts, kas saņem un izdod naudu. Pin kods un bilance glabājas teksta failā `dati.txt`.
@@ -93,6 +95,38 @@ def beigtDarbu():
     print("Gaidīsim atkal!")
 
 pinParbaude()
+~~~
+
+### Ābolu lasīšanas algoritms. <a id="aboli"></a>
+
+~~~python
+import random
+import time
+
+def ejamPieKoka():
+  print("Ejam līdz kokam...")
+  time.sleep(1)
+  print("Esam pie koka! Kas tālāk?")
+  purinamKoku()
+
+def purinamKoku():
+  print("Purinam koku...")
+  skaits = random.randrange(0, 30)
+  print("Nokrita ", skaits, " āboli")
+  lasamAbolus(skaits)
+
+def lasamAbolus(skaits):
+  for i in range(1, skaits+1):
+    print("Paņemam ābolu...", i)
+    time.sleep(1)
+  else:
+    print("Visi āboli salasīti!")
+  darbsIzdarits()
+
+def darbsIzdarits():
+  print("Labs darbiņš!")
+
+ejamPieKoka()
 ~~~
 
 ### UID ģenerātors <a id="uid-gen"></a>
