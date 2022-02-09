@@ -8,7 +8,128 @@ nav_order: 11
 ---
 # Piemēri
 
-### UID ģenerātors
+[Bankomāts](#bankomats)
+
+[UID Ģenerators](#uid-gen)
+
+[Dators iedomājas skaitli..](#iedomajas-skaitli)
+
+[Āboli](#aboli)
+
+### Bankomāts <a id="bankomats"></a>
+
+Piemērā nodemonstrēts bankomāts, kas saņem un izdod naudu. Pin kods un bilance glabājas teksta failā `dati.txt`.
+
+~~~python
+fails = open("dati.txt", "r")
+pin = fails.readline().strip()
+bilance = fails.readline().strip()
+fails.close()
+bilance = int(bilance)
+
+def pinParbaude():
+    meginajumi = 3
+    while meginajumi != 0:
+        mansPin = input("Ievadi pin kodu!")
+        if mansPin == pin:
+            print("Pin kods pareizs!")
+            izvelne()
+            break
+        else:
+          meginajumi -= 1
+          print("Nepareizs pin kods! Mēģini vēlreiz! Atlikušie mēģinājumi:", meginajumi)
+    else:
+        print("Konts bloķēts!")
+
+def izvelne():
+    print("***BANKOMĀTS***")
+    print("Ko vēlies darīt?")
+    print("1 < Izmaksa\n2 < Iemaksa\n3 < Atlikums\n4 < Mainīt pin kodu\n5 < Beigt darbu")
+    izvele = int(input("Izvēlies darbību, ievadot skaitli!"))
+    if izvele == 1:
+        izmaksa()
+    elif izvele == 2:
+        iemaksa()
+    elif izvele == 3:
+        paraditAtlikumu()
+    elif izvele == 4:
+        mainitPin()
+    elif izvele == 5:
+        beigtDarbu()
+
+def izmaksa():
+    summa = int(input("Ievadi summu!"))
+    global bilance
+    bilance -= summa
+    print("Saņem naudu!")
+    izvelne()
+
+def iemaksa():
+    summa = int(input("Ievadi summu!"))
+    global bilance
+    bilance += summa
+    print("Nauda iemaksāta!")
+    izvelne()
+
+def paraditAtlikumu():
+    global bilance
+    print("Tavs atlikums:", bilance)
+    izvelne()
+
+def mainitPin():
+    global pin
+    jaunaisPin = input("Ievadi jauno pin kodu!")
+    if len(jaunaisPin) != 4:
+      print("Operācija atcelta! Pin kodā jābūt 4 cipariem!")
+    else:
+      pin = jaunaisPin
+      print("Pin kods nomainīts!")
+    izvelne()
+
+def beigtDarbu():
+    global pin, bilance
+    fails = open("dati.txt", "w")
+    fails.write(str(pin)+"\n")
+    fails.write(str(bilance))
+    fails.close()
+    print("Gaidīsim atkal!")
+
+pinParbaude()
+~~~
+
+### Ābolu lasīšanas algoritms. <a id="aboli"></a>
+
+~~~python
+import random
+import time
+
+def ejamPieKoka():
+  print("Ejam līdz kokam...")
+  time.sleep(1)
+  print("Esam pie koka! Kas tālāk?")
+  purinamKoku()
+
+def purinamKoku():
+  print("Purinam koku...")
+  skaits = random.randrange(0, 30)
+  print("Nokrita ", skaits, " āboli")
+  lasamAbolus(skaits)
+
+def lasamAbolus(skaits):
+  for i in range(1, skaits+1):
+    print("Paņemam ābolu...", i)
+    time.sleep(1)
+  else:
+    print("Visi āboli salasīti!")
+  darbsIzdarits()
+
+def darbsIzdarits():
+  print("Labs darbiņš!")
+
+ejamPieKoka()
+~~~
+
+### UID ģenerātors <a id="uid-gen"></a>
 
 Šis kods ļauj mums iegūt unikālu lietotāja identifikātoru formātā `XXXXX-XXXXX-XXXXX-XXXXX` daļu daudzumu nosaka lietotājs.
 
@@ -64,7 +185,7 @@ print("Šīs dienas joks:",t["value"])
 
 Atgriežot saturu, pie joka mēc varam tikt izmantojot komandu `t["value"]` jeb vārdnīcas vienību `value`.
 
-### Dators iedomājās skaitli...
+### Dators iedomājās skaitli... <a id="iedomajas-skaitli"></a>
 
 Dots piemērs spēlei, kurā dators ir iedomājies skaitli un lietotājam tas jāuzmin. Mēģinājumu skaits ir 3 mazāks nekā spēlē uzstādītais maksimālais skaitlis.
 Spēles norise.
