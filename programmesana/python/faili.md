@@ -34,3 +34,16 @@ with open('data.txt', 'a') as f:
     dati= 'Šo tekstu ierakstīt failā'
     f.write(dati)
 ~~~
+
+Pēc darbībām ar failu, neaizmirsti to aizvērt ar `f.close()`! Citādi izmaiņas nebūs redzamas!
+{: .alert .alert-danger}
+
+Lasot failus, ērti pielietot for ciklu
+
+~~~python
+for rinda in f:
+    print(rinda)
+~~~
+
+Lai vairākkārt cikliski varētu nolasīt failu, nepieciešams atgriezties faila sākumā ar `f.seek(0)`
+{: .alert .alert-warning}

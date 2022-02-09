@@ -4,6 +4,7 @@ title:  Sīkdatnes
 description: Sīkdatņu pielietošana
 grand_parent: Programmēšana
 parent: JavaScript
+nav_order: 10
 ---
 
 # Sīkdatnes

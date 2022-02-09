@@ -9,7 +9,7 @@ nav_order: 10
 
 ## Funkciju definēšana
 
-Funkcija ir neatkarīgs koda bloks, kas veico konkrētu uzdevumu.
+Funkcija ir neatkarīgs koda bloks, kas veic konkrētu uzdevumu.
 
 Python programmēšanas valodā funkcijas definē ar vārdu def.
 
