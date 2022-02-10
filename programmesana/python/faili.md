@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Failu lasīšana/raksīšana
+title: Failu lasīšana/rakstīšana
 description: ~
 grand_parent: Programmēšana
 parent: Python
