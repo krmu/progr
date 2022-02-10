@@ -51,4 +51,15 @@ p::first-letter {
 }
 ~~~
 
+Selektoru `::selection` izmanto, lai nodefinētu īpašības atlasītam tekstam rindkopā vai virsrakstā.
+
+~~~css
+p::selection {
+    color: white;
+    background-color: black;
+}
+~~~
+
+Atlasītā rindkopas tekstā būs balti burti uz melna fona.
+
 
