@@ -5,6 +5,7 @@ layout: default
 parent: Programmēšana
 has_children: true
 ikona: javalogo.png
+nav_order: 8
 ---
 
 ![example image](/media/javalogo.png){: .logoval}

@@ -4,7 +4,7 @@ description: PHP servera programmēšanas valodas lietojums un praktiski piemēr
 layout: default
 parent: Programmēšana
 has_children: true
-nav_order: 3
+nav_order: 5
 ikona: phplogo.svg
 ---
 ![pythonlogo](/media/phplogo.svg){: .logoval}

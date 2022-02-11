@@ -3,7 +3,7 @@ title: Sāksim kodēt!
 description: Kā sagatavot darba vidi un izveidot pirmo projektu.
 layout: default
 parent: Programmēšana
-nav_order: 0
+nav_order: 1
 has_children: false
 ikona: vscodelogo.png
 ---
@@ -64,7 +64,7 @@ Ja viss izdevās, terminālī ieraudzīsi tekstu **Hello World!**
 
 Tagad vari doties savā programmēšanas piedzīvojumā!
 
-VS Code ērti lietot arī veidojot mājas lapas! Tādā gadījumā tev tukšā mapē jāizveido `index.html`, `style.css` un `script.js` faili!
+VS Code ērti lietot arī veidojot mājas lapas! Tev tikai tukšā mapē jāizveido `index.html`, `style.css` un `script.js` faili!
 {: .alert .alert-warning}
 
 
