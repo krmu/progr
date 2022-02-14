@@ -10,9 +10,9 @@ ikona: vscodelogo.png
 
 ### Teksta redaktora un interpretatora uzstādīšana
 
-Lai sāktu programmēt, tev nepieciešams: 
-* teksta redaktors, kas ļauj rakstīt kodu
-* kompilators vai interpretators, kas pārtulko uzrakstīto kodu, lai datora procesors to saprastu
+Lai sāktu programmēt, Tev nepieciešams: 
+* teksta redaktors, kas ļauj rakstīt kodu;
+* kompilators vai interpretators, kas pārtulko uzrakstīto kodu, lai datora procesors to saprastu.
 
 Izmantosim teksta redaktoru Visual Studio Code un Python interpretatoru!
 
