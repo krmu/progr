@@ -23,6 +23,20 @@ Iznākums:
 
 ![html1](/media/js_alert.jpg)
 
+## Ievades lodziņš
+
+`prompt()` darbojas līdzīgi kā `alert()`, bet ļauj ievadīt arī, piemēram, vārdu.
+
+~~~js
+
+var vards = prompt("Ievadu savu vārdu!");
+
+~~~
+
+Ievadītais vārds saglabājas mainīgajā `vards`, kuru var izmantot, piemēram, izvadot sveicienu lappusē.
+
+![prompt](/media/prompt.jpg)
+
 ## Ievades lauciņa nolasišana
 
 Ar Javascript progr. valodu ir iespējams arī nolasīt ievades lauciņu vērtības. Mēs definēsim teksta ievades lauciņu un paziņojumā izvadīsim tā saturu.
@@ -80,3 +94,33 @@ function maini_mani(){
     ievades_lauks_atlasi.innerHTML =  "Nakts"; // Iestatām tā HTML saturu uz vārdu "Nakts"
 }
 ~~~
+
+## Iepirkumu saraksts
+
+Uzbūvēsim vienkāršu iepirkšanās sarakstu, ko var papildināt, ievadot pirkumus
+
+Sākumā nepieciešams tukšs saraksts, ievades lauks un poga
+
+~~~html
+
+<input id="pirkums"></input>
+<button onclick="pievienot()">Pievienot pirkumu!</button>
+<ol id="saraksts">
+</ol>
+
+~~~
+
+Nospiežot pogu, pirkums no ievades lauka *pārcelsies* uz sarakstu 
+
+~~~js
+function pievienot() {
+    var pirkums = document.getElementById("pirkums").value;
+    var rinda = document.createElement("li");
+    rinda.innerHTML = pirkums;
+    var saraksts = document.getElementById("saraksts");
+    saraksts.appendChild(rinda);
+}
+~~~
+
+Rezultāts:  
+![pirkumi](/media/pirkumi.jpg)

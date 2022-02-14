@@ -6,7 +6,7 @@ grand_parent: Programmēšana
 parent: JavaScript
 nav_order: 1
 ---
-## Sākums
+# Sākums
 
 Lai sāktu mājaslapā rakstīt Javascript kodu jālieto `<script type="application/javascript"></script>` birkas. 
 
@@ -38,24 +38,29 @@ Lai iekļautu savā lapā ārējo Javascript kodu:
 
 `<script src="mansskripts.js"></script>`
 
+`<script>` tagu vēlams ievietot body bloka beigās! 
+{: .alert .alert-warning}
+
 Ārējie Javascript faili var tikt uzturēti uz cita servera. Ja skripts uz ārējā servera tiek noņemts, tad arī vietnē netiks ielādēts šis fails.
 
 # Komentāri kodā
 
 ~~~js
 
-alert("Paziņouma lodziņš");
+alert("Paziņojuma lodziņš");
 
 // Vienas rindas komentārs
 /*
- Vairāku rindu komentārs
- 
+Vairāku 
+rindu 
+komentārs
 */
+
 ~~~
 
 # Brīdinājumi konsolē
 
-Programmētājs, lai atkļūdotu savu kodu, var veidot dažādus paziņojumus consolē. Konsole parādās, ja lietotājs pārlūkā nospiež labo peles klikšķi un tad izvēlas `Console`.
+Programmētājs, lai atkļūdotu savu kodu, var veidot dažādus paziņojumus konsolē. Konsole parādās, ja lietotājs pārlūkā nospiež labo peles klikšķi un tad izvēlas `Inpect` -> `Console` vai ar taustiņu kombināciju `Ctrl + Shift + J`.
 
 Ir trīs veida paziņojumi.
 
@@ -79,28 +84,4 @@ console.log("Parasts teikums konsolē");
 console.warn("Brīdinājums konsolē");
 console.error("Kļūda konsolē");
 
-~~~
-`<script>` tagu vēlams ievietot body bloka beigās! 
-{: .alert .alert-warning}
-
-`alert()` ir uzlecošais logs ar paziņojuma tekstu.
-
-`prompt()` ir uzlecošais logs ar ievades lauku.
-
-
-Piemērā nodemonstrēta arī komentāru pievienošana kodā.
-~~~js
-alert("Paziņojuma lodziņš");
-
-var tavsVards = prompt("Ievadi savu vārdu!");
-
-console.log("Sveika, pasaule!");
-
-// Vienas rindas komentārs
-
-/*
- Vairāku 
- rindu 
- komentārs
-*/
 ~~~

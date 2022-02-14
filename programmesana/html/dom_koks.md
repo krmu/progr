@@ -3,7 +3,7 @@ layout: default
 title:  HTML hierarhijas koks
 description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 grand_parent: Programmēšana
-parent: JavaScript
+parent: HTML
 ---
 
 # HTML hierarhijas koks

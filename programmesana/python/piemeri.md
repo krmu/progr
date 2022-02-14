@@ -16,6 +16,8 @@ nav_order: 11
 
 [Āboli](#aboli)
 
+[Burtu skaitīšana](#burti)
+
 ### Bankomāts <a id="bankomats"></a>
 
 Piemērā nodemonstrēts bankomāts, kas saņem un izdod naudu. Pin kods un bilance glabājas teksta failā `dati.txt`.
@@ -97,6 +99,8 @@ def beigtDarbu():
 pinParbaude()
 ~~~
 
+---
+
 ### Ābolu lasīšanas algoritms. <a id="aboli"></a>
 
 ~~~python
@@ -128,6 +132,8 @@ def darbsIzdarits():
 
 ejamPieKoka()
 ~~~
+
+---
 
 ### UID ģenerātors <a id="uid-gen"></a>
 
@@ -168,6 +174,8 @@ print("Kopa:", len(testeris))
 
 ~~~
 
+---
+
 ### API pieprasījums
 
 Ar Python palīdzību ir iespējams arī veidot API pieprasījumus uz vietnēm. Tiek veidots vienkāršs pieprasījums uz vietni  chucknorris.io. Mainīgais `r` sevī satur pieparsījumu un tā saturu. Tiek izmantota funkcija `.json()` kas ļauj pārveidot pieprasījumu par vārdnīcu PYTHON valodā. 
@@ -183,7 +191,9 @@ print("Šīs dienas joks:",t["value"])
 
 ~~~
 
-Atgriežot saturu, pie joka mēc varam tikt izmantojot komandu `t["value"]` jeb vārdnīcas vienību `value`.
+Atgriežot saturu, pie joka mēs varam tikt izmantojot komandu `t["value"]` jeb vārdnīcas vienību `value`.
+
+--
 
 ### Dators iedomājās skaitli... <a id="iedomajas-skaitli"></a>
 
@@ -242,3 +252,23 @@ while notiek == True:
 ~~~
 
 Speles uzlabošanas variantā dažas vietas var aizvietot ar fukcijām.
+
+---
+
+### Burtu skaitīšana <a id="burti"></a>
+
+Piemērā nodemonstrēts algoritms, kas dotam tekstam saskaita visus unikālos burtus un rezultātu ieraksta vārdnīcā.
+
+~~~python
+burti = {}
+vards = "Anastasija"
+for burts in vards: #caurskata burtus vārdā 
+    if not burts in burti: #pārbauda, vai burts nav vārdnīcā
+        burti[burts] = 0 #pievieno jaunu burtu vārdnīcā
+    burti[burts] += 1 #palielina skaitu
+        
+print(burti)
+~~~
+
+Rezultāts:
+{'A': 1, 'n': 1, 'a': 3, 's': 2, 't': 1, 'i': 1, 'j': 1}
