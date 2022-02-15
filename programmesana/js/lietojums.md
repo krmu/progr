@@ -6,7 +6,12 @@ grand_parent: Programmēšana
 parent: JavaScript
 nav_order: 1
 ---
-# Sākums
+# Lietošana
+
+JavaScript lieto, lai mājas lapai piešķirtu dinamiku un interaktivitāti.
+
+![html-css-js](/media/html-css-js.png)  
+Izmantotais attēls: edureka.co
 
 Lai sāktu mājaslapā rakstīt Javascript kodu jālieto `<script type="application/javascript"></script>` birkas. 
 
