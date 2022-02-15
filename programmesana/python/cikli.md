@@ -4,11 +4,12 @@ title: Cikli
 description: ~
 grand_parent: Programmēšana
 parent: Python
-nav_order: 9
+nav_order: 5
 ---
 
 # Ciklu veidošana
 
+## Nenoteiktie while cikli
 
 Python progr. valodā eksistē divu veidu cikli - noteiktie(`for`) un nenoteiktie(`while`).
 
@@ -25,6 +26,8 @@ while i < 6:
 `i` ir mazāks nekā 6. 
 
 `i += 1` šī rinda ir svarīgākā šajā ciklā, jo tiek pateikts, ka cikla vērtība `i` tiek palielināta par vienu vienību. 
+
+## Noteiktie for cikli
 
 Piemērs noteiktajam.
 
@@ -45,6 +48,19 @@ Cikla gala vērtība būs par vienu mazāka nekā tiek norādīts. Ja cikla gala
 range(sākums,beigas,solis)
 ~~~
 Minimums šai komandai ir beigu viena vērtība, kura parādīs, kad ir cikla beigas.
+
+Pielietojot negatīvu soli ciklu iespējams darbināt arī atpakaļgaitā.
+
+~~~python
+for x in range(10, 0, -1):
+  print(x)
+~~~
+
+Šajā gadījumā izdrukāsies skaitļi:
+
+~~~tip
+10 9 8 7 6 5 4 3 2 1
+~~~
 
 ## Ciklu veidošana - saraksti
 

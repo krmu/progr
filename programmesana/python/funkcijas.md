@@ -4,7 +4,7 @@ title: Funkcijas
 description: ~
 grand_parent: Programmēšana
 parent: Python
-nav_order: 10
+nav_order: 6
 ---
 
 ## Funkciju definēšana
@@ -45,3 +45,37 @@ print(paraVaiNepara(5)) #F-jas izsaukums
 Dotajā piemērā ir funkcija, kas jebkādam padotam skaitlim nosaka, vai tas ir pāra skaitlis un atgriež `True` vai `False`. Tā kā padotais skaitlis ir 5, tad rezultāts ir `False`.
 
 Lai labāk saprastu, kā darbojas funkcijas, apskati [ābolu lasīšanas algoritmu.](piemeri.md#aboli)
+
+## Mainīgo redzamība
+
+Mainīgie, kas deklarēti ārpus funkcijām, ir **globāli** mainīgie, bet tie, kas deklarēti funkcijas iekšienē, ir **lokāli** mainīgie.
+
+~~~python
+x = 5 #globāls mainīgais
+def izvadaSkaitli():
+    x = 10 #lokāls mainīgais
+    print(x)
+
+izvadaSkaitli()
+print(x)
+~~~
+
+Dotajā koda piemērā ir divi dažādi mainīgie `x`. Vispirms izdrukā f-jas mainīgā vērtību `10`, pēc tam globālā mainīgā vērtību `5`.
+
+Globālu mainīgo no funkcijas var nolasīt, bet nevar mainīt tā vērtību.
+{: .alert .alert-warning}
+
+Ja vēlamies mainīt mainīgā vērtību no f-jas, tad jālieto atslēgvārds `global`.
+
+~~~python
+x = 5 
+def izvadaSkaitli():
+    global x
+    x = 10
+    print(x)
+
+izvadaSkaitli()
+print(x)
+~~~
+
+Šajā gadījumā visā programmā ir viens mainīgais `x`, kam funkcijā tiek mainīta vērtība. Programma izdrukās skaitļus `10` un `10`.

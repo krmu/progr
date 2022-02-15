@@ -31,7 +31,7 @@ Ciklam ir īsāks pieraksts un doti iekavās mainīgie: `(cikla sākums, cikla d
 
 Cikliem pielieto operatorus `break` un `continue`.
 
-### Break
+## Break
 
 `break` pārtrauc ciklu pie konkrēta nosacījuma.
 
@@ -45,7 +45,7 @@ while (i < 5) {
 
 Šajā gadījumā cikls apstāsies, mainīgajam i sasniedzot vērtību 3.
 
-### Continue
+## Continue
 
 ~~~cpp
 int i = 0;

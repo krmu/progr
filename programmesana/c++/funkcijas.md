@@ -79,12 +79,16 @@ int main() {
 
 ~~~
 
-`sk1` un `sk` šajā gadījumā ir argumenti, kurus padodam funkcijai, kura tos saņem kā parametrus `a` un `b`.
-
-Mainīgais `summa` saņem funkcijas atgriezto rezultātu `c`.
+`sk1` un `sk2` šajā gadījumā ir argumenti, kurus padodam funkcijai, kura tos saņem kā parametrus `a` un `b`.
 
 Var teikt, ka parametri pārmanto argumentu vērtības.
 {: .alert .alert-warning}
+
+Mainīgais `summa` saņem funkcijas atgriezto rezultātu `c`.
+
+Mainīgais, kas deklarēts funkcijā, ārpus tās neeksistē!
+{: .alert .alert-danger}
+
 
 
 

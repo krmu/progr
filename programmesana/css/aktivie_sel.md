@@ -1,12 +1,12 @@
 ---
 layout: default
-title:  Aktīvie selektori
+title:  Aktīvie un izņēmuma selektori
 grand_parent: Programmēšana
 parent: CSS
 nav_order: 4
 ---
 
-# Aktīvie selektori
+## Aktīvie selektori
 
 Aktīvie selektori jeb pseido-klases ir selektori, kas nosaka, kā elements reaģēs uz noteiktām darbībām, piemēram, uzbraukšana ar kursoru vai klikšķis uz saites.
 
@@ -62,4 +62,21 @@ p::selection {
 
 Atlasītā rindkopas tekstā būs balti burti uz melna fona.
 
+## Izņēmuma selektori
 
+Iedomāsimies, ka mums ir 4 attēli, kuriem jāiestata izmērs, bet attēlam ar `id="titulbilde"` jāpaliek nemainīgam.
+
+~~~html
+<img id="titulbilde" src="...">
+<img src="...">
+<img src="...">
+<img src="...">
+~~~
+
+Lieto `:not()`, iekavās rakstot elementu, uz kuru neattieksies dotās īpašības.
+
+~~~css
+img:not(#titulbilde) {
+    width: 100px;
+}
+~~~

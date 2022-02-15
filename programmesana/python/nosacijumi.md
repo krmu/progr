@@ -30,6 +30,12 @@ elif nosacījums3:
 
 Kur [TABULATORA ATKĀPE] ir taustiņš TAB
 ~~~
+
+Veidojot nosacījumus pēc principa `if ... elif ... else` tie izpildās šādi:
+
+Ja neizpildās `if`, pārbauda `elif` bloku. Ja neizpildās `elif` bloks, jebkurā gadījumā izpilda `else` bloku.
+{: .alert .alert-warning} 
+
 Piemēri:
 
 ~~~python
@@ -37,9 +43,9 @@ x = 0
 y = 5
 if x < y:  
     print('x ir mazāks nekā y')
-
+    
 if y < x: 
     print('y ir mazāks nekā x')
-if y in ['foo', 'bar', 'baz']: 
-    print('y atrodas sarakstā')
 ~~~
+
+Dodies [šeit](./saraksti.md#meklesana) un izpēti, kā nosacījumus pielieto sarakstiem!
