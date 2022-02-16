@@ -1,0 +1,61 @@
+---
+title: Git un GitHub
+description: Versiju vadības sistēmas.
+layout: none
+has_children: false
+nav_order: 5
+ikona: git.png
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Git un GitHub (Elīza Koļesinska, Diāna Mierture)</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="sveiciens()">
+    <center>
+    <h3>Autori:<br>Diāna Mierture un Elīza Koļesinska<br>Jēkabpils Valsts ģimnāzija 11.b</h3>
+    <div>
+    <h1 id="sakums" title="Uzziniet par versiju kontroles sistēmu Git un to, kā tā darbojas ar GitHub.">Git un GitHub</h1>
+    <img width=500px id="float" alt="bubbles" src="https://miro.medium.com/max/1400/1*mtsk3fQ_BRemFidhkel3dA.png"><br>
+    <button href="vēsture.html" onclick=location.href="vēsture.html" id="poga1">Vēsture</button>
+    <button href="VCS.html" onclick=location.href="VCS.html" id="poga2">VCS</button>
+    <button href="Git.html" onclick=location.href="Git.html" id="poga3">Git</button>
+    <button href="GitHub.html" onclick=location.href="GitHub.html" id="poga4">GitHub</button>
+    <button href="Repozitorijs.html" onclick=location.href="Repozitorijs.html" id="poga5">Repozitorijs</button>
+    <button href="Terminu_vārdnīca.html" onclick=location.href="Terminu_vārdnīca.html" id="poga6">Terminu vārdnīca</button>
+    <button href="Zari_branches.html" onclick=location.href="Zari_branches.html" id="poga7">Zari(branches)</button>
+    <br>
+    <br>
+    <br>
+
+    <br><ul class="demo">
+     <li>Sekojiet līdzi izmaiņām!</li>
+     <li>Veiciet vēstures dublējumkopijas!</li>
+     <li>Attīstieties kopā ar komandu!</li>
+     <li>Rediģējiet kodu vienlaikus kopā ar kolēģiem!</li>
+    </ul><br>
+
+
+    <br><iframe width="560" height="315" src="https://www.youtube.com/embed/wpISo9TNjfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</center>
+    <p></p><br></br>
+  <fieldset>
+    <legend>Kā tev patīk šī mājaslapa?</legend>
+    <input type="radio" name="atbilde" id="atbilde1">
+    <label for="atbilde1">Patīk</label><br>
+    <input type="radio" name="atbilde" id="atbilde2">
+    <label for="atbilde2">Nav emociju</label><br>
+    <input type="radio" name="atbilde" id="atbilde3">
+    <label for="atbilde3">Nepatīk</label><br>
+    <button onclick="iesniegtAtbildi()">Iesniegt atbildi</button>
+  </fieldset>
+  <input style="visibility:hidden;" type="text" name="" id="atsauksme" value="Ievadi atsauksmi!">
+  <button id="atsauksmesPoga" style="visibility:hidden;"onclick="iesniegtAtsauksmi()">Iesniegt atsauksmi</button>
+    <script src="script.js"></script>
+  </body>
+</html>
