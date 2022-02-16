@@ -3,7 +3,7 @@ layout: default
 title:  Noslēgumā par HTML
 grand_parent: Programmēšana
 parent: HTML
-nav_order: 5
+nav_order: 13
 ---
 
 # Noslēgumā par HTML
