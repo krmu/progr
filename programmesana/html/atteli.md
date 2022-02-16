@@ -34,7 +34,8 @@ Attēla izmērus var pierakstīt arī ar atribūtu `style` - `style="width:20px;
 Atribūtā `alt` norāda tekstu, kas parādīsies, ja attēlu neizdosies ielādēt.
 
 Piemērs:  
-![Te jābūt attēlam. Kur tas ir?](/media/navattela.jpg)
+
+![kur-ir-attels](/media/kur-ir-attels.jpg)
 
 Ārēji uzturētās bildes var ar laiku pazust. Tas atkarīgs no attēla uzturētāja.
 {: .alert .alert-warning}
