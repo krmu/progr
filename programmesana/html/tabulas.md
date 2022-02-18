@@ -1,86 +1,10 @@
 ---
 layout: default
-title:  Piemēri
+title:  Tabulas
 grand_parent: Programmēšana
 parent: HTML
-nav_order: 9
+nav_order: 10
 ---
-
-# Piemēri ar gataviem kodiem
-
-
-
-### Dažādi virsraksti lapā
-~~~html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Lapas virsraksts</title>
-    </head>
-<body>
-    <h1>1. līmeņa virsraksts </h1>
-    <h2>2. līmeņa virsraksts </h2>
-    <h3>3. līmeņa virsraksts </h3>
-    <h4>4. līmeņa virsraksts </h4>
-    <h5>5. līmeņa virsraksts </h5>
-    <h6>6. līmeņa virsraksts </h6>
-</body>
-</html>
-~~~
-Izskats:
-
-![html1](/media/html_uzd2.png)
-
-### Hipersaites ievietošana lapā
-
-~~~html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Lapas virsraksts</title>
-    </head>
-<body>
-
-    <h1>Mana hipersaite</h1>
-    <a href="https://navtadasmajaslapas.lv/apaksmape">Nospied mani</a>
-    
-</body>
-</html>
-~~~
- 
-![html1](/media/urlhiperlink.png)
-
-### Attēla ievietošana lapā
-~~~html
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Lapas virsraksts</title>
-    </head>
-<body>
-
-    <h1>Ievietoju savu pirmo bildīti!</h1>
-    <img src="https://codebrainer.azureedge.net/images/what-is-html.jpg" width="20px" height="20px">
-
-</body>
-</html>
-~~~
-Avots: azureedge.net
-Izskats:
-![html1](/media/html_uzd1.png)
-
-Šajā piemērā tiek ievietots pirmā līmeņa virsraksts `h1` un attēls. 
-
-Attēlam ir 3 atribūti: `src` - attēla adrese, `width` - attēla platums pikseļos, `height` - attēla garums pikseļos.
-
-Attēla izmērus var pierakstīt arī ar atribūtu `style` - `style="width:20px;height:20px"`
-
-Šajā piemērā tiek izmantota ārējā bilde, bet ļauts izmantot arī datorā atrodamās.
-
-
-Ārēji uzturētās bildes var ar laiku pazust. Tas atkarīgs no attēla uzturētāja.
-{: .alert .alert-warning}
-
 
 ### Tabulas izveide
 

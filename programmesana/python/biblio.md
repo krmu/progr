@@ -4,7 +4,7 @@ title: Bibliotēkas
 description: ~
 grand_parent: Programmēšana
 parent: Python
-nav_order: 5
+nav_order: 8
 ---
 # Bibliotēkas
 

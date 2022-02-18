@@ -1,12 +1,12 @@
 ---
 layout: default
-title:  Mājaslapas sadaļas
+title: HTML struktūra un pieraksts
 grand_parent: Programmēšana
 parent: HTML
 nav_order: 2
 ---
 
-# Mājaslapas sadaļas
+# HTML struktūra un pieraksts
 
 Apskatīsim mājaslapas daļas. 
 

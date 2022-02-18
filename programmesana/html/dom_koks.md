@@ -4,6 +4,7 @@ title:  HTML hierarhijas koks
 description: JavaScript programmēšanas valodas lietojums un praktiski piemēri
 grand_parent: Programmēšana
 parent: HTML
+nav_order: 12
 ---
 
 # HTML hierarhijas koks

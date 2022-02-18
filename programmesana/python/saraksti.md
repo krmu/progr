@@ -4,7 +4,7 @@ title: Saraksti
 description: ~
 grand_parent: Programmēšana
 parent: Python
-nav_order: 6
+nav_order: 7
 ---
 
 # Saraksti
@@ -88,7 +88,7 @@ krasas.reverse()
 Kārtojot tekstuālas vērtības, saraksta sākumā novietosies vērtības ar lielajiem sākuma burtiem.
 {: .alert .alert-warning}
 
-### Vērtību meklēšana
+### Vērtību meklēšana <a id="meklesana"></a>
 
 Ērti izmantot sazarojumu, lai pārbaudītu, vai vērtība eksistē sarakstā
 

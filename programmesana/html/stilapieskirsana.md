@@ -3,7 +3,7 @@ layout: default
 title:  Stila piešķiršana
 grand_parent: Programmēšana
 parent: HTML
-nav_order: 4
+nav_order: 5
 ---
 
 # Stila piešķiršana elementam
