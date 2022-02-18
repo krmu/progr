@@ -9,15 +9,3 @@ ikona: vscodelogo.png
 ---
 ![vscode-logo](/media/vscodelogo.png){: .logoval}
 Attēls: commons.wikimedia.org
-
-
-
-
-
-
-
-
-
-
-
-
