@@ -10,9 +10,9 @@ nav_order: 8
 
 Python datu struktūras iedala maināmās (mutable) un nemaināmās (immutable).
 
-Saraksts, kuru definē kvadrātiekavās `[]`, ir maināma datu struktūra.
+Saraksts, kuru definē kvadrātiekavās `[]`, ir maināma datu struktūra, bet apaļās iekavās `()` pierakstīts tas kļūst par nemaināmu slēgto sarakstu.
 
-Ja vērtības rakstām apaļās iekavās `()`, tad to sauc par nemaināmu datu struktūru jeb slēgto sarakstu (tuple). Dažkārt tos dēvē arī par kortežiem.
+Arī slēgtā sarakstā ir spēkā indeksācija un to var veidot arī daudzdimensiju pierakstā.
 
 ~~~py
 # saraksts
