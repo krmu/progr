@@ -19,7 +19,7 @@ Ja vērtības rakstām apaļās iekavās `()`, tad to sauc par nemaināmu datu s
 draudzenes = ["Maija", "Anna", "Ilze"]  
 
 # slēgtais saraksts
-cipari = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  
+patskani = ("a", "ā", "e", "ē", "i", "ī", "u", "ū", "o")  
 ~~~
 
 Slēgtos sarakstus parasti lieto vispārpieņemtiem nemainīgiem datiem, piemēram, patskaņu kopai vai nedēļas dienām.
