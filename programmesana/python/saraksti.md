@@ -7,7 +7,7 @@ parent: Python
 nav_order: 7
 ---
 
-# Saraksti
+# Saraksti (lists)
 
 ### Saraksta definēšana
 
