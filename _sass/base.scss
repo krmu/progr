@@ -106,3 +106,10 @@ hr {
   background-color: $border-color;
   border: 0;
 }
+
+// Video fix for small screens
+
+iframe{
+  width: 100vw;
+  height: calc(100vw/1.77777778);
+ }
