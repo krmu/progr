@@ -35,7 +35,7 @@ git config --global user.email "brasais_koderis@pasts.lv"
 Ja nepieciešams apskatīties esošo konfigurāciju, to var izdarīt šādi:
 
 ~~~git
-git config --global user.email "brasais_koderis@pasts.lv"
+git config --list
 ~~~
 
 

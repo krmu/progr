@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Veidojam repozitoriju
+title: Pievienojam failus
 description: ~
 grand_parent: Versiju vadība
 parent: Versiju vadība
