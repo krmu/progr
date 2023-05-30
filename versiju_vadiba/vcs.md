@@ -7,5 +7,3 @@ has_children: true
 permalink: /versiju_vadiba/
 ---
 # Versiju vadība
-
-Drīzumā.

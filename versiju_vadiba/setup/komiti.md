@@ -56,4 +56,12 @@ Versiju žurnālā būs nu jau 2 versijas, kur pēdējā satur papildinātu *ind
 
 ![otra_versija](/media/git/log2.png)
 
-Ja jaunās izmaiņas tomēr nevēlamies, varam atgriezties uz sākotnējo versiju un *index.html* fails 
+Ja jaunās izmaiņas tomēr nevēlamies, varam atgriezties uz sākotnējo versiju un *index.html* fails atkal kļūs tukšs
+
+Tam lietojam komandu
+
+~~~git
+git reset --hard <komita_id>
+~~~
+
+Repozitorijā anulējas visas izmaiņas, kas ieviestas kopš norādītā komita

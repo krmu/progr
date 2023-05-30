@@ -8,25 +8,21 @@ nav_order: 4
 ---
 ## Failu pievienošana
 
-Kad esam izveidojuši repozitoriju, varam izveidot mapē dažus failus.
+Pirms veidojam versijas, jāizpilda svarīgs solis - faili jāieliek uzskaitē
 
-Tie būs `index.html`, `style.css` un `script.js`.
+![add_commit](/media/git/add_commit.png)
 
-Failus var izveidot grafiskajā vidē, ar labo klikšķi izpildot **New -> Text Document** un norādot attiecīgo nosaukumu ar paplašinājumu.
-
-Kad faili ir izveidoti, izpildām komandu
+Ar komandu
 
 ~~~git
 git status
 ~~~
 
-, kas ļauj jebkurā brīdī apskatīties repozitorija stāvokli un statusu visiem failiem, kas atrodami tajā
-
-Visi 3 pievienotie faili Git sistēmai ir sveši, tie uzrādās sarkanā krāsā kā nepazīstami jeb *untracked files*
+varam ērti apskatīt, kuri faili jau ir repozitorija uzskaitē un kuri vēl nav
 
 ![neizsekotie_faili](/media/git/untracked_files.png)
 
-Lai repozitorijs varētu sekot līdzi izmaiņām šajos failos, tos jāpievieno kā izsekojamos failus ar komandu
+Sarkanā krāsā iezīmētie ir sveši faili, pievienosim tos repizotorijam ar
 
 ~~~git
 git add .
