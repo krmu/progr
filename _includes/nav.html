@@ -75,7 +75,14 @@
               {%- if child.has_children -%}
                 <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
               {%- endif -%}
+
+              <!-- Pārbauda, vai ir ikona -->
+              {% if child.ikona %}
               <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{% if node.ikona %}<img src="/media/{{child.ikona}}" class="navikon"> {% endif %}{{ child.title }}</a>
+              {% else %}
+              <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
+              {% endif %}
+              
               {%- if child.has_children -%}
                 {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
                 <ul class="nav-list">
