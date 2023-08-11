@@ -3,7 +3,7 @@ layout: default
 title: Datu bāzu sistēmas
 description: ~
 parent: Datu bāzes
-nav_order: 2
+nav_order: 3
 ---
 # Datu bāzu sistēmas
 
