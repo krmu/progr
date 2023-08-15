@@ -7,5 +7,5 @@ has_children: true
 nav_order: 5
 ikona: phplogo.svg
 ---
-![pythonlogo](/media/phplogo.svg){: .logoval}
+![phplogo](/media/phplogo.svg){: .logoval}
 Attēls: php.net
