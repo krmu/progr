@@ -5,6 +5,7 @@ layout: default
 has_children: true
 parent: Datu bāzes
 nav_order: -1
+nesakuma: true
 ---
 
 # Paņēmieni
