@@ -31,3 +31,5 @@ _sass/@primer/css/**/*.md
 action.changelog.md
 run.bat
 .idea/vcs.xml
+
+.DS_Store
