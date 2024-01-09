@@ -12,6 +12,7 @@ ikona: envelope.svg
     <dt>Materiāla autori</dt>
     <dd>Kristaps Muižnieks  [ HTML, Javascript, Java, PHP, Python sadaļas] - Babītes vidusskola</dd>
     <dd>Raivis Rasnačs [ HTML, Javascript, Python sadaļas] - Jēkabpils Valsts ģimnāzija</dd>
+    <dd>Gabriels Nikijs Savičs[ SQL sadaļas ] - Babītes vidusskola</dd>
 </dl>
 
 Materiāls paredzēts izglītošanas nolūkā.
