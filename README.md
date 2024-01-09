@@ -14,6 +14,6 @@ Katras tēmas beigās iekļauti "piemēri" (uzdevums ar atrisinājumu), kurus sk
 
 ---
 
-Šīs vietnes autors ir Kristaps Muižnieks. Šī vietne nav maksas projekts un ir veidota izglītības nolūkiem.
+Šīs vietnes oriģinālās idejas autors ir Kristaps Muižnieks (Babītes vidusskola). Šī vietne nav maksas projekts un ir veidota izglītības nolūkiem.
 
 Drīkst arī sadarboties un uzlabot materiālus. 
