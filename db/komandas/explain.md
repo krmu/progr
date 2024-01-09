@@ -12,7 +12,7 @@ parent: SQL komandas
 
 Īsumā: `EXPLAIN` izskaidro cik daudz rindas tiek lasītas u.tml. bez vaicājuma veikšanas, jeb tikai ar statistiku. `EXPLAIN ANALYZE` dara to pašu, bet veic vaicājumu.
 
-Ja mums ir kaut kādas problēmas ar veiktspēju, mēs varam izmantot `EXPLAIN` komandu, lai to analizētu.
+Ja mums ir problēmas ar veiktspēju, mēs varam izmantot `EXPLAIN` komandu, lai to analizētu.
 
 ## `EXPLAIN`
 
