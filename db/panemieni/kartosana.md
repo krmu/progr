@@ -13,13 +13,13 @@ Ja mēs strādājam ar datubāzēm mums ir vairāki paņēmieni kā sakārtot da
 
 ## Deterministiska sakārtošana
 
-Šis kārtošanas paņēmiens ir vislabākais, ja vajag lai dati **vispār nekad nemaina vietu**.
+Šis kārtošanas paņēmiens ir vislabākais,jo nepieciešams, lai dati **vispār nekad nemaina vietu**.
 
 **Īsumā:** kārtojot pēc 1 kolonas un `id` rezultāti vienmēr būs tajā pašā vietā
 
 ### 1 kolona
 
-Pieņemsim mums ir datu bāze un mēs kārtojam pēc kolonas `first_name`:
+Mums ir datu bāze un mēs kārtojam pēc kolonas `first_name`:
 
 | id | first_name | last_name | birthday |
 | ---- | ---- | ---- | ---- |
@@ -38,7 +38,7 @@ Kā mēs redzam, ir ļoti daudz ieraksti uz vārda "Aaron", un ar katru vaicāju
 
 ### 2 kolonas
 
-Ok, tātad ar vienu kolonu nepietiek, jo tajā ierakstu vērtība var atkārtoties. Tad kā būtu ar `first_name, last_name`?
+Ar vienu kolonu nepietiek, jo tajā ierakstu vērtība var atkārtoties. Tad kā būtu ar `first_name, last_name`?
 
 | id | first_name | last_name | birthday |
 | ---- | ---- | ---- | ---- |
