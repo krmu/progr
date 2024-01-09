@@ -17,7 +17,7 @@ ikona: home.png
     <dd>Kristaps Muižnieks  [ HTML, Javascript, Java, PHP, Python sadaļas] - Babītes vidusskola</dd>
     <dd>Raivis Rasnačs [ HTML, Javascript, Python sadaļas] - Jēkabpils Valsts ģimnāzija</dd>
     <dd>Diāna M. un Elīza K. 11.b [ Git un GitHub sadaļa] - Jēkabpils Valsts ģimnāzija</dd>
-    <dd><a href="https://exerra.xyz">Gabriels Nikijs Savičs</a> [ SQL sadaļas ]</dd>
+    <dd>Gabriels Nikijs Savičs - Babītes vidusskola [ SQL sadaļas ]</dd>
 </dl>
 ## Pievienotās tēmas:
 <div class="row">
