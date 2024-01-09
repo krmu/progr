@@ -41,4 +41,4 @@ WHERE
 
 ## Optimizācija
 
-Šī komanda ir samērā dārga, tāpēc ir ieteikts **vismaz** izmantot [indeksus](/db/komandas/indeksi) priekš ģeogrāfiskā garuma un platuma kolonām (`lon(longitude)`, `lat(latitude)`).
+Šī komanda ir samērā smaga, tāpēc ir ieteikts **vismaz** izmantot [indeksus](/db/komandas/indeksi) priekš ģeogrāfiskā garuma un platuma kolonām (`lon(longitude)`, `lat(latitude)`).
