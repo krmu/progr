@@ -104,7 +104,6 @@ Ja mēs ņemam `*` vai kādu citu vērtību, tad datu bāze turpina tā it kā t
 
 Izmantojot [Explain komandu](/db/komandas/explain) mēs varam pārliecināties vai vaicājums izmanto aptverošo indeksu pēc `Extra` un `key` kolonām.
 
-![](/assets/images/db/komandas/indeksi-explain-*.png)
 
 Šajā piemērā (`SELECT * [...]`) mēs varam redzēt, ka aptverošais indekss netiek izmantots pēc atslēgas vārdiem `Using MRR`. Kā arī mēs varam redzēt ka tomēr kaut kāds indekss tiek izmantots, bet tas ir parastais un nevis aptverošais indekss, tāpēc šajā gadījumā šis vaicājums būs ~73,6 ms nevis ~6,7ms. 
 
