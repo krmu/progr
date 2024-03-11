@@ -13,3 +13,6 @@ parent: JavaScript
 - [Javascript loģiskie operatori](https://www.w3schools.com/js/js_operators.asp)
 - [Dažādi piemēri un pamācības](https://htmldog.com)
 - [Īsas video pamācības](https://www.youtube.com/playlist?list=PLYZAmrDCITSMH8BLTKOvZfTdP1bCpkqEi)
+- [Valstu galvaspilsētu spēle](https://github.com/krmu/valstuspele)
+- [React Piemērs](https://github.com/krmu/ReactTests)
+- [VUE Piemērs](https://github.com/krmu/datagovlvapi)

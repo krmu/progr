@@ -17,7 +17,7 @@ Ieteicams identifikātorus lapā turēt unikālus!
 
 ~~~js
 
-var vertiba = document.getElementById("identifikators");
+let vertiba = document.getElementById("identifikators");
 
 ~~~
 
@@ -31,8 +31,22 @@ Klases elementiem lapā var atkārtoties
 
 ~~~js
 
-var vertiba = document.getElementsByClassName("manaklase");
+let vertiba = document.getElementsByClassName("manaklase");
 
 ~~~
 
 Kur vārda `manaklase` lieto elementa  `Class` identifikatoru. HTML birkā to raksta: `class="manaklase"`
+
+# Elementu satura, krāsas maiņa ar Javascript
+
+Lai mainītu kāda elementa dizainu un saturu, izmanto:
+
+~~~js
+
+let elements = document.getElementById("identifikators");
+elements.innerHTML = "Jauns saturs"; // Šis samaina HTML elementa saturu.
+
+let elements = document.getElementById("identifikators");
+elements.style.color = "green"; // Uzliek tekstam zaļu krāsu
+
+~~~

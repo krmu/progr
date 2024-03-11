@@ -9,20 +9,23 @@ nav_order: 2
 
 # Mainīgie
 
-Mainīgajiem nav jāpieraksta to veids, bet mainīgo nosaukumam priekšā jāraksta vārdu `var`. 
+Mainīgajiem nav jāpieraksta to veids, bet mainīgo nosaukumam priekšā jāraksta vārdu `let`.
 {: .alert .alert-warning}
+
+Ir diezgan svarīga atšķirība, jo literatūrā parādās apzīmējums `var`, bet šis apzīmējums ir novecojis un to vairs neizmanto. 
+
 
 Piemērs:
 
 ~~~js
 
-var x = 1; // Skaitlisks mainīgais
+let x = 1; // Skaitlisks mainīgais
 
-var vards = "Mans vārds ir Pēteris"; // Tekstuāls mainīgais
+let vards = "Mans vārds ir Pēteris"; // Tekstuāls mainīgais
 
-var atzimes = [1,2,3,4,5]; // Skaitlisks masīvs
+let atzimes = [1,2,3,4,5]; // Skaitlisks masīvs
 
-var teksta_masivs = ["Krūmi", "Koks", "Stabs"]; // Tekstuāls masīvs
+let teksta_masivs = ["Krūmi", "Koks", "Stabs"]; // Tekstuāls masīvs
 
 ~~~~
 
@@ -32,9 +35,9 @@ Skaitliskos mainīgos no tekstuālajiem mainīgajiem atšķir ar pēdiņu lietoj
 Daži piemēri skaitliskajiem mainīgajiem.
 
 ~~~js
-var x = 1;
-var maingaisviens = 1124123;
-var pi = 3.14159265359;
+let x = 1;
+let maingaisviens = 1124123;
+let pi = 3.14159265359;
 ~~~~
 
 Tekstuālos mainīgos pievieno ar pēdiņām. Tekstu raksta starp pēdīņām.
@@ -42,7 +45,7 @@ Tekstuālos mainīgos pievieno ar pēdiņām. Tekstu raksta starp pēdīņām.
 
 ~~~js
 
-var garss_teksts = "Javscript ir programmēšanas valoda, bet HTML nav.";
+let garss_teksts = "Javscript ir programmēšanas valoda, bet HTML nav.";
 
 ~~~~
 
@@ -53,9 +56,9 @@ Masīvus pielieto, lai apvienotu vairākus mainīgos vienā.  Skatām piemēru.
 
 ~~~js
 
-var pirmais = 1;
-var otrais =  2;
-var tresais  = 3; 
+let pirmais = 1;
+let otrais =  2;
+let tresais  = 3; 
 
 ~~~~
 
@@ -66,7 +69,7 @@ Masīvā katru elementu raksta atdalot ar komatu. Sāk rakstīt ar `[` un noslē
 
 ~~~js
 
-var skaitli = [1,2,3];
+let skaitli = [1,2,3];
 
 ~~~~
 
@@ -81,7 +84,7 @@ Tieši tāpat kā notiek skaitlisko masīvu veidošana, tiek veidoti arī tekstu
 
 ~~~js
 
-var prieksmeti = ["Latviešu valoda","Sports","Programmēšana","Datorika","Matemātika"];
+let prieksmeti = ["Latviešu valoda","Sports","Programmēšana","Datorika","Matemātika"];
 
 ~~~~
 
@@ -92,7 +95,7 @@ Masīvos var tikt miksēti tekstuālie elementi un skaitliskie elementi.
 
 ~~~js
 
-var prieksmeti = ["Latviešu valoda",1,"Programmēšana",3,6543];
+let prieksmeti = ["Latviešu valoda",1,"Programmēšana",3,6543];
 
 ~~~~
 
@@ -116,7 +119,7 @@ Piemērs:
 
 Kā izmantot šādus datus?
 ~~~js
-var obj = JSON.parse('{ "vards":"Valērijs Visvaris", "vecums":30, "pilseta":"Rīga"}');
+let obj = JSON.parse('{ "vards":"Valērijs Visvaris", "vecums":30, "pilseta":"Rīga"}');
 // Lai iegūtu datus no šī objekta izmanto mainīgā nosaukumu un atslēgu:
 
 alert(obj.vards + ", " + obj.pilseta);
@@ -128,8 +131,8 @@ alert(obj.vards + ", " + obj.pilseta);
 Ja mums ir vairāki elementi objektā:
 
 ~~~js
-var obj = JSON.parse('[ { "vards":"Valērijs Visvaris", "vecums":30, "pilseta":"Rīga"},{ "vards":"Anna Bauma", "vecums":12, "pilseta":"Rīga"} ]');
-for (var i=0; i < obj.length; i++) {
+let obj = JSON.parse('[ { "vards":"Valērijs Visvaris", "vecums":30, "pilseta":"Rīga"},{ "vards":"Anna Bauma", "vecums":12, "pilseta":"Rīga"} ]');
+for (let i=0; i < obj.length; i++) {
     console.log(obj[i].vards);
 }
 ~~~

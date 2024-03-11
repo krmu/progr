@@ -20,7 +20,7 @@ AJAX pieprasījumus var veidot izmantojot `jQuery` bibliotēku vai bez tās.
 Pirmais piemērs bez.
 
 ~~~js
-var xhttp = new XMLHttpRequest(); // Tiek definēta metode, kura tiks izmantota
+let xhttp = new XMLHttpRequest(); // Tiek definēta metode, kura tiks izmantota
   xhttp.onreadystatechange = function() { // Kad metode ir gatava jeb ielādēta tiek izpildīda funkcija
     if (this.readyState == 4 && this.status == 200) { // Ja funckija ir veiksmīga un statusa kods ir 200, kas nozīme OK
       document.getElementById("demo").innerHTML = this.responseText; // Dokumenta elementā `demo` tiek ielādeta atbilde no faila 

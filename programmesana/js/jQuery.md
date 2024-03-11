@@ -18,14 +18,14 @@ Javascript bez jQuery:
 
 ~~~js
 
-var vertiba = document.getElementById("identifikators");
+let vertiba = document.getElementById("identifikators");
 
 ~~~
 Javascript izmantojot jQuery:
 
 ~~~js
 
-var vertiba = $("$identifikators");
+let vertiba = $("$identifikators");
 
 ~~~
 
@@ -35,13 +35,13 @@ Javascript valodā atlasām elementa vērtību lapā jeb ievades lauciņa vērt�
 Javascript bez jQuery:
 ~~~js
 
-var vertiba = document.getElementById("identifikators").value;
+let vertiba = document.getElementById("identifikators").value;
 
 ~~~
 Javascript izmantojot jQuery:
 
 ~~~js
 
-var vertiba = $("#identifikators").val();
+let vertiba = $("#identifikators").val();
 
 ~~~

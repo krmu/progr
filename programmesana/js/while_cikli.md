@@ -24,7 +24,7 @@ while( NOSACĪJUMS ){
 Piemērs:
 
 ~~~js 
-var pildi = true;
+let pildi = true;
 
 while(pildi == true){
 

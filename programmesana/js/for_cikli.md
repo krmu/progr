@@ -24,7 +24,7 @@ for( SĀKUMA VĒRTĪBA; PILDĪT KAMĒR; SOLIS){
 ~~~~
 Piemērs:
 ~~~js
-for( var sk = 0; sk< 10; sk++ ){
+for( let sk = 0; sk< 10; sk++ ){
 
     console.log(sk); // Konsolē tiks izvadīts skaitlis intervālā no 0 līdz 9
 
@@ -36,7 +36,7 @@ JavaScript valodā pastāv vēl divi īpaši `for` cikla veidi, tie ir `for in` 
 Lai labāk saprastu, kā tie strādā, apskatīsim piemēru...
 
 ~~~js
-var draugi = ["Emīls", "Juris", "Reinis", "Dace"];
+let draugi = ["Emīls", "Juris", "Reinis", "Dace"];
 for (indekss in draugi) {
     console.log(draugi[indekss]);
 }
@@ -47,7 +47,7 @@ Piemērā nodefinēts masīvs, kurā, izmantojot `for in` ciklu ar skaitītāju 
 Izdarīsim to pašu ar `for of` ciklu...
 
 ~~~js
-var draugi = ["Emīls", "Juris", "Reinis", "Dace"];
+let draugi = ["Emīls", "Juris", "Reinis", "Dace"];
 for (draugs of draugi) {
     console.log(draugs);
 }
@@ -58,7 +58,7 @@ for (draugs of draugi) {
 Šo paņēmienu ērti pielietot, caurskatot atlasītus HTML elementus, piemēram, tabulas rindas.
 
 ~~~js
-var rindas = document.getElementById("tabula").rows;
+let rindas = document.getElementById("tabula").rows;
 for (row of rows) {
     //...darbība katrai rindai...
 }

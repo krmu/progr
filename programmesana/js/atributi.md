@@ -14,7 +14,7 @@ Iedomāsimies, ka atlasītais elements ir kā objekts un atribūti ir tā īpaš
 `innerHTML` ir elementa attēlojamais teksts
 
 ~~~js
-var rindkopa = document.getElementById("rindkopa");
+let rindkopa = document.getElementById("rindkopa");
 rindkopa.innerHTML = "Es esmu rindkopa!";
 ~~~
 
@@ -26,13 +26,13 @@ Apskatīsim piemēru, kā klikšķis uz pogas maina tās tekstu
 
 ~~~js
 function mainaTekstu() {
-    var poga = document.getElementById("poga");
+    let poga = document.getElementById("poga");
     poga.innerHTML = "Hey!";
 }
 ~~~
 
 Izmēģini darbībā!  
-<button style="padding:5px; border:1px solid black;" id="poga" onclick="var poga = document.getElementById('poga'); poga.innerHTML = 'Hey!';">Spied šeit!</button>
+<button style="padding:5px; border:1px solid black;" id="poga" onclick="let poga = document.getElementById('poga'); poga.innerHTML = 'Hey!';">Spied šeit!</button>
 
 Lai paslēptu elementu, tam iestata atribūtu `hidden = true`
 

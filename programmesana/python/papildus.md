@@ -13,4 +13,6 @@ parent: Python
 - [Python loops](https://www.learnpython.org/en/Loops)
 - [Python projects](https://data-flair.training/blogs/python-project-ideas/)
 - [Publiskie API](https://github.com/public-apis/public-apis)
+- [SQL Lite un Python piemērs](https://github.com/krmu/SQLite_OOP)
+- [Django piemērs - mini atzīmju izlikšanas sistēma](https://github.com/krmu/djangouni)
 

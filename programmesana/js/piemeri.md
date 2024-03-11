@@ -29,7 +29,7 @@ Iznākums:
 
 ~~~js
 
-var vards = prompt("Ievadu savu vārdu!");
+let vards = prompt("Ievadu savu vārdu!");
 
 ~~~
 
@@ -64,8 +64,8 @@ Tad tiek definēts Javascript kods:
 
 ~~~js
 function nolasi(){
-    var ievades_lauks_atlasi = document.getElementById("ievades_lauks"); // Atlasām elementu no mūsu HTML lapas.
-    var vertiba = ievades_lauks_atlasi.value; // Paņemam no mūsu elementa tikai un vienīgi tā vērtību
+    let ievades_lauks_atlasi = document.getElementById("ievades_lauks"); // Atlasām elementu no mūsu HTML lapas.
+    let vertiba = ievades_lauks_atlasi.value; // Paņemam no mūsu elementa tikai un vienīgi tā vērtību
     alert("Ievades lauka vērtība ir: " + vertiba); // Paziņojam lapā ievades lauka vērtību.
 }
 ~~~
@@ -90,7 +90,7 @@ HTML Kods:
 
 ~~~js
 function maini_mani(){
-    var ievades_lauks_atlasi = document.getElementById("mainit_so"); // Atlasām elementu no mūsu HTML lapas.
+    let ievades_lauks_atlasi = document.getElementById("mainit_so"); // Atlasām elementu no mūsu HTML lapas.
     ievades_lauks_atlasi.innerHTML =  "Nakts"; // Iestatām tā HTML saturu uz vārdu "Nakts"
 }
 ~~~
@@ -103,7 +103,7 @@ Sākumā nepieciešams tukšs saraksts, ievades lauks un poga
 
 ~~~html
 
-<input id="pirkums"></input>
+<input id="pirkums">
 <button onclick="pievienot()">Pievienot pirkumu!</button>
 <ol id="saraksts">
 </ol>
@@ -114,10 +114,10 @@ Nospiežot pogu, pirkums no ievades lauka *pārcelsies* uz sarakstu
 
 ~~~js
 function pievienot() {
-    var pirkums = document.getElementById("pirkums").value;
-    var rinda = document.createElement("li");
+    let pirkums = document.getElementById("pirkums").value;
+    let rinda = document.createElement("li");
     rinda.innerHTML = pirkums;
-    var saraksts = document.getElementById("saraksts");
+    let saraksts = document.getElementById("saraksts");
     saraksts.appendChild(rinda);
 }
 ~~~
