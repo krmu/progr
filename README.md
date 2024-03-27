@@ -1,6 +1,6 @@
 # ProgHelp - Vietne palīdzībai programmēšanā
 
-Vietnes adrese: https://prog.kmu.lv
+Šī ir vecā vietne, kuru darbināja Jekyll. Jaunā vietne atrodas ar tādu pašu repozitorija nosaukumu.
 
 ## Apraksts
 
