@@ -62,4 +62,5 @@ npm run docs:dev
 
 Visas bildes liekam mapē /src/.vuepress/public/
 
-...
+
+Vietne darbojas kopš 2020. gada 29. decembra.

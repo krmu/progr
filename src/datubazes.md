@@ -235,6 +235,15 @@ Papildināsim piemēru ar tabulu **audzinataji**.
 
 Zinot, ka katrai klasei var būt tikai viens audzinātājs un katram audzinātājam var būt tikai viena klase, tā ir *viens-pret-vienu* relācija.
 
+Var būt piemērs, kad klasei ir vairāki audzinātāji. Tad iespejams izmantot vēl vienu tabulu, kurā glabā relācijas starp klasi un audzinātāju.
+
+![daudzi_audzinataji](/audzintaji_varaki_relacijas.png)
+
+Šajā piemērā, datubāzē ir 3 tabulas: **klases**, **audzinataji** un **klases_audzinataji**. <br>
+Tabulā **klases_audzinataji** ir divi lauki, kas saista tabulas **klases** un **audzinataji**.<br>
+Tiek izmantota arī relācija **viens-pret-vienu** tabulā **klases_audzinataji** pret tabulu **audzinataji**.
+
+ER modeļus zīmēt ērti ir vietnē [draw.io](https://app.diagrams.net/)
 
 ## Indeksi
 
