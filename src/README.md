@@ -1,16 +1,20 @@
-<div align="center">
-<h1> < /> ProgHelp</h1>
-<h3>Vietne palīdzībai programmēšanā un Datorikā</h3>
-</div>
- 
+---
+home: true
+icon: home
+navbar: true
+heroImage: 
+---
+# ProgHelp - Vietne palīdzībai programmēšanā
 
+::: center
 
+![landingpage](/landinggifs.gif)
+:::
 
-# Vietnes adreses maiņa
+# Svarīgi - jauns vietnes domēns proghelp.lv
 
-Lai būtu vieglāk atcerēties vietnes adresi, esam mainījuši tās adresi uz proghelp.lv. Pārsūtīšana notiek automātiski.
-
-Vietnes jaunā adrese: https://proghelp.lv
+Lai būtu vieglāk atcerēties vietnes adresi un tā būtu vairāk saistīta ar saturu, vietnei ir jauns domēns - [proghelp.lv](https://proghelp.lv) <br>
+Pārsūtīšana no vecā domēna [prog.kmu.lv](https://prog.kmu.lv) uz jauno domēnu notiek automātiski.
 
 # Apraksts
 
@@ -28,6 +32,20 @@ Katras tēmas beigās iekļauti "piemēri" (uzdevums ar atrisinājumu), kurus sk
 
 Drīkst arī sadarboties un uzlabot materiālus. 
 
+# Kontakti
+<dl>
+    <dt>Materiāla autori</dt>
+    <dd>Kristaps Muižnieks  [ HTML, Javascript, Java, PHP, Python sadaļas] - Babītes vidusskola</dd>
+    <dd>Raivis Rasnačs [ HTML, Javascript, Python sadaļas] - Jēkabpils Valsts ģimnāzija</dd>
+    <dd>Gabriels Nikijs Savičs [ SQL sadaļas ] - Babītes vidusskola</dd>
+</dl>
+
+Materiāls paredzēts izglītošanas nolūkā.
+
+Lai izveidotu pēc iespējas labāku materiāli, ir ļauts sadarboties un šis projekts pieejams Github versiju kontroles platformā.
+
+Kontaktiem un jautājumiem: kristaps.muiznieks@bvsk.lv
+
 # Ja vēlas palīdzēt...
 
 Vietni darbina VUEPRESS un tiek pielietota Markdown sintakse, hopeTheme tēma.
@@ -43,7 +61,3 @@ npm run docs:dev
 ```
 
 Visas bildes liekam mapē /src/.vuepress/public/
-
-Visa pamatā ir Vuepress: https://vuepress.github.io
-
-Dizains no https://theme-hope.vuejs.press/guide/
