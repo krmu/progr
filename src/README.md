@@ -61,3 +61,5 @@ npm run docs:dev
 ```
 
 Visas bildes liekam mapē /src/.vuepress/public/
+
+...
