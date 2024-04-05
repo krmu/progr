@@ -235,7 +235,7 @@ Papildināsim piemēru ar tabulu **audzinataji**.
 
 Zinot, ka katrai klasei var būt tikai viens audzinātājs un katram audzinātājam var būt tikai viena klase, tā ir *viens-pret-vienu* relācija.
 
-Var būt piemērs, kad klasei ir vairāki audzinātāji. Tad iespejams izmantot vēl vienu tabulu, kurā glabā relācijas starp klasi un audzinātāju.
+Var būt piemērs, kad klasei ir vairāki audzinātāji. Tad iespējams izmantot vēl vienu tabulu, kurā glabā relācijas starp klasi un audzinātāju.
 
 ![daudzi_audzinataji](/audzintaji_varaki_relacijas.png)
 
