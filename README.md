@@ -3,9 +3,6 @@
 <h3>💻 Vietne palīdzībai programmēšanā un Datorikā 💻</h3>
 </div>
  
-
-
-
 # 🖊️ Vietnes adreses maiņa
 
 Lai būtu vieglāk atcerēties vietnes adresi, esam mainījuši tās adresi uz proghelp.lv. Pārsūtīšana notiek automātiski.
@@ -26,7 +23,7 @@ Katras tēmas beigās iekļauti "piemēri" (uzdevums ar atrisinājumu), kurus sk
 
 Šīs vietnes oriģinālās idejas autors ir Kristaps Muižnieks (Babītes vidusskola). Šī vietne nav maksas projekts un ir veidota izglītības nolūkiem.
 
-Drīkst arī sadarboties un uzlabot materiālus. 
+💡 Drīkst arī sadarboties un uzlabot materiālus. 
 
 # 🖊️ Ja vēlas palīdzēt...
 
