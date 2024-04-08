@@ -6,13 +6,13 @@
 
 
 
-# Vietnes adreses maiņa
+# 🖊️ Vietnes adreses maiņa
 
 Lai būtu vieglāk atcerēties vietnes adresi, esam mainījuši tās adresi uz proghelp.lv. Pārsūtīšana notiek automātiski.
 
 Vietnes jaunā adrese: https://proghelp.lv
 
-# Apraksts
+# 🖊️ Apraksts
 
 Vietnē apkopotas dažādas programmēšanas valodas un to paši pamati, tāpat arī pievienoti piemēri.
 
@@ -28,7 +28,7 @@ Katras tēmas beigās iekļauti "piemēri" (uzdevums ar atrisinājumu), kurus sk
 
 Drīkst arī sadarboties un uzlabot materiālus. 
 
-# Ja vēlas palīdzēt...
+# 🖊️ Ja vēlas palīdzēt...
 
 Vietni darbina VUEPRESS un tiek pielietota Markdown sintakse, hopeTheme tēma.
 Lai uzstādītu šo savā datorā, jāuzstāda Node.js un VUEPRESS.
