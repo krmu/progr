@@ -1,6 +1,6 @@
 <div align="center">
 <h1> < /> ProgHelp</h1>
-<h3>Vietne palīdzībai programmēšanā un Datorikā</h3>
+<h3>💻 Vietne palīdzībai programmēšanā un Datorikā 💻</h3>
 </div>
  
 
