@@ -778,7 +778,6 @@ for simbols in teksts:
 ~~~
 
 Arī atstarpe ir simbols!
-{: .alert .alert-warning} 
 
 ### Lielie un mazie burti
 
