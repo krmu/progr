@@ -1,5 +1,6 @@
 ---
 title: Versiju vadība
+icon: material-symbols:conversion-path
 ---
 ## Ievads
 

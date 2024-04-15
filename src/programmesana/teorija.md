@@ -1,6 +1,7 @@
 ---
 title: Teorija
 order: 2
+icon: gravity-ui:book-open
 ---
 ## Algoritmi
 

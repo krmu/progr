@@ -1,6 +1,7 @@
 ---
 title: Python
 order: 7
+icon: teenyicons:python-solid
 ---
 
 ## Datu izvads

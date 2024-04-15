@@ -1,6 +1,7 @@
 ---
 title: HTML un CSS
 order: 3
+icon: flowbite:html-solid
 ---
 ## Kas ir HTML un CSS?
 

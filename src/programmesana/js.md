@@ -1,6 +1,7 @@
 ---
 title: Javascript
 order: 5
+icon: ri:javascript-fill
 ---
 ## Lietošana
 
@@ -1080,6 +1081,147 @@ function pievienot() {
 @tab Iznākums
   
 ![pirkumi](/pirkumi.jpg)
+:::
+
+### LocalStorage dati tabulā
+
+Šajā piemērā apskatīsim kā izveidot tabulu, kurā var ievadīt datus un tie saglabājas lokālajā krātuvē jeb Localstorage. <br>
+Piemērs tiek skatīts kā preču pievienotājs sarakstam ar iegādes datumu un skaitu.<br>
+Pašā sākumā izveidojam HTML ietvaru.
+
+::: tabs
+
+@tab Kods
+
+~~~html
+<h1> Preču uzskaitītājs un saglabātājs</h1>
+<label>Nosaukums:</label><input type="text" id="nosaukums"><br>
+<label>Iegādes datums:</label><input type="date" id="datums"><br>
+<label>Daudzums: </label><input type="number" id="daudzums" min=0><br>
+<button onclick="pievienot_jaunu()">Pievienot</button>
+<hr>
+<table id="tabula" border=1></table>
+~~~
+
+@tab Iznākums
+
+![tabula](/piemers_tabula_html_ietvars.png)
+
+:::
+
+Javascript daļā tiek definētas 3 funkcijas.<br>
+Funckija `pievienot_jaunu()` nolasa ievades laukus un saglabā tos lokālajā krātuvē.<br>
+Funkcija `dzest_rindu()` izdzēš rindu no tabulas. Tai tiek iedots līdzi parametrs - rindas indekss.<br>
+Funkcija `uzzimet()` uzzīmē tabulu, izmantojot datus no lokālās krātuves.<br>
+~~~js
+function pievienot_jaunu(){
+  // Šeit sākas visu ievadīto datu nolasīšana
+  let nosaukums_ievade = document.getElementById("nosaukums").value;
+  let datums_ievade = document.getElementById("datums").value;
+  let daudzums_ievade = document.getElementById("daudzums").value;
+  // Šeit beidzas visu ievadīto datu nolasīšana
+  
+  // Pārbaudam, vai visi lauki ir aizpildīti, ja kāds no laukiem nav aizpildīts tiek izmantota alert funkcija
+  // Šeit var arī veidot HTML izdruku.
+  if(nosaukums_ievade == "" || datums_ievade == "" || daudzums_ievade == ""){
+    alert("Visiem laukiem jābūt aizpildītiem!");
+  }else{
+    // Pārbaudam, vai lokālā krātuve ir tukša jeb vai gadījumā nav situācija, ka localStorage nesatur mums vajadzīgo atslēgu - glabatuve
+    if (localStorage.getItem("glabatuve") === null) {
+      // Tātad tāda elementa nav. Tātad mums jāizveido jauns masīvs un jāsaglabā to lokālajā krātuvē
+      let jauns_masivs = []; // Te izveidojam jaunu tukšu masīvu
+      // Pievienojam masīvam objektu,kuram ir 3 atslēgas - nosaukums, datums, daudzums
+      // Atslēgu vērtības nāk no ievades laukiem
+      jauns_masivs.push({
+        nosaukums:nosaukums_ievade,
+        datums:datums_ievade,
+        daudzums:daudzums_ievade
+      });
+      // Uzstādam lokālajā krātuvē šo masīvu
+      // JSON.stringify pārveido masīvu par JSON formātu, lai to varētu saglabāt lokālajā krātuvē un nolasīt.
+      localStorage.setItem("glabatuve",JSON.stringify(jauns_masivs));
+     }else{
+      // LocalStorage satur mums vajadzīgo atslēgu - glabatuve
+      // Iegūst to un pārveido par masīvu
+      // Tā kā tas ir JSON formātā, tad to pārveido par masīvu ar JSON.parse
+      let jau_ir_masivs = JSON.parse(localStorage.getItem("glabatuve"));
+      // Pievienojam jau esošajam masīvam jaunu objektu ar ievadītajiem datiem
+      jau_ir_masivs.push({
+        nosaukums:nosaukums_ievade, 
+        datums:datums_ievade,
+        daudzums:daudzums_ievade
+      });
+      // Atjaunojam lokālo krātuvi ar jaunajiem datiem
+      localStorage.setItem("glabatuve",JSON.stringify(jau_ir_masivs));
+    }
+  }
+  // Izsaucam funkciju, kura uzzīmē HTML tabulu
+  uzzimet();
+}
+function dzest_rindu(index){
+  // Iegūstam masīvu no lokālās krātuves
+  // Pārveidojam to par masīvu ar JSON.parse funkciju
+  let jau_ir_masivs = JSON.parse(localStorage.getItem("glabatuve"));
+  // Izdzēšam rindu ar noteikto indeksu
+  // Izmantojam splice funkciju, kura izdzēš rindu no masīva.
+  jau_ir_masivs.splice(index, 1);
+  // Atjaunojam lokālo krātuvi ar jaunajiem datiem
+  localStorage.setItem("glabatuve",JSON.stringify(jau_ir_masivs));
+  // Uzzīmējam tabulu ar jaunajiem datiem
+  uzzimet();
+}
+function uzzimet(){
+  // Šis ir funkcijas uzdevums - uzzīmēt tabulu
+  // Pārbaudam, vai lokālā krātuve satur kaut ko
+  // Mūsu gadījumā, meklējam atslēgu glabatuve
+  if (localStorage.getItem("glabatuve") !== null) {
+    // Atrodam tabulas elementu HTML dokumentā
+    let tabula = document.getElementById("tabula");
+    // Uzstādam tabulas sākumu
+    tabula.innerHTML = "<tr><th>Nosaukums</th><th>Datums</th><th>Daudzums</th><th>Dzēst</th></tr>";
+    // Iegūstam masīvu no lokālās krātuves, pārveidojam to par masīvu ar JSON.parse
+    let iegutais_masivs = JSON.parse(localStorage.getItem("glabatuve"));
+    // Pārbaudam, vai masīvs ir tukšs
+    if(iegutais_masivs.length == 0){
+      // Ja masīvs ir tukšs, tad izvadam paziņojumu, ka dati nav
+      tabula.innerHTML += "<tr><td colspan=4>Datu nav!</td></tr>";
+    }else{
+      // Ja masīvs nav tukšs, tad uzzīmējam tabulu
+      // Šis ir indekss, lai zinātu, kura rinda tiek izdzēsta, ja tiek spiesta dzēšanas poga
+      let indekss = 0;  
+      // Katrai rindai no masīva pievienojam jaunu rindu tabulā
+      // Mainīga rinda satur masīva elementu
+      for(let rinda of iegutais_masivs){
+        // Izveidojam tukšu mainīgo, kurā konstruēsim rindu
+        let html_rinda = "";
+        // Konstruējam rindu
+        html_rinda += "<tr>";
+            // Pievienojam katru rindas kolonu, iegūstot datus no masīva elementa
+            html_rinda += "<td>"+rinda.nosaukums+"</td>";
+            html_rinda += "<td>"+rinda.datums+"</td>";
+            html_rinda += "<td>"+rinda.daudzums+"</td>";
+            // Pievienojam dzēšanas pogu, kurai tiek padots indekss
+            html_rinda += "<td><button onclick='dzest_rindu("+indekss+")'>Dzēst šo</button>";
+        html_rinda += "</tr>";
+        // Pievienojam konstruēto rindu tabulai
+        tabula.innerHTML += html_rinda;
+        //  Palielinam indeksu, lai zinātu, kura rinda tiek izdzēsta
+        indekss++;
+      }  
+    }
+  }
+}
+uzzimet();
+~~~
+
+Beigu iznākums, ja tiek aizpildīta tabula ar datiem.
+
+![tabula](/piemers_tabula_html_ietvars_gala.png)
+
+::: warning Brīdinājums
+
+Pogu krāsas un dizains var atšķirties atkarībā no pārlūkprogrammas un tās versijas.
+
 :::
 
 ## Papildus resursi

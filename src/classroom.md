@@ -1,5 +1,6 @@
 ---
 title: GitHub Classroom
+icon: mdi:github
 ---
 ## GitHub Classroom izmantošana darbam stundās
 

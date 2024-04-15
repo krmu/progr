@@ -9,7 +9,7 @@ export default hopeTheme({
     url: "",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: "iconify",
 
   logo: "",
 

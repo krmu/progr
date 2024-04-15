@@ -5,7 +5,7 @@ export default defineUserConfig({
   lang: "en-US",
   title: "</> ProgHelp",
   description: "Vietne palīdzībai programmēšanā",
-
+  
   theme,
  
 });

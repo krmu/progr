@@ -1,6 +1,7 @@
 ---
 title: PHP
 order: 5
+icon: akar-icons:php-fill
 ---
 ## Ievads
 

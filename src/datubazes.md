@@ -1,5 +1,6 @@
 ---
 title: Datubāzes
+icon: material-symbols:database
 ---
 ## Kas ir datu bāzes?
 

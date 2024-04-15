@@ -1,6 +1,7 @@
 ---
 title: Sāksim kodēt!
 order: 1
+icon: material-symbols:book
 ---
 
 ## Teksta redaktora un interpretatora uzstādīšana

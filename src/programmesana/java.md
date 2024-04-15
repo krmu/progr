@@ -1,5 +1,6 @@
 ---
 title: Java
+icon: ri:java-fill
 ---
 ## Ievads
 

@@ -1,5 +1,6 @@
 ---
 title:  C++
+icon: simple-icons:cplusplus
 ---
 
 ## Ievads
