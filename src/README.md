@@ -18,6 +18,7 @@ Pārsūtīšana no vecā domēna [prog.kmu.lv](https://prog.kmu.lv) uz jauno dom
 
 # 📌 Jaunākās izmaiņas vietnē
 
+
 <div id="izvads">Iegūst izmaiņu sarakstu...</div>
  
 # 🖊️ Apraksts
