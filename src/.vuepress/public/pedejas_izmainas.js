@@ -13,8 +13,9 @@ async function iegut_pedejas_izmainas() {
         html_elements.innerHTML = "Neizdevās iegūt jaunākās izmaiņas!";
     }
 }
-var ir_tads_elements = document.getElementById("izvads");
-if (ir_tads_elements) {
-    iegut_pedejas_izmainas();
-}
- 
+document.addEventListener("DOMContentLoaded", () => {
+    let ir_tads_elements = document.getElementById("izvads");
+    if (ir_tads_elements) {
+        iegut_pedejas_izmainas();
+    }
+});
