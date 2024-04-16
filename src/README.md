@@ -11,17 +11,17 @@ heroImage:
 ![landingpage](/landinggifs.gif)
 :::
 
-# ⚠️ Svarīgi - jauns vietnes domēns proghelp.lv
+# <HopeIcon icon="emojione-v1:warning" /> Svarīgi - jauns vietnes domēns proghelp.lv
 
 Lai būtu vieglāk atcerēties vietnes adresi un tā būtu vairāk saistīta ar saturu, vietnei ir jauns domēns - [proghelp.lv](https://proghelp.lv) <br>
 Pārsūtīšana no vecā domēna [prog.kmu.lv](https://prog.kmu.lv) uz jauno domēnu notiek automātiski.
 
-# 📌 Jaunākās izmaiņas vietnē
+# <HopeIcon icon="ic:baseline-published-with-changes" /> Jaunākās izmaiņas vietnē
 
 
 <div id="izvads">Iegūst izmaiņu sarakstu...</div>
  
-# 🖊️ Apraksts
+# <HopeIcon icon="gg:notes" /> Apraksts
 
 Vietnē apkopotas dažādas programmēšanas valodas un to paši pamati, tāpat arī pievienoti piemēri.
 
@@ -37,7 +37,7 @@ Katras tēmas beigās iekļauti "piemēri" (uzdevums ar atrisinājumu), kurus sk
 
 Drīkst arī sadarboties un uzlabot materiālus. 
 
-# ✉️ Kontakti
+# <HopeIcon icon="ic:outline-email" /> Kontakti
 <dl>
     <dt>Materiāla autori</dt>
     <dd>Kristaps Muižnieks  [ HTML, Javascript, Java, PHP, Python sadaļas] - Babītes vidusskola</dd>
@@ -51,7 +51,7 @@ Lai izveidotu pēc iespējas labāku materiāli, ir ļauts sadarboties un šis p
 
 Kontaktiem un jautājumiem: kristaps.muiznieks@bvsk.lv
 
-# ℹ️ Ja vēlas palīdzēt...
+# <HopeIcon icon="material-symbols:info-outline" /> Ja vēlas palīdzēt...
 
 Vietni darbina VUEPRESS un tiek pielietota Markdown sintakse, hopeTheme tēma.
 Lai uzstādītu šo savā datorā, jāuzstāda Node.js un VUEPRESS.
