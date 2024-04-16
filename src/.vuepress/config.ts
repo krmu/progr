@@ -5,7 +5,9 @@ export default defineUserConfig({
   lang: "en-US",
   title: "</> ProgHelp",
   description: "Vietne palīdzībai programmēšanā",
-  
+  head: [
+      ['script', {src: '/pedejas_izmainas.js'}],
+  ],
   theme,
  
 });
