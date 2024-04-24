@@ -394,9 +394,13 @@ WHERE
 
 ## SQLite
 
-SQLite ir atvieglots SQL paveids, jo datu bāzei nav nepieciešams serveris un tā var glabāties datnē ar paplašinājumu `.sqlite`. Tas rada zināmus drošības riskus, bet atvieglo datu bāzes izstrādi un testēšanu.
+SQLite ir atvieglots SQL paveids, jo datu bāzei nav nepieciešams serveris un tā var glabāties datnē ar paplašinājumu `.sqlite`.<br>
+SQLite ir iebūvēta kā Python bibliotēka, tāpēc to var izmantot bez papildus instalācijas.<br>
+SQLite ir vienkārša un ātra, bet tai ir ierobežotas iespējas salīdzinot ar MySQL vai PostgreSQL.<br>
+SQLite datu bāze ir piemērota maziem projektiem, jo	tā var glabāt tikai vienu lietotāju vienlaicīgi.<br>
+Tas rada zināmus drošības riskus, bet atvieglo datu bāzes izstrādi un testēšanu.
 
-Lai darbotos ar SQLite un līdzīgām datu bāzēm, jāzina dažas svarīgākās komandas
+Lai darbotos ar SQLite un līdzīgām datu bāzēm, jāzina dažas svarīgākās komandas.
 
 ~~~sql
 CREATE TABLE preces;
@@ -423,3 +427,210 @@ DELETE FROM preces WHERE daudzums = 0;
 
 Komandu var rakstīt vairākās rindās, bet tās beigās vienmēr jālieto semikols!
 
+Lai redzētu lietotājam ērtā veidā SQLite datubāzi, viens no risinājumiem ir izmantot [DB Browser for SQLite](https://sqlitebrowser.org/).
+
+Vizuālā saskarne izskatās šādi:
+
+![landing-page](/sqllite_landing_pic.png)
+
+Avots: https://sqlitebrowser.org/
+
+### SQLite datu tipi
+
+SQLite datu tipi ir līdzīgi citu SQL datu bāzu tipiem, bet ir dažas atšķirības.
+
+| Datu tips | Apraksts | Piemērs |
+|:-----|:------------|:------------|
+| INTEGER   | Vesels skaitlis     |  4        |
+| REAL   | Decimālskaitlis | 5.6     |
+| TEXT    | Teksts     | Anna |
+| DATE   | Datums  | 2023-01-01 |
+| NULL    | Tukšā vērtība       | NULL |
+
+### Datubāzes izveide
+
+Lai uzsāktu veidot SQLite datubāzi, jāver vaļā DB Browser for SQLite un jāizveido jauna datubāze.
+
+![bilde](/sqlite_new_database.png)
+
+Tālāk izvēlamies kur to saglabāt un kā to nosaukt.
+
+![bilde](/sqlite_new_database_save.png)
+
+Pēc tam mēs varam sākt veidot tabulas un ievietot datus.
+
+Veidosim tabulu ar nosaukumu `personas`.
+
+![bilde](/sqllite_jauna_tabula.png)
+
+Numuri un to darbības
+
+| Numurs | Darbība |
+|:-----|:------------|
+| 1. | Ieraksta datubāzes tabulas nosaukumu |
+| 2. | Ieraksta kolonas nosaukumu |
+| 3. | Ieraksta kolonas datu tipu |
+| 4. | Ja tā ir identifikatora kolona, tad izvēlas AI* |
+| 5. | Ja tā ir primārā atslēga, tad izvēlas PK |
+
+*AI - Autoincrement, lai katrs ieraksts dabūtu unikālu ID un tas automātiski palielinātos.<br>
+Tāpat arī apakšējā logā ir redzams SQL vaicājums, kas tiks izpildīts, kad tiks spiests `OK`.<br>
+To vēl iespējams koriģēt, ja nepieciešams.<br>
+
+Pēc tam mēs varam ievietot datus. Lai atrastu datubāzes tabulu, spiežam uz `Database Structure` un tad uz `Browse Data`.
+
+![bilde](/database_structure_sqlite.png)
+
+Pēc tam mēs varam ievietot datus.<br>
+Spiež uz `Browse Data` un tad uz `New Record`.<br>
+Divvreiz uzspiežot uz kolonas, var ievadīt jaunus datus.
+
+![bilde](/sqllite_jauna_tabula_jauns_ieraksts.png)
+
+Kad jaunie dati ir ievadīti, tad spiež `Write Changes`, lai saglabātu tos.
+
+![bilde](/sqlite_save_database.png)
+
+Pēc tam mēs varam veikt vaicājumus no Python puses.
+
+Ja vēlamies pārbaudīt SQL vaicājumus, tad to dara cilnē `Execute SQL`.<br>
+`Excute SQL` ļauj veikt vaicājumus un redzēt rezultātus, iespējams arī redzēt kļūdas un labot datus.
+
+
+### Python un SQLite
+
+Lai darbotos ar SQLite no Python, mums ir jāimportē `sqlite3` bibliotēka.
+
+```python
+import sqlite3
+```
+
+Lai izveidotu savienojumu ar datubāzi, mums ir jāizveido `connection` objekts. To sāisinām un rakstām `con`.<br>
+Tiek pievienots arī `cursor` objekts, lai veiktu vaicājumus. To sāisinām un rakstām `cur`.<br>
+Kursors ir kā rādītājs uz rindu datubāzē. Tas ļauj mums pārvietoties pa rindām un veikt darbības ar tām - lasīt, rakstīt datus utt.
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+```
+
+Tagad varam veikt darbības ar datubāzi.
+Nolasīsim visu personu datubāzi.
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+dati = cur.execute("SELECT * FROM personas")
+for rinda in dati:
+  print(rinda[1])
+
+con.close()
+
+```
+Mainīgais `dati` satur visus ierakstus no personas tabulas, mēs šo secību izveidojām, būvējot tabulu.<br>
+`for` cikls iziet cauri visiem ierakstiem un izvada katras rindas otrās kolonas vērtību.<br>
+`con.close()` aizver savienojumu ar datubāzi.
+
+::: warning Svarīgi!
+Datubāzes kolonas ir šādas secībā: id, vārds, uzvārds.<br>
+Tāpat kā ar sarakstiem, arī SQLite un Python lasīšanā indeksācija sākas no 0.<br>
+Tas ir specifiski SQLite datubāzei un Python veidam kā to nolasīt.
+:::
+
+Pievienosim jaunu ierakstu datubāzes tabulā `personas`.<br>
+
+Personas vārds un uzvārds ir Jānis Bērziņš.
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+cur.execute("INSERT INTO personas (vards, uzvards) VALUES ('Jānis', 'Bērziņš')")
+con.commit()
+
+con.close()
+
+```
+Šajā piemērā mēs izmantojam `execute` metodi, lai izpildītu SQL vaicājumu.<br>
+`INSERT INTO personas (vards, uzvards) VALUES ('Jānis', 'Bērziņš')` ievieto jaunu ierakstu tabulā `personas` ar vārdu Jānis un uzvārdu Bērziņš.<br>
+
+Svarīgi, ka šajā piemērā mēs izmantojam `con.commit()`, lai saglabātu izmaiņas datubāzē. <br>
+Pretējā gadījumā izmaiņas netiks saglabātas.<br>
+
+Ja mums ir nepieciešams ielādēt datus no mainīgajiem un nevis statiskā tekstā, tad mēs varam izmantot `?` zīmi un kortežu ar vajadzīgajām vērtībām.
+
+::: info 
+Tuple latviskais tulkojums ir kortežs. Tā ir vērtību grupa, kura ir nemainīga.<br>
+Līdzīgi kā saraksts, bet ar nemainīgiem elementiem.
+:::
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+vards = "Jānis"
+uzvards = "Bērziņš"
+
+cur.execute("INSERT INTO personas (vards, uzvards) VALUES (?, ?)", (vards, uzvards))
+con.commit()
+
+con.close()
+
+```
+Jautājuma zīmes apzīmē mainīgos, kas tiks ievietoti datubāzē. Tuple ar mainīgajiem tiek padots kā otra arguments `execute` metodei.<br>
+Manīgie tiek likti tādā pašā secībā, kādā tie ir tabulā.<br>
+Secību nosaka daļa SQL vaicājumā `INTO personas (vards, uzvards)`, kur vārds ir pirmā jautājuma zīme, bet uzvārds ir otrā.<br>
+Ja tagad mēs gribētu redzēt visas personas, kuras ir ievietotas datubāzē, tad mēs varētu izmantot iepriekšējo piemēru.
+
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+dati = cur.execute("SELECT * FROM personas")
+for rinda in dati:
+  print(rinda[1])
+
+con.close()
+
+```
+Tiek iegūts šāds rezultāts:
+
+```
+Visvaldis
+Jānis
+```
+
+Ja mēs gribam izdzēst ierakstu no datubāzes, tad mēs varam izmantot `DELETE` vaicājumu.
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+cur.execute("DELETE FROM personas WHERE vards = 'Jānis'")
+con.commit()
+
+con.close()
+
+```
+Tiek izdzēstas visas personas ar vārdu Jānis.
