@@ -356,45 +356,9 @@ Kāpēc? Jo `id` ir primārā atslēga, un primārā atslēga ir ielikta visos i
 
 ![](/db/komandas/indeksu_zim.png)
 
-
-## ST_distance_sphere
-
-Ja mums ir 2 ģēogrāfiski punkti ar ģeogrāfiskajiem platumiem un ģeogrāfiskajiem garumiem, un mēs vēlamies dabūt attālumu metros starp diviem punktiem, mums ir jaizmanto haversīna formula.
-
-![Haversīna formulas attēlojums uz riņķa](/db/komandas/haversine.png)
-![Haversīna formula](/db/komandas/haversine-1.png)
-
-... bet tā formula ir ļoti sarežģīta un lai gan mēs varam viņu paši iekodēt, ir liela iespējamība, ka mēs pieļausim kļūdu, vai ka nebūs optimizēti. Tāpēc MySQL datubāze nāk ar iebūvētu komandu, kas to aprēķina.
-
-```sql
-select ST_distance_sphere(
-	point(garums, platums),
-	point(garums, platums)
-	-- papildus arguments - metri (riņķa platums). Pēc noklusējuma MySQL ņem zemeslodes platumu (6 370 986 m).
-); -- atgriež attālumu metros
-```
-
-### Izmantošana filtrā
-
-Ja mēs vēlamies atlasīt visus ģeogrāfiskos punktus 1 km attālumā no centra punkta mēs varam izmantot `ST_distance_sphere` kā filtru.
-
-```sql
-SELECT
-	*
-FROM
-	addresses
-WHERE
-	ST_distance_sphere(
-		point(-1.234567, 2.345678), -- "Point Of Interest" (centra punkts)
-		point(longitude, latitude)  -- longitude (ģeogrāfiskais garums) un latitude (ģeogrāfiskais platums) - kolonas tabulā
-	) < 1000 -- kur attālums ir mazāks par 1 km
-```
-
-Šī komanda ir samērā smaga, tāpēc ir ieteikts **vismaz** izmantot [indeksus](/db/komandas/indeksi) priekš ģeogrāfiskā garuma un platuma kolonām (`lon(longitude)`, `lat(latitude)`).
-
 ## SQLite
 
-SQLite ir atvieglots SQL paveids, jo datu bāzei nav nepieciešams serveris un tā var glabāties datnē ar paplašinājumu `.sqlite`.<br>
+SQLite ir atvieglots SQL paveids, jo datu bāzei nav nepieciešams serveris un tā var glabāties datnē ar paplašinājumu `.sqlite` vai `.db`.<br>
 SQLite ir iebūvēta kā Python bibliotēka, tāpēc to var izmantot bez papildus instalācijas.<br>
 SQLite ir vienkārša un ātra, bet tai ir ierobežotas iespējas salīdzinot ar MySQL vai PostgreSQL.<br>
 SQLite datu bāze ir piemērota maziem projektiem, jo	tā var glabāt tikai vienu lietotāju vienlaicīgi.<br>
@@ -596,6 +560,35 @@ Manīgie tiek likti tādā pašā secībā, kādā tie ir tabulā.<br>
 Secību nosaka daļa SQL vaicājumā `INTO personas (vards, uzvards)`, kur vārds ir pirmā jautājuma zīme, bet uzvārds ir otrā.<br>
 Ja tagad mēs gribētu redzēt visas personas, kuras ir ievietotas datubāzē, tad mēs varētu izmantot iepriekšējo piemēru.
 
+Otrs veids kā ievadīt vērtības ir no ievades lauciņa, kuru aizpilda lietotājs.
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+vards = input("Ievadiet vārdu: ")
+uzvards = input("Ievadiet uzvārdu: ")
+
+cur.execute("INSERT INTO personas (vards, uzvards) VALUES (?, ?)", (vards, uzvards))
+con.commit()
+
+con.close()
+
+```
+
+Šajā piemērā lietotājs ievada vārdu un uzvārdu, un šīs vērtības tiek ievietotas datubāzē.<br>
+
+
+Ja vēlamies nolasīt datus no datubāzes, tad mēs varam izmantot `SELECT` vaicājumu.<br>
+Piemērā mēs atlasām visus vārdus no personas tabulas. Šie dati jau pievienoti iepriekš.
+
+
+::: tabs
+
+@tab Kods 
 
 ```python
 
@@ -611,12 +604,13 @@ for rinda in dati:
 con.close()
 
 ```
-Tiek iegūts šāds rezultāts:
+@tab Rezultāts
 
 ```
 Visvaldis
 Jānis
 ```
+:::
 
 Ja mēs gribam izdzēst ierakstu no datubāzes, tad mēs varam izmantot `DELETE` vaicājumu.
 
@@ -634,3 +628,67 @@ con.close()
 
 ```
 Tiek izdzēstas visas personas ar vārdu Jānis.
+
+Dinamiskā meklēšana pēc lietotāja ievades ir iespējama, izmantojot `?` zīmi un tuple.
+Šajā gadījumā mēs gribētu meklēt to ko ievadījis lietotājs.
+
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+cur = con.cursor()
+
+ievade = input("Ievadiet vārdu: ")
+
+cur.execute("SELECT * FROM personas WHERE vards = ?", (ievade))
+
+dati = cur.fetchall()
+for rinda in dati:
+  print(rinda[1])
+
+con.close()
+
+```
+
+Šajā piemērā tiek atlasītas visas personas ar vārdu, ko ievada lietotājs.<br>
+`input` funkcija ļauj lietotājam ievadīt datus.<br>
+`cur.fetchall()` atgriež visas rindas, kas atbilst meklēšanas kritērijam.<br>
+`for` cikls izvada visas personas ar ievadīto vārdu.
+
+
+## ST_distance_sphere
+
+Ja mums ir 2 ģēogrāfiski punkti ar ģeogrāfiskajiem platumiem un ģeogrāfiskajiem garumiem, un mēs vēlamies dabūt attālumu metros starp diviem punktiem, mums ir jaizmanto haversīna formula.
+
+![Haversīna formulas attēlojums uz riņķa](/db/komandas/haversine.png)
+![Haversīna formula](/db/komandas/haversine-1.png)
+
+... bet tā formula ir ļoti sarežģīta un lai gan mēs varam viņu paši iekodēt, ir liela iespējamība, ka mēs pieļausim kļūdu, vai ka nebūs optimizēti. Tāpēc MySQL datubāze nāk ar iebūvētu komandu, kas to aprēķina.
+
+```sql
+select ST_distance_sphere(
+	point(garums, platums),
+	point(garums, platums)
+	-- papildus arguments - metri (riņķa platums). Pēc noklusējuma MySQL ņem zemeslodes platumu (6 370 986 m).
+); -- atgriež attālumu metros
+```
+
+### Izmantošana filtrā
+
+Ja mēs vēlamies atlasīt visus ģeogrāfiskos punktus 1 km attālumā no centra punkta mēs varam izmantot `ST_distance_sphere` kā filtru.
+
+```sql
+SELECT
+	*
+FROM
+	addresses
+WHERE
+	ST_distance_sphere(
+		point(-1.234567, 2.345678), -- "Point Of Interest" (centra punkts)
+		point(longitude, latitude)  -- longitude (ģeogrāfiskais garums) un latitude (ģeogrāfiskais platums) - kolonas tabulā
+	) < 1000 -- kur attālums ir mazāks par 1 km
+```
+
+Šī komanda ir samērā smaga, tāpēc ir ieteikts **vismaz** izmantot [indeksus](/db/komandas/indeksi) priekš ģeogrāfiskā garuma un platuma kolonām (`lon(longitude)`, `lat(latitude)`).
