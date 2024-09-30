@@ -5,7 +5,7 @@ navbar: true
 heroImage: 
 ---
 # ProgHelp - Vietne palīdzībai programmēšanā
-
+Sveiciens :)
 ::: center
 
 ![landingpage](/landinggifs.gif)
