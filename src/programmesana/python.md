@@ -276,7 +276,7 @@ Konsolē izdrukāsies vārdnīcas atslēgas.
 
 Lai izdrukātos vērtības, jāraksta `print(prieksmetusaisinajumi[x])`
 
-Lai labāk saprastu, kā strādā vārdnīcas, apskati [burtu skaitīšanas algoritmu.](piemeri.md#aboli)
+Lai labāk saprastu, kā strādā vārdnīcas, apskati [burtu skaitīšanas algoritmu.](#burtu-skaitisana)
 
 ## Slēgtie saraksti (tuples)
 
@@ -366,7 +366,7 @@ print(paraVaiNepara(5)) #F-jas izsaukums
 
 Dotajā piemērā ir funkcija, kas jebkādam padotam skaitlim nosaka, vai tas ir pāra skaitlis un atgriež `True` vai `False`. Tā kā padotais skaitlis ir 5, tad rezultāts ir `False`.
 
-Lai labāk saprastu, kā darbojas funkcijas, apskati [ābolu lasīšanas algoritmu.](piemeri.md#aboli)
+Lai labāk saprastu, kā darbojas funkcijas, apskati [ābolu lasīšanas algoritmu.](#abolu-lasisanas-algoritms)
 
 ### Mainīgo redzamība
 
@@ -522,7 +522,7 @@ if y < x:
     print('y ir mazāks nekā x')
 ~~~
 
-Dodies [šeit](./saraksti.md#meklesana) un izpēti, kā nosacījumus pielieto sarakstiem!
+Dodies [šeit](#vertibu-meklesana) un izpēti, kā nosacījumus pielieto sarakstiem!
 
 
 ## Operatori
@@ -809,7 +809,7 @@ print(teksts_s)
 
 Rezultāts: ['S', 'p', 'r', 'ī', 'd', 'ī', 't', 'i', 's']
 
-Par sarakstiem vairāk izlasīsi [šeit](./saraksti.md)!
+Par sarakstiem vairāk izlasīsi [šeit](#saraksti-lists)!
 
 ## Datums un laiks
 
@@ -1267,13 +1267,13 @@ Konstruktors palīdz iekustināt objektu ar gatavām no malas iedotām vērtīb�
 
 [Bankomāts](#bankomats)
 
-[UID Ģenerators](#uid-gen)
+[UID Ģenerators](#uid-generators)
 
-[Dators iedomājas skaitli..](#iedomajas-skaitli)
+[Dators iedomājas skaitli..](#dators-iedomajas-skaitli)
 
-[Āboli](#aboli)
+[Āboli](#abolu-lasisanas-algoritms)
 
-[Burtu skaitīšana](#burti)
+[Burtu skaitīšana](#burtu-skaitisana)
 
 ### Bankomāts
 
