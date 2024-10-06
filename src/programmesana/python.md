@@ -263,6 +263,17 @@ print(prieksmetusaisinajumi['lv'])
 ~~~
 
 Konsolē tiek izdrukāts: Latviešu valoda , jo vārdnīcas atslēga `lv` satur vērtību Latviešu valoda.
+::: info Svarīgi!
+Ļoti svarīgi, ka Python programmēšanas valodā atslēgas ir jāraksta ar pēdiņām, bet tās var saturēt arī ciparus, komatus un pat atstarpes.
+:::
+Piemērs:
+
+~~~python
+savadaka_vardnica = {'1 : Atslēga ar atstarpi':'Atslēgas vērtba', 'inf':'Informātika'}
+print(prieksmetusaisinajumi['1 : Atslēga ar atstarpi'])
+~~~
+
+Konsolē izdrukāsies visas vērtības, kas ir vārdnīcas atslēgas `valodas` sarakstā.
 
 Vārdnīcas nolasīšana ciklā.
 
@@ -275,6 +286,23 @@ for x in prieksmetusaisinajumi:
 Konsolē izdrukāsies vārdnīcas atslēgas.
 
 Lai izdrukātos vērtības, jāraksta `print(prieksmetusaisinajumi[x])`
+
+Vārdnīcas var saturēt arī sarakstus.
+
+~~~python
+prieksmetusaisinajumi = {'valodas':['Latviešu valoda', 'Angļu valoda'], 'tehnologijas':['Informātika', 'Datorika', 'Programmēšana']}
+~~~
+
+::: info Svarīgi!
+Ja vēlamies tikt pie vārdnīcas atslēgām, tad to var izdarīt ar ciklu.
+:::
+
+~~~python
+prieksmetusaisinajumi = {'valodas':['Latviešu valoda', 'Angļu valoda'], 'tehnologijas':['Informātika', 'Datorika', 'Programmēšana']}
+for x in prieksmetusaisinajumi['valodas']:
+    print(x)
+~~~
+
 
 Lai labāk saprastu, kā strādā vārdnīcas, apskati [burtu skaitīšanas algoritmu.](#burtu-skaitisana)
 
@@ -723,6 +751,10 @@ Ja nepieciešams nosūtīt serverim kādus datus, izmanto POST pieprasījumu. Pi
 
 Serveris atbild ar jaunu lapu, ja dati pareizi vai kļūdas ziņojumu, ja dati kļūdaini.
 
+::: info Svarīgi!
+
+Papildus piemērs detalizētā veidā apskatāms [šeit](#api-izsaukuma-piemers).
+:::
 ## Darbības ar tekstu
 
 ### Teksta garums
@@ -1508,6 +1540,149 @@ print(burti)
 
 Rezultāts:
 {'A': 1, 'n': 1, 'a': 3, 's': 2, 't': 1, 'i': 1, 'j': 1}
+
+### API izsaukuma piemērs
+
+Dota parauga adrese API izsaukumam.
+
+`https://api.tvmaze.com/singlesearch/shows?q={part_of_show_name}`
+
+Šajā adresē tiek dots parametrs ar nosaukumu `q`, kuram jānorāda daļa no seriāla nosaukuma.
+
+Lai mēs izvēlētos savu šovu, nepieciešams mainīt adreses daļu `{part_of_show_name}` uz kādu no zināmajiem seriāliem.
+
+Meklēsim šovu ar nosaukumu The Office.
+
+Adreses izsaukums būs šāds:
+
+`https://api.tvmaze.com/singlesearch/shows?q=The Office`
+
+Adrese pārlūkā tiek pārvērsta par šādu:
+
+`https://api.tvmaze.com/singlesearch/shows?q=The%20Office`
+
+`%20` ir atstarpes aizstājējs, jo URL nevar saturēt atstarpes. Tas notiek automātiski un no tā nevar izbēgt.
+
+Piemērā tiek izmantota bibliotēka `requests`, kas ļauj veikt HTTP pieprasījumus.
+::: warning
+
+API atbildes datu struktūru un saturu nosaka API izstrādātājs. Tāpēc ir svarīgi iepazīties ar API dokumentāciju, lai zinātu, kādi dati tiks saņemti un kādi dati jāsūta.
+
+:::
+
+Atbilde no servera izskatās šāda:
+
+~~~json
+ 
+{
+  "id": 526,
+  "url": "https://www.tvmaze.com/shows/526/the-office",
+  "name": "The Office",
+  "type": "Scripted",
+  "language": "English",
+  "genres": [
+    "Comedy"
+  ],
+  "status": "Ended",
+  "runtime": 30,
+  "averageRuntime": 30,
+  "premiered": "2005-03-24",
+  "ended": "2013-05-16",
+  "officialSite": "http://www.nbc.com/the-office",
+  "schedule": {
+    "time": "21:00",
+    "days": [
+      "Thursday"
+    ]
+  },
+  "rating": {
+    "average": 8.5
+  },
+  "weight": 97,
+  "network": {
+    "id": 1,
+    "name": "NBC",
+    "country": {
+      "name": "United States",
+      "code": "US",
+      "timezone": "America/New_York"
+    },
+    "officialSite": "https://www.nbc.com/"
+  },
+  "webChannel": null,
+  "dvdCountry": null,
+  "externals": {
+    "tvrage": 6061,
+    "thetvdb": 73244,
+    "imdb": "tt0386676"
+  },
+  "image": {
+    "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/481/1204342.jpg",
+    "original": "https://static.tvmaze.com/uploads/images/original_untouched/481/1204342.jpg"
+  },
+  "summary": "\u003Cp\u003ESteve Carell stars in \u003Cb\u003EThe Office\u003C/b\u003E, a fresh and funny mockumentary-style glimpse into the daily interactions of the eccentric workers at the Dunder Mifflin paper supply company. Based on the smash-hit British series of the same name and adapted for American Television by Greg Daniels, this fast-paced comedy parodies contemporary American water-cooler culture. Earnest but clueless regional manager Michael Scott believes himself to be an exceptional boss and mentor, but actually receives more eye-rolls than respect from his oddball staff.\u003C/p\u003E",
+  "updated": 1704794497,
+  "_links": {
+    "self": {
+      "href": "https://api.tvmaze.com/shows/526"
+    },
+    "previousepisode": {
+      "href": "https://api.tvmaze.com/episodes/711203",
+      "name": "Finale (2)"
+    }
+  }
+}
+
+~~~
+
+
+Darbību secība:
+
+1. Importē bibliotēku `requests`.
+2. Definē adresi, kurai jāveic pieprasījums.
+3. Veic pieprasījumu ar funkciju `requests.get()`.
+4. Iegūst atbildi no servera.
+5. Atbildes tekstu pārveido par vārdnīcu ar funkciju `json()`.
+6. Izvada vārdnīcu.
+
+::: tip
+
+Papildus var izmantot `response.status_code`, lai pārbaudītu, vai serveris atbildēja ar korektu kodu.
+
+:::
+
+Kā tas izskatās kodā:
+
+~~~python
+
+import requests
+
+url = "https://api.tvmaze.com/singlesearch/shows?q=The%20Office"
+response = requests.get(url)
+data = response.json()
+
+if response.status_code == 200: # Pārbaudām vai vispār serveris atbildēja ar korektu kodu
+    print(data)
+    # Tagad varam izmantot datus
+    # Pārbaudām vai visi iegūtie dati ir korekti
+    if id in data:
+        print("Seriāla ID:", data["id"])
+        print("Seriāla nosaukums:", data["name"])
+        # Atbildē atslēga genres satur vairākas vērtības, tās ir saraksts
+        # Varam izmantot join funkciju, lai izvadītu sarakstu kā vienu tekstu
+        print("Seriāla žanrs:", ", ".join(data["genres"]))
+        # Atslēga rating satur vērtību average, kas ir vērtējums
+        # Varam izvadīt vērtējumu, bet tā ir apakšatslēga
+        print("Vērtējums:", data["rating"]["average"])
+    else:
+        # Tika iegūti nepareizi dati, jo nav atslēgas id
+        print("Kļūda iegūtā atbilde ir nepareiza")
+else:
+    print("Kļūda! Statusa kods:", response.status_code)
+    # Serveris atbildēja ar nepareizu kodu
+
+~~~
+
 
 
 ## Papildus resursi
