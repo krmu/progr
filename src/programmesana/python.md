@@ -762,7 +762,7 @@ Tādā veidā iespējams iegūt datus no ārejiem resursiem neizmantojot tiešo 
 ### Kā tas strādā?
 
 Apskatīsim attēlu.
-****
+
 ![html1](/api.jpg)
 Attēls: lvivity.com
 
