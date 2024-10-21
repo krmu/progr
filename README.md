@@ -44,3 +44,15 @@ Visas bildes liekam mapē /src/.vuepress/public/
 Visa pamatā ir Vuepress: https://vuepress.github.io
 
 Dizains no https://theme-hope.vuejs.press/guide/
+
+Saites, kas var noderēt:
+
+- https://commonmark.org/help/
+
+- https://vuepress.github.io/guide/markdown.html
+
+- https://theme-hope.vuejs.press/guide/markdown/stylize/hint.html
+
+- https://theme-hope.vuejs.press/guide/markdown/stylize/align.html
+
+- https://theme-hope.vuejs.press/guide/markdown/content/tabs.html

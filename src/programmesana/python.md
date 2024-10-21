@@ -250,6 +250,75 @@ for oga in ogas:
     print(oga)
 ~~~
 
+### Sarakstu aizpilde (List Comprehensions)
+
+Python programmēšanas valodā sarakstu izveidi ir iespējams saīsināt.
+
+Sarakstus, kas tiek veidoti šādi:
+
+~~~python
+kvadrati = []
+
+for x in range(10):
+    kvadrati.append(x**2)
+~~~
+
+Ir iespējams izveidot arī šādi:
+
+~~~python
+kvadrati = [x**2 for x in range(10)]
+~~~
+
+Rezultāts: `[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]`
+
+Saraksta izveidē var iekļaut arī pārbaudes.
+
+::: tabs
+
+@tab Izmantojot sarakstu aizpildi
+~~~python
+skaitli = [x for x in range(10) if x%2 == 0]
+~~~
+Rezultāts: `[0, 2, 4, 6, 8]`
+
+@tab Neizmantojot sarakstu aizpildi
+~~~python
+skaitli = []
+
+for x in range(10):
+    if x%2 == 0:
+        skaitli.append(x)
+~~~
+Rezultāts: `[0, 2, 4, 6, 8]`
+:::
+
+Ir iespējams izveidot arī daudzdimensiju sarakstus.
+
+::: tabs
+@tab Izmantojot sarakstu aizpildi
+~~~python
+skaitlu_pakapes1 = [[x**i for i in range(1, 4)] for x in range(1, 4)]
+~~~
+
+Rezultāts: `[[1, 1, 1], [2, 4, 8], [3, 9, 27]]`
+
+@tab Neizmantojot sarakstu aizpildi
+~~~python
+skaitlu_pakapes = []
+
+for x in range(1, 4):
+    saraksts = []
+    for i in range(1, 4):
+        saraksts.append(x**i)
+    skaitlu_pakapes.append(saraksts)
+~~~
+Rezultāts: `[[1, 1, 1], [2, 4, 8], [3, 9, 27]]`
+:::
+
+![python-list-comprehensions](/python-list-comprehension-syntax.png)
+
+Avots: [scientecheasy.com](https://www.scientecheasy.com/2023/06/list-comprehension-in-python.html/)
+
 ## Vārdnīcas
 
 `manaVardnica = {'atslega':'vertiba','atslega2':'vertiba2'}`
