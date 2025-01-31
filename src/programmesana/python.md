@@ -1115,6 +1115,8 @@ def index():
 app.run(debug=True)
 ~~~
 
+Pilns piemērs Flask projektam pieejams adresē [https://github.com/krmu/Flask_bvsk](https://github.com/krmu/Flask_bvsk)
+
 ## Kļūdu apstrāde
 
 Apskatīsim, kā programmā paredzēt dažādus izņēmuma gadījumus...
