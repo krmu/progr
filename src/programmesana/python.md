@@ -631,7 +631,7 @@ Aritmētiskie operatori
 | -   | Atņemšana | 4  - 3     |
 | *    | Reizināšana     | 4 * 3|
 | /   | Dalīšana      | 4 / 3 |
-| %    | Modulis       | 4 < 5 |
+| %    | Modulis       | 4 % 5 |
 | **   | Kāpināšana | 4**3 |
 | //   | Dalīšana iegūstot veselu skaitli    | 13 // 4 |
 
