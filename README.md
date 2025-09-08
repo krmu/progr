@@ -50,3 +50,5 @@ Saites, kas var noderēt:
 - https://theme-hope.vuejs.press/guide/markdown/stylize/align.html
 
 - https://theme-hope.vuejs.press/guide/markdown/content/tabs.html
+
+.
