@@ -1,105 +1,95 @@
+// .vuepress/theme.ts
 import { hopeTheme } from "vuepress-theme-hope";
-import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
+
 export default hopeTheme({
   hostname: "https://prog.kmu.lv",
-
   author: {
     name: "Kristaps Muižnieks",
     url: "",
   },
-
-  iconAssets: "iconify",
-
-  logo: "",
-
+  navbarLayout: {
+    start: ["Brand"],
+    center: ["Links"],
+    end: ["Repo","Outlook","Search"]
+  },
+  darkmode: "switch",
   repo: "krmu/progr",
-
+  repoLabel: "GitHub",
+  repoDisplay: true,
   docsDir: "src",
-
-  // navbar
-  navbar,
-
-  // sidebar
-  sidebar,
-
-  footer: "Proghelp - vietne palīdzībai programmēšanā",
-
+  navbar: [
+    {
+      text: "Sākums",
+      link: "/",
+      icon: "material-symbols:home-outline",
+    },
+    {
+      text: "Programmēšana",
+      link: "/programmesana/",
+      icon:"mdi-light:console"
+    },
+    {
+      text: "Datubāzes",
+      link: "datubazes",
+      icon: "material-symbols:database-outline"
+    },
+    {
+      text: "Versiju vadība",
+      link: "versiju_vadiba",
+      icon:"simple-icons:githubactions"
+    },
+    {
+      text: "Classroom",
+      link: "classroom",
+      icon: "mdi:google-classroom"
+    },
+    {
+      text: "Eksāmens programmēšanā",
+      link: "/ce/",
+      icon: "healthicons:i-exam-qualification-outline",
+      
+    },
+  ],
+  sidebar: [
+    {
+      text: "Programmēšana",
+      prefix: "/programmesana/",
+      children: ["teorija","html_css", "js","php", "python","java"],
+    },
+    {
+      text: "Datubāzes",
+      link: "datubazes",
+    },
+    {
+      text: "Versiju vadība",
+      link: "versiju_vadiba",
+    },
+    {
+      text: "Classroom",
+      link: "classroom",
+    },
+    {
+      text: "Centralizētais eksāmens programmēšanā",
+      prefix: "/ce/",
+      children: ["2023"],
+    },
+  ],
+  footer: "Proghelp - vietne palīdzībai programmēšanā kopš 2020. gada info@proghelp.lv",
   displayFooter: true,
-  pageInfo:false,
+  pageInfo: false,
   metaLocales: {
     editLink: "Palīdzēt uzlabot šo lapu!",
   },
-  plugins:{
-    mdEnhance: {
-      // this is the default option, so you can use it directly
-      hint: true,
-      align: true,
-      tabs: true,
+  markdown: {
+    hint: true,
+    align: true,
+    tabs: true,
+  },
+  plugins: {
+    icon: {
+      assets: "iconify",
     },
     copyCode: {},
-    search:{}
-    
-  }
-    // You should generate and use your own comment service
-    
-
-    // All features are enabled for demo, only preserve features you need here
-
-    // install @vuepress/plugin-pwa and uncomment these if you want a PWA
-    // pwa: {
-    //   favicon: "/favicon.ico",
-    //   cacheHTML: true,
-    //   cachePic: true,
-    //   appendBase: true,
-    //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
-    //     statusBarColor: "black",
-    //   },
-    //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
-    //     color: "#ffffff",
-    //   },
-    //   manifest: {
-    //     icons: [
-    //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
-    //         sizes: "512x512",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
-    //         sizes: "192x192",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //     ],
-    //     shortcuts: [
-    //       {
-    //         name: "Demo",
-    //         short_name: "Demo",
-    //         url: "/demo/",
-    //         icons: [
-    //           {
-    //             src: "/assets/icon/guide-maskable.png",
-    //             sizes: "192x192",
-    //             purpose: "maskable",
-    //             type: "image/png",
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
+    search: {},
+  },
 });

@@ -3,12 +3,6 @@
 <h3>💻 Vietne palīdzībai programmēšanā un Datorikā 💻</h3>
 </div>
  
-# 🖊️ Vietnes adreses maiņa
-
-Lai būtu vieglāk atcerēties vietnes adresi, esam mainījuši tās adresi uz proghelp.lv. Pārsūtīšana notiek automātiski.
-
-Vietnes jaunā adrese: https://proghelp.lv
-
 # 🖊️ Apraksts
 
 Vietnē apkopotas dažādas programmēšanas valodas un to paši pamati, tāpat arī pievienoti piemēri.

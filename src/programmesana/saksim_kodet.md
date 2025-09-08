@@ -2,6 +2,7 @@
 title: Sāksim kodēt!
 order: 1
 icon: material-symbols:book
+navbar: true
 ---
 
 ## Teksta redaktora un interpretatora uzstādīšana
@@ -142,10 +143,6 @@ Iegūstam tabulu ar 3 rindām un 3 šūnām katrā rindā.
 
 ## Mājas lapu programmēšana
 
-Ja tev vēl datorā nav uzstādīts VS Code, [dodies šeit](./vscode.md) un uzzini, kā to izdarīt!
-
-Ja esi gatavs, varam sākt!
-
 Izveidosim pirmo mājas lapas projektu!
 
 Tev jāizveido sev ērtā vietā tukša mape, ko nosauksim par `manaPirmaLapa`.
@@ -199,8 +196,6 @@ Ievietosim lapā virsrakstu!
 }
 ~~~
 
-Vairāk par css uzzināsi [šeit](../css/index.md)!
-
 
 ![sveika-pasaule](/sveika_pasaule.jpg)
 
@@ -222,7 +217,4 @@ function pasvitroTekstu() {
 ~~~
 
 Izmēģini pievienoto pogu!
-
-Lai uzzinātu vairāk par JavaScript, [dodies šeit](../js/index.md)!
-
 

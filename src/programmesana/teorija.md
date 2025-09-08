@@ -105,7 +105,7 @@ Kārtojamie dati sadalās sakārtotajā daļā un nesakārtotajā daļā.
 Viens no vienkāršākajiem algoritmiem, kas vairākkārt pārbauda visus virknes skaitļus pa pāriem un maina tos vietām.
 
 1. Pirmos divus virknes skaitļus savstarpēji salīdzina, lai noteiktu lielāko. 
-2. Ja 1. skaitlis ir lielāks, to maina ar otro, izmantojot kādu no [*swap*](swap.md) algoritmiem.
+2. Ja 1. skaitlis ir lielāks, to maina ar otro, izmantojot kādu no [*swap*] algoritmiem.
 3. Salīdzina 2. un 3. skaitli un maina vietām, ja nepieciešams. Tā secīgi atkārto darbību visiem pārējiem skaitļu pāriem. Kad pārbaudīts beidzamais pāris, lielākais virknes skaitlis atrodas pēdējā pozīcijā.
 4. Atkārto 1.-3. soli tik ilgi, kamēr visa virkne sakārtota.
 
