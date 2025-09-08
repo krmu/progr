@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ES6"
+    "target": "ES2022"
   },
   "include": [
     "src/.vuepress/**/*.ts",
