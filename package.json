@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@vuepress/plugin-google-analytics": "2.0.0-rc.112",
-    "@vuepress/plugin-search": "2.0.0-rc.112"
+    "@vuepress/plugin-search": "2.0.0-rc.112",
+    "vite": "^5.4.2"
   }
 }
