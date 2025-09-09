@@ -17,7 +17,7 @@ export default hopeTheme({
   repoLabel: "GitHub",
   repoDisplay: true,
   docsDir: "src",
-  docsBranch: "next",
+  docsBranch: "main",
   lastUpdated:true,
   changelog:true,
   navbar: [
