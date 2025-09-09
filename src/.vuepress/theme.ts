@@ -17,7 +17,9 @@ export default hopeTheme({
   repoLabel: "GitHub",
   repoDisplay: true,
   docsDir: "src",
-  lastUpdated:false,
+  docsBranch: "next",
+  lastUpdated:true,
+  changelog:true,
   navbar: [
     {
       text: "Sākums",
