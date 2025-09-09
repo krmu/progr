@@ -78,7 +78,7 @@ export default hopeTheme({
     {
       text: "Centralizētais eksāmens programmēšanā",
       prefix: "/ce/",
-      children: ["2023","2024","2025"],
+      children: ["ieteikumi","2023","2024","2025"],
       icon: "healthicons:i-exam-qualification-outline",
     },
   ],
