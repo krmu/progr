@@ -17,6 +17,7 @@ export default hopeTheme({
   repoLabel: "GitHub",
   repoDisplay: true,
   docsDir: "src",
+  lastUpdated:false,
   navbar: [
     {
       text: "Sākums",
@@ -55,23 +56,28 @@ export default hopeTheme({
       text: "Programmēšana",
       prefix: "/programmesana/",
       children: ["teorija","html_css", "js","php", "python","java"],
+      icon:"mdi-light:console"
     },
     {
       text: "Datubāzes",
       link: "datubazes",
+      icon: "material-symbols:database-outline"
     },
     {
       text: "Versiju vadība",
       link: "versiju_vadiba",
+      icon:"simple-icons:githubactions"
     },
     {
       text: "Classroom",
       link: "classroom",
+      icon: "mdi:google-classroom"
     },
     {
       text: "Centralizētais eksāmens programmēšanā",
       prefix: "/ce/",
-      children: ["2023"],
+      children: ["2023","2024","2025"],
+      icon: "healthicons:i-exam-qualification-outline",
     },
   ],
   footer: "Proghelp - vietne palīdzībai programmēšanā kopš 2020. gada info@proghelp.lv",
@@ -91,5 +97,6 @@ export default hopeTheme({
     },
     copyCode: {},
     search: {},
+    git: {}
   },
 });
