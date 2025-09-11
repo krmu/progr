@@ -42,11 +42,6 @@ export default hopeTheme({
       icon:"simple-icons:githubactions"
     },
     {
-      text: "Classroom",
-      link: "classroom",
-      icon: "mdi:google-classroom"
-    },
-    {
       text: "Eksāmens programmēšanā",
       link: "/ce/",
       icon: "healthicons:i-exam-qualification-outline",
@@ -69,11 +64,6 @@ export default hopeTheme({
       text: "Versiju vadība",
       link: "versiju_vadiba",
       icon:"simple-icons:githubactions"
-    },
-    {
-      text: "Classroom",
-      link: "classroom",
-      icon: "mdi:google-classroom"
     },
     {
       text: "Centralizētais eksāmens programmēšanā",
