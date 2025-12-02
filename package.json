@@ -1,29 +1,29 @@
 {
-  "name": "proghelp",
-  "version": "2.1.0",
-  "description": "A project of vuepress-theme-hope",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "docs:build": "vuepress-vite build src",
-    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
-    "docs:dev": "vuepress-vite dev src",
-    "docs:update-package": "npx vp-update"
-  },
-  "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.24",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.112",
-    "@vuepress/plugin-git": "^2.0.0-rc.112",
-    "@vuepress/plugin-shiki": "2.0.0-rc.112",
-    "sass-embedded": "^1.92.1",
-    "vue": "^3.5.21",
-    "vuepress": "2.0.0-rc.24",
-    "vuepress-plugin-md-enhance": "2.0.0-rc.94",
-    "vuepress-theme-hope": "2.0.0-rc.94"
-  },
-  "dependencies": {
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.112",
-    "@vuepress/plugin-search": "2.0.0-rc.112",
-    "vite": "^7.1.5"
-  }
+ "name": "proghelp",
+ "version": "2.1.0",
+ "description": "A project of vuepress-theme-hope",
+ "license": "MIT",
+ "type": "module",
+ "scripts": {
+  "docs:build": "vuepress-vite build src",
+  "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+  "docs:dev": "vuepress-vite dev src",
+  "docs:update-package": "npx vp-update"
+ },
+ "devDependencies": {
+  "@vuepress/bundler-vite": "2.0.0-rc.26",
+  "@vuepress/plugin-docsearch": "^2.0.0-rc.118",
+  "@vuepress/plugin-git": "^2.0.0-rc.118",
+  "@vuepress/plugin-shiki": "^2.0.0-rc.118",
+  "sass-embedded": "^1.92.1",
+  "vue": "^3.5.21",
+  "vuepress": "2.0.0-rc.26",
+  "vuepress-plugin-md-enhance": "^2.0.0-rc.98",
+  "vuepress-theme-hope": "^2.0.0-rc.98"
+ },
+ "dependencies": {
+  "@vuepress/plugin-google-analytics": "^2.0.0-rc.118",
+  "@vuepress/plugin-search": "^2.0.0-rc.118",
+  "vite": "^7.1.5"
+ }
 }
