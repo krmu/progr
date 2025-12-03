@@ -200,13 +200,17 @@ order by
 ```
 
 
-## Relāciju veidi
+## Relācijas un ER modelis
 
-Lai datu bāzes tabulā vairākkārt nedublētos dati, tos izdala pa vairākām tabulām, piemēram, *skoleni*, *klases*, *skolotaji* vai līdzīgi. Noliktavas uzraudzības datu bāzē tās varētu būt *preces*, *noliktavas_zales*, *parvaldnieki*.
+Lai datu bāzes tabulā vairākkārt nedublētos dati, tos izdala pa vairākām tabulām, piemēram, *skoleni*, *klases*, *skolotaji* vai līdzīgi. 
+Noliktavas uzraudzības datu bāzē tās varētu būt *preces*, *noliktavas_zales*, *parvaldnieki*.
 
 Vairāku tabulu gadījumā tās vienmēr tiek sasaistītas. Tam izmanto saites jeb **relācijas**.
 
 Relācija ir saite starp divām datu bāzes tabulām.
+
+
+### Relāciju veidi
 
 Relācijām izšķir 3 galvenos tipus:
 
@@ -221,6 +225,10 @@ Vidusskolas programmēšanas padziļinātā eksāmenā tiek lietoti šādi apzī
 Avots: https://mape.gov.lv/api/files/C04D96D4-F361-4572-8375-2C36B798A81C/download
 
 Daudzi-pret-daudziem relācijas gadījumā izmanto papildus tabulu un divas **viens-pret-daudziem** relācijas.
+
+### Piemērs - skolēni un klases, audzinātāji
+ 
+Relāciju zīmējumos tiek izmantota Sqlite datu lauku veidi.
 
 Attēlā redzamas tabulas *skoleni* un *klases*. Tā kā vienā klasē var būt vairāki skolēni, bet skolēns var būt tikai vienā klasē, tā ir viens-pret-daudziem relācija.
 
@@ -243,6 +251,151 @@ Var būt piemērs, kad klasei ir vairāki audzinātāji. Tad iespējams izmantot
 Šajā piemērā, datubāzē ir 3 tabulas: **klases**, **audzinataji** un **klases_audzinataji**. <br>
 Tabulā **klases_audzinataji** ir divi lauki, kas saista tabulas **klases** un **audzinataji**.<br>
 Tiek izmantota arī relācija **viens-pret-vienu** tabulā **klases_audzinataji** pret tabulu **audzinataji**.
+
+### Piemērs - skolēnu vērtējumu datubāze
+
+Vēl viens piemērs ar skolēnu datubāzi. Dots ER modelis.
+
+![db-er-modelis](/skolenu_db_relacijas.png)
+
+
+Dotas trīs datubāzes tabulas: **skoleni**, **vertejumi** un **prieksmeti**.<br>
+
+Tabulā **skoleni** ir informācija par skolēniem.<br>
+Tabulā **prieksmeti** ir informācija par mācību priekšmetiem.<br>
+Tabulā **vertejumi** ir informācija par skolēnu vērtējumiem mācību priekšmetos.<br>
+
+Tabulu apraksti:
+
+::: tabs
+
+@tab skoleni 
+
+**skoleni** tabulā ir lauki:
+
+* `id` (primārā atslēga);
+* `vards` - skolēna vārds;
+* `uzvards` - skolēna uzvārds;
+* `apl_numurs` - skolēna apliecības numurs;
+* `dzd` - skolēna dzimšanas datums, paredzēts formāts yyyy-mm-dd;
+* `status` - skolēna statuss (aktīvs/neaktīvs);
+
+@tab prieksmeti
+
+* `id` (primārā atslēga);
+* `nosaukums` - mācību priekšmeta nosaukums;
+
+@tab vertejumi
+
+* `id` (primārā atslēga);
+* `skolens_id` (ārējā atslēga uz tabulu **skoleni**);
+* `prieksmets_id` (ārējā atslēga uz tabulu **prieksmeti**);
+* `vertiba` - skolēna vērtējums mācību priekšmetā, paredzēts skaitlis no 1 līdz 10 un "nv" - nav vērtējuma;
+* `laiks` - vērtējuma izveidošanas laiks;
+ 
+:::
+
+
+Ir dotas relācijas starp tabulām:<br>
+
+* viens-pret-daudziem relācija starp tabulām **skoleni** un **vertejumi** (vienam skolēnam var būt vairāki vērtējumi);<br>
+* viens-pret-daudziem relācija starp tabulām **prieksmeti** un **vertejumi** (vienam mācību priekšmetam var būt vairāki vērtējumi no dažādiem skolēniem).<br>
+
+### Piemērs - hokejistu turnīru statistikas datubāze
+
+Ir izveidota datubāze, kura uztur informāciju par hokejistu turnīru statistiku. <br>
+Katram spēlētājam tiek uzskaitīti punkti par gūtajiem vārtiem un rezultatīvām piespēlēm.<br>
+Statistiku krāj par katru spēli. Statistikā tiek iekļauta informāciju par spēlētāju, komandu, pretinieku, spēles datumu un vietu.<br>
+
+Dots ER modelis.
+
+![db-hokejs](/hokejs_db_ER.png)
+
+Galvenā tabula, kura visu informāciju uzglabā, ir tabula **speles_statistika**.<br>
+Šai tabulai tiek piesaistītas pārējās tabulas. <br>
+Pēc šī zīmējuma var secināt, ka spēlētājs var spēlēt vairākās komandās viena turnīra laikā, kas nav īsti reāli, bet šis ir tikai piemērs datubāzes relāciju zīmēšanai.<br>
+
+Tabulu apraksti:
+
+::: tabs
+
+@tab personas
+
+**personas** tabulā ir lauki:
+
+* `id` (primārā atslēga);
+* `vards` - spēlētāja vārds;
+* `uzvards` - spēlētāja uzvārds;
+* `svars` - spēlētāja svars;
+* `augums` - spēlētāja augums;
+* `dzimsanas_gads` - spēlētāja dzimšanas datuma gads;
+* `dzimsanas_menesis` - spēlētāja dzimšanas datuma mēnesis;
+* `dzimsanas_diena` - spēlētāja dzimšanas datuma diena;
+* `satveriens` - spēlētāja satveriens (kreisais/labais);
+
+@tab komandas
+
+**speles_statistika** tabulā ir lauki:
+
+* `id` (primārā atslēga);
+* `turnira_id` - turnīra identifikators;
+* `varti` - vārti gūti spēlē;
+* `piespeles` - rezultatīvas piespēles spēlē;
+* `soda_minutes` - soda minūtes spēlē;
+* `parstav_komandu_id` - komanda, kuru pārstāv spēlētājs;
+* `spele_pret_komandu_id` - komanda, pret kuru spēlē;
+* `arena_id` - arēna, kurā notiek spēle;
+* `datums_laiks` - spēles datums un laiks;
+* `speletajs_id` - spēlētājs, kurš piedalās spēlē;
+
+@tab turniri
+
+**turniri** tabulā ir lauki:
+
+* `id` (primārā atslēga);
+* `nosaukums` - turnīra nosaukums;
+* `sakuma_datums` - turnīra sākuma datums;
+* `beigu_datums` - turnīra beigu datums;
+* `valsts_id` - turnīra bāzes valsts identifikators;
+
+@tab komandas
+
+**komandas** tabulā ir lauki:
+
+* `id` (primārā atslēga);
+* `nosaukums` - komandas nosaukums;
+* `valsts_id` - komandas valsts identifikators;
+
+@tab arena
+
+**arena** tabulā ir lauki:
+
+* `id` (primārā atslēga);
+* `nosaukums` - arēnas nosaukums;
+* `adrese` - arēnas adrese;
+* `valsts_id` - arēnas valsts identifikators;
+
+@tab valstis
+
+**valstis** tabulā ir lauki:
+
+* `id` (primārā atslēga);
+* `nosaukums` - valsts nosaukums;
+* `nosaukums_iss` - valsts īsais nosaukums (2 burti);
+
+:::
+
+Šajā datubāzē ir šādas relācijas starp tabulām:<br>
+
+* viens-pret-daudziem relācija starp tabulām **personas** (`id`) un **speles_statistika** (`speletajs_id`) (vienam spēlētājam var būt vairāki statistikas ieraksti);<br>
+* viens-pret-daudziem relācija starp tabulām **komandas** (`id`) un **speles_statistika** (`parstav_komandu_id`) (vienai komandai var būt vairāki statistikas ieraksti);<br>
+* viens-pret-daudziem relācija starp tabulām **komandas** (`id`) un **speles_statistika** (`spele_pret_komandu_id`) (vienai komandai var būt vairāki statistikas ieraksti);<br>
+* viens-pret-daudziem relācija starp tabulām **turniri** (`id`) un **speles_statistika** (`turnira_id`) (vienam turnīram var būt vairāki statistikas ieraksti);<br>
+* viens-pret-daudziem relācija starp tabulām **arena** (`id`) un **speles_statistika** (`arena_id`) (vienai arēnai var būt vairāki statistikas ieraksti);<br>
+* viens-pret-daudziem relācija starp tabulām **valstis** (`id`) un **turniri** (`valsts_id`) (vienai valstij var būt vairāki turnīri);<br>
+* viens-pret-daudziem relācija starp tabulām **valstis** (`id`) un **komandas** (`valsts_id`) (vienai valstij var būt vairāki turnīri);<br>
+* viens-pret-daudziem relācija starp tabulām **valstis** (`id`) un **arena** (`valsts_id`) (vienai valstij var būt vairāki turnīri);<br>
+
 
 ER modeļus zīmēt ērti ir vietnē [draw.io](https://app.diagrams.net/)
 
@@ -463,6 +616,7 @@ Ja vēlamies pārbaudīt SQL vaicājumus, tad to dara cilnē `Execute SQL`.<br>
 
 ### Python un SQLite
 
+### Imports un savienojums
 Lai darbotos ar SQLite no Python, mums ir jāimportē `sqlite3` bibliotēka.
 
 ```python
@@ -481,6 +635,7 @@ con = sqlite3.connect("datubaaze.db")
 cur = con.cursor()
 
 ```
+### Datu nolasīšana
 
 Tagad varam veikt darbības ar datubāzi.
 Nolasīsim visu personu datubāzi.
@@ -504,10 +659,34 @@ Mainīgais `dati` satur visus ierakstus no personas tabulas, mēs šo secību iz
 `con.close()` aizver savienojumu ar datubāzi.
 
 ::: warning Svarīgi!
+
 Datubāzes kolonas ir šādas secībā: id, vārds, uzvārds.<br>
 Tāpat kā ar sarakstiem, arī SQLite un Python lasīšanā indeksācija sākas no 0.<br>
 Tas ir specifiski SQLite datubāzei un Python veidam kā to nolasīt.
 :::
+
+::: warning Svarīgi!
+
+Ir iespējams datus nolasīt ar vārdnīcas atslēgu, nevis ar indeksu.<br>
+Lai to izdarītu, ir jāiestata `row_factory` uz `sqlite3.Row` pirms kursora izveides.<br>
+Kvadrātiekavās rakstām kolonas nosaukumu, lai nolasītu datus.<br>
+
+:::
+
+```python
+
+import sqlite3
+con = sqlite3.connect("datubaaze.db")
+con.row_factory = sqlite3.Row
+cur = con.cursor()
+dati = cur.execute("SELECT * FROM personas")
+for rinda in dati:
+  print(rinda["vards"])
+con.close()
+
+```
+
+### Datu ievietošana
 
 Pievienosim jaunu ierakstu datubāzes tabulā `personas`.<br>
 
@@ -612,6 +791,7 @@ Jānis
 ```
 :::
 
+### Datu dzēšana
 Ja mēs gribam izdzēst ierakstu no datubāzes, tad mēs varam izmantot `DELETE` vaicājumu.
 
 ```python
@@ -657,6 +837,105 @@ con.close()
 `cur.fetchall()` atgriež visas rindas, kas atbilst meklēšanas kritērijam.<br>
 `for` cikls izvada visas personas ar ievadīto vārdu.
 
+### Pēdējais ievietotais ID
+
+Ir gadījumi, ka nepieciešams iegūt rindas identifikatoru pēc tam, kad ir ievietots jauns ieraksts datubāzē.<br>
+
+```python
+
+import sqlite3
+
+con = sqlite3.connect("datubaaze.db")
+con.row_factory = sqlite3.Row
+cur = con.cursor()
+
+vards = "Jānis"
+uzvards = "Bērziņš"
+cur.execute("INSERT INTO personas (vards, uzvards) VALUES (?, ?)", (vards, uzvards))
+con.commit()
+last_id = cur.lastrowid
+print(f"Ievietotā ieraksta ID ir: {last_id}")
+
+```
+Šo var izmantot, ja nepieciešams saglabāt relācijas starp tabulām.<br>
+
+### Temperatūras uzskaites datubāzes piemērs ar SQLite
+
+Ir izveidota vienkārša datubāze, kura reģistrē temperatūras vērtības ar laika atzīmi.<br>
+Šo programmu var izmantot, lai simulētu temperatūras reģistrēšanu ik pēc sekundes.<br>
+Programmu var pielāgot, lai reģistrētu temperatūras vērtības no sensora vai cita avota.<br>
+
+```python
+
+# Imports
+import sqlite3
+
+#Lai iegūtu laiku un nejaušas vērtības
+import time
+import random
+import datetime
+
+# Savienojums ar datubāzi
+con = sqlite3.connect("datubaze.db")
+
+con.row_factory = sqlite3.Row
+cur = con.cursor()
+# Skaitītājs ciklam
+skaititajs = 0
+
+# Galvenais cikls
+while True:
+	# Te jāievieto kods, kas iegūst temperatūras vērtību no sensora vai cita avota
+	# Šajā piemērā tiek ģenerēta nejauša vērtība no -20 līdz 20
+    temperaturas_vertiba = random.randint(-20,20)
+
+	# Iegūst pašreizējo laiku
+    laiks = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+	# Ievieto datus datubāzē
+    cur.execute("insert into registracija (vertiba,laiks) values (?,?)",(temperaturas_vertiba,laiks,))
+    con.commit()
+
+	# Izvada reģistrēto vērtību un laiku
+    print(f'Reģistrācijas laiks {laiks} un vērtība {temperaturas_vertiba} ')
+
+	# Katru 10 reizi aprēķina un izvada vidējo temperatūru
+    if skaititajs == 10:
+
+		# Visa laika vidējā temperatūra
+        vaicajums = cur.execute("SELECT AVG(vertiba) as videjie_gradi FROM registracija")
+        dati = vaicajums.fetchone()
+        print(f"Visa laika vidējā temperatūra {round(dati['videjie_gradi'],2)} grādi.")
+        
+		# Pēdējās stundas vidējā temperatūra
+        vaicajums = cur.execute("SELECT AVG(vertiba) as videjie_gradi_menesis FROM registracija WHERE laiks >= datetime('now', '-1 hour')")
+        dati = vaicajums.fetchone()
+        
+        print(f"Pēdējās stundas vidējā temperatūra {round(dati['videjie_gradi_menesis'],2)} grādi.")
+        
+		# Notīra skaitītāju
+        skaititajs = 0
+	else:
+		# Paaugstina skaitītāju par 1
+    	skaititajs += 1
+
+	# Gaida 1 sekundi līdz nākamajai reģistrācijai
+    time.sleep(1)  
+
+```
+
+Datubāzes tabulas izveides SQL komanda izskatās šādi:
+
+```sql
+
+CREATE TABLE "registracija" (
+	"id"	INTEGER,
+	"vertiba"	REAL,
+	"laiks"	REAL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+```
 
 ## ST_distance_sphere
 
